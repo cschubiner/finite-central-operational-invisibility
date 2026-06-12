@@ -1,0 +1,924 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1.18in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{proposition}{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\B}{\mathcal B}
+\newcommand{\C}{\mathbb C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\M}{\mathcal M}
+\newcommand{\N}{\mathcal N}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathcal Z}
+\setlength{\emergencystretch}{3em}
+\hypersetup{
+  pdftitle={Finite Central Invisibility in Operational Reconstructions of Tensor Factorization and Horizon Entropy},
+  pdfsubject={Operator algebras, algebraic quantum field theory, and horizon entropy},
+  pdfkeywords={AQFT, von Neumann algebras, finite centers, tensor factorization, crossed products, DHR sectors, horizon entropy}
+}
+
+\title{Finite Central Invisibility in Operational Reconstructions of Tensor
+Factorization and Horizon Entropy}
+\author{}
+\date{June 12, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Operational reconstructions in algebraic quantum field theory and quantum
+information normally reconstruct the object that is supplied: a represented von
+Neumann algebra, a local net, a sector category, a channel tested by specified
+preparations and effects, or a Type II algebra with a trace normalization.  This
+note proves a finite-central converse.  On comparison classes closed under
+finite central direct sums, finite central refinements, and shared finite
+centers in proposed bipartitions, represented or retracted operational data
+determine full central support, central cardinality, tensor factorization,
+central channel dynamics, retained sector labels, and absolute finite-center
+entropy contributions exactly when the matching separating or calibrating
+hypothesis is supplied.  If it is not supplied, explicit finite-central
+same-data pairs change the target invariant.
+
+The result is a no-go theorem, not a new positive reconstruction of quantum
+gravity.  It says that normal state/effect data factored through a quotient do
+not decide whether a nonzero finite central summand has been omitted; generated
+algebra correlations do not reconstruct an unquotiented spatial tensor product
+when multiplication has a kernel; and relative-entropy, recovery, modular-core,
+or crossed-product entropy data do not fix an absolute horizon entropy
+coefficient while a same-data finite-center or affine/trace residual has
+nonzero area density.  Standard positive results--Tomita--Takesaki theory,
+Osterwalder--Schrader reconstruction, DHR/Doplicher--Roberts reconstruction,
+the split property, Fewster--Verch dynamical locality, process tomography,
+JLMS/OAQEC, and gravitational crossed-product entropy--are used as inputs and
+are left intact.  A Lean 4 file formalizes the finite logical descent kernels;
+the analytic operator-algebraic reductions are the standard cited hypotheses.
+\end{abstract}
+
+\paragraph{Keywords.}
+Algebraic quantum field theory; von Neumann algebras; finite centers; locally
+covariant quantum field theory; DHR sectors; split property; process
+tomography; modular crossed products; black-hole entropy.
+
+\paragraph{MSC 2020.}
+Primary 81T05, 46L10, 46L55; secondary 81P45, 83C57.
+
+\section{Question and Contribution}
+
+Many reconstruction arguments in quantum field theory and quantum information
+start from operational data: normal state values, effects, channels, relative
+entropies, modular flows, sector categories, or local probe readouts.  The
+positive theorems then reconstruct the algebraic or geometric structure that
+was actually supplied.  Tomita--Takesaki theory acts on a specified represented
+von Neumann algebra and weight.  Osterwalder--Schrader reconstruction starts
+from reflection-positive Euclidean data after quotienting by the null space.
+DHR and Doplicher--Roberts reconstruction start from a specified sector
+category of a specified observable net.  Locally covariant QFT and
+Fewster--Verch dynamical locality are formulated for a supplied functor and its
+relative Cauchy evolution.  Process tomography is relative to specified
+preparations and effects; no-broadcasting constrains physical channels for
+noncommuting state families, not unsupplied commutative central coordinates.
+JLMS/OAQEC and crossed-product entropy use specified code algebras, represented
+algebras, traces, and normalizations
+\cite{TakesakiI,TakesakiII,OS1,OS2,DHR1,DHR2,DRDuality,DR,BFV,FewsterVerch,
+FewsterVerchMeasurements,Choi,Jamiolkowski,NoBroadcasting,Petz,JLMS,HarlowRT,DHW,
+WittenCrossed,LongoWitten,CLPW,CPW}.
+
+The question here is the converse finite-center question.  Suppose the data
+have already passed through a represented quotient, a central-state retraction,
+a diagonal restriction, a generated algebra, a restricted input/effect family,
+or an entropy calibration that does not see all finite central directions.  Can
+the data nevertheless reconstruct the full ambient central support, the number
+of finite central atoms, the unquotiented tensor product, or the absolute
+finite-center contribution to a horizon entropy coefficient?
+
+The answer is no in the precise fiber sense below.  A target invariant is
+reconstructible from a labelled data map exactly when it is constant on the
+data fibers.  The theorem identifies the finite-central fibers for the standard
+operator-algebraic data maps named above.  It also records the exact positive
+exits.  Full support requires central support faithfulness.  Central atoms and
+weights require central separation.  Spatial tensor product coordinates require
+tested-kernel separation, and with full generated-algebra tomography this is
+injectivity of multiplication, supplied in AQFT by split or
+W*-tensor-product independence.  Finite central process dynamics require
+input spanning and output separation.  Central sector labels require the
+supplied sector datum to retain those labels.  Absolute entropy and horizon
+coefficients require trace, entropy, affine area, and geometric area-scale
+calibrations that kill same-data residuals.
+
+\paragraph{Novelty claim.}
+No individual ingredient in this note is advertised as new.  Weak-* closed
+ideals of von Neumann algebras are central summands; normal representations
+have central support; normal functionals separate von Neumann algebras when
+enough of them are supplied; split inclusions give tensor-product
+independence; DHR/DR reconstruct from a supplied sector category; and Type II
+entropy constructions are relative to a specified algebra and trace.  The
+claim is the joint finite-central descent criterion: for the full-algebra
+targets listed below, represented, retracted, restricted, generated, or tested
+operational data determine the target if and only if the corresponding
+finite-central separator, tensor-kernel separator, sector-character datum,
+quotient/exclusion rule, or entropy/area calibration is supplied.  If an
+existing paper already states this joint iff theorem, this note should be read
+as an application to operational spacetime and horizon-entropy reconstruction
+rather than as a new theorem.
+
+\section{Data Descent}
+
+\begin{definition}[Reconstruction from labelled data]
+Let \(\mathcal X\) be a comparison class, \(D:\mathcal X\to\D\) a labelled data
+map, and \(I:\mathcal X\to Y\) a target invariant.  The target is
+reconstructible from \(D\) on \(\mathcal X\) if there is a map
+\(R:D(\mathcal X)\to Y\) such that \(I=R\circ D\).
+\end{definition}
+
+\begin{proposition}[Fiber criterion]
+\label{prop:fiber}
+A target \(I:\mathcal X\to Y\) is reconstructible from \(D:\mathcal X\to\D\)
+if and only if \(I\) is constant on every fiber of \(D\).  Equivalently, no
+pair \(X,Y\in\mathcal X\) has \(D(X)=D(Y)\) but \(I(X)\ne I(Y)\).
+\end{proposition}
+
+\begin{proof}
+If \(I=R\circ D\), then \(D(X)=D(Y)\) implies \(I(X)=R(D(X))=R(D(Y))=I(Y)\).
+Conversely, if \(I\) is constant on data fibers, define
+\(R(d)=I(X)\) for any \(X\) with \(D(X)=d\).  Fiber constancy makes this
+well-defined.
+\end{proof}
+
+This elementary criterion is the only logical engine in the paper.  The
+operator-algebraic work is to identify when ordinary operational data maps have
+finite central fibers on which a full-algebra target changes.
+
+\section{Main Finite-Central Descent Theorem}
+
+\begin{theorem}[Finite-central operational descent]
+\label{thm:main}
+Let \(\mathcal X\) be a comparison class of von Neumann-algebraic local-net,
+locally covariant, code-algebra, or finite process models.  Let
+\(D:\mathcal X\to\D\) be a labelled operational data map built from normal
+state/effect values, channels tested by specified preparations and effects,
+represented modular or Osterwalder--Schrader data, DHR sector data, locally
+covariant relative-Cauchy-evolution or probe-measurement data, relative entropy
+or exact recovery data, crossed-product entropy data, or trace/area
+assignments.
+
+Assume that the finite central directions, when present, are read only through
+one of the following: a normal quotient, a represented GNS quotient, a
+central-state retraction, a diagonal subnet restriction, a generated algebra,
+a specified nonseparating preparation/effect family, a restricted sector
+functor, or a specified trace/area calibration.  Assume also that the
+comparison class contains the corresponding finite central modifications unless
+an explicit data exit or exclusion exit is imposed.
+
+For each full-algebra target in the left column, \(D\) reconstructs that target
+on the finite-central comparison class if and only if the matching exit in the
+right column is supplied.
+\begin{center}
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.39\linewidth}
+                >{\raggedright\arraybackslash}p{0.51\linewidth}}
+\toprule
+Target & Exact exit \\
+\midrule
+Full central support of the supplied normal readouts &
+The readouts are faithful on the finite central positive cone. \\
+Atoms and weights of a specified finite center &
+The restrictions of the supplied central readouts separate the center. \\
+Variable finite cardinality, including the two-atom predicate &
+The data distinguish the corresponding cardinality fibers, or the
+cardinality is supplied as calibrated data. \\
+Factor-valuedness of a retained local algebra &
+A factor, irreducibility, quotient, inadmissibility, or minimality
+hypothesis excludes the nontrivial finite center. \\
+A proposed spatial tensor product for a bipartition &
+The tested pullbacks of multiplication have zero common kernel; with all
+normal generated-algebra correlations this is injectivity of multiplication,
+for example by split or W*-tensor-product independence. \\
+Finite central channel dynamics &
+Tested central preparations span the finite input algebra and tested central
+effects separate the output algebra. \\
+Central-character labels in sector data &
+The supplied sector functor is faithful on the central-character fibers. \\
+Absolute finite-center entropy, a horizon entropy-density coefficient, or the
+Newton coupling inferred from \(S=A/(4G\hbar)\) &
+The affine absolute calibration spans the claimed central state family,
+the trace calibration spans the central coordinates used by the entropy term,
+the geometric area scale is fixed, and every remaining same-data residual has
+zero limiting area density; or an explicit quotient/exclusion removes the
+residual. \\
+\bottomrule
+\end{tabular}
+\end{center}
+If the row exit is absent and the comparison class contains the corresponding
+finite central modification, then there are \(X,Y\in\mathcal X\) with
+\(D(X)=D(Y)\) and different values of the retained target.  Hence no
+universal reconstruction rule from \(D\) can determine that target.
+\end{theorem}
+
+\begin{proof}
+By Proposition \ref{prop:fiber}, every row is a fiber computation.
+
+For support, restrict the supplied normal positive functionals \(F\) to the
+finite center \(C\).  They rule out invisible central support exactly when
+every nonzero central projection \(p\in C\) is detected by some
+\(\varphi\in F\), i.e. \(\varphi(p)>0\).  If such a projection is missed, the
+corner \(p\M p\) can be retained or adjoined without changing any supplied
+readout.  If no projection is missed, equality of readouts forbids a hidden
+positive central corner.  This is precisely central faithfulness.
+
+For atoms and weights of a specified finite center
+\(C\simeq\ell^\infty_n\), the readouts induce a linear map
+\[
+  r_F:C\to \C^F,\qquad r_F(c)=(\varphi(c))_{\varphi\in F}.
+\]
+The central coordinates are reconstructed exactly when \(r_F\) is injective,
+or affinely injective on the normalized central state simplex.  If \(r_F\) is
+not injective, two central observables or two central weights have identical
+labelled pairings.  Across a comparison class in which \(n\) varies, the same
+fiber criterion says that finite cardinality, and in particular the predicate
+\(n=2\), is reconstructed only when the data distinguish the corresponding
+cardinality fibers.
+
+Factor-valuedness is the assertion that the relevant center is trivial.  A
+finite direct sum of factor fibers has a nontrivial finite center unless only
+one summand is present.  Thus any data fiber that leaves finite cardinality or
+central separation undecided contains same-data candidates with different
+factor-valuedness.  A factor, irreducibility, quotient, inadmissibility, or
+minimality hypothesis removes that pair from the comparison class.
+
+For tensor factorization, let
+\(\A,\B\subset \N(O)\) be commuting von Neumann algebras.  Generated-algebra
+correlations evaluate an element \(x\in\A\bar\otimes\B\) only through the
+normal multiplication representation
+\[
+  \mu:\A\bar\otimes\B\to\A\vee\B,\qquad a\otimes b\mapsto ab .
+\]
+With tested functionals \(\Gamma\subset(\A\vee\B)_*\), two tensor elements
+have the same generated-algebra data exactly when their difference lies in
+\(\bigcap_{\gamma\in\Gamma}\ker(\gamma\circ\mu)\).  The unquotiented spatial
+tensor coordinate therefore descends exactly when this common kernel is zero.
+If all normal functionals on \(\A\vee\B\) are supplied, normal functionals
+separate points of the generated algebra, so the common kernel is \(\ker\mu\).
+Split or W*-tensor-product independence is the standard AQFT exit making this
+multiplication representation faithful in the cases considered here
+\cite{DoplicherLongoSplit,BuchholzWichmann,WernerSplit}.
+
+For finite central process data, the channel table consists of pairings
+\(e(K\rho)\) between tested preparations and tested effects.  The full finite
+central channel is determined exactly when tested preparations span the finite
+input vector space and tested effects separate the finite output vector space.
+If either condition fails, a finite classical channel can be perturbed in an
+untested direction without changing the displayed table.
+
+For sector data, DHR/Doplicher--Roberts reconstruction applies to the sector
+category actually supplied \cite{DHR1,DHR2,DRDuality,DR}.  If finite central
+characters are forgotten by restriction to a diagonal subnet, those characters
+are not present in the supplied category.  They are reconstructed exactly when
+the sector functor remains faithful on the central-character fibers.
+
+For entropy and horizon coefficients, finite central residuals are explicit.
+Uniform \(q\)-fold multiplicity contributes \(\log q\) for one unresolved
+finite center, or \(m(\Sigma)\log q\) for \(m(\Sigma)\) such centers on a cut
+\(\Sigma\).  Finite trace weights contribute logarithmic terms of the form
+\(\sum_i p_i\log\lambda_i\).  Relative-entropy and JLMS-type data determine
+absolute entropy or area potentials only modulo affine functions on the tested
+central state family.  Therefore an absolute entropy term or density
+coefficient descends exactly when the supplied trace, state-family, affine,
+and geometric-area calibrations make every same-data residual vanish on the
+claimed family, or at least have zero limiting density after division by
+area.  If area units and \(\hbar\) are fixed and \(c>0\), the map
+\(c\mapsto (4\hbar c)^{-1}\) is injective, so the same criterion identifies
+the Newton coupling inferred from \(S=A/(4G\hbar)\).
+
+These row computations prove both directions.  If the exit holds, the target
+is constant on finite-central fibers.  If it fails and the comparison class
+contains the corresponding modification, one of the countermodels in the next
+section gives a same-data pair with different target value.
+\end{proof}
+
+\paragraph{Closest prior results and novelty for Theorem \ref{thm:main}.}
+The support part is basic von Neumann algebra central-support theory
+\cite{Sakai,TakesakiI}.  The tensor positive exit is the split/W*-independence
+literature \cite{DoplicherLongoSplit,BuchholzWichmann,WernerSplit}.  The sector
+positive theorem is DHR/Doplicher--Roberts reconstruction from a supplied
+category \cite{DHR1,DHR2,DRDuality,DR}.  The locally covariant and measurement
+inputs are BFV and Fewster--Verch \cite{BFV,FewsterVerch,
+FewsterVerchMeasurements}.  The entropy inputs are Araki/Petz/JLMS/OAQEC and
+gravitational crossed products \cite{ArakiRelativeEntropy,Petz,JLMS,HarlowRT,
+DHW,WittenCrossed,LongoWitten,CLPW,CPW}.  The theorem's claimed contribution is
+the simultaneous finite-central iff: these positive frameworks reconstruct
+full support, central cardinality, unquotiented tensor factors, retained sector
+labels, and absolute finite-center entropy contributions exactly when the
+corresponding finite-central exit is part of the supplied data or hypotheses.
+
+\section{Three Countermodels}
+
+\subsection{Quotient-visible support and finite rank}
+
+Let \(\B\) and \(\M\) be nonzero von Neumann algebras.  Put
+\[
+  \widehat\B_0=\B,\qquad
+  \widehat\B_q=\B\oplus(\M\bar\otimes\ell^\infty(\{1,\ldots,q\})),
+  \quad q\ge2,
+\]
+and let \(\pi_q:\widehat\B_q\to\B\) be the normal quotient onto the first
+summand, with \(\pi_0=\mathrm{id}_\B\).  Suppose every displayed datum is a
+labelled function of \(\pi_q\), say
+\[
+  D_q=(\widetilde D_\lambda\circ\pi_q)_{\lambda\in\Lambda},
+\]
+with fixed labels and codomains.  Then the reported data are identical for
+\(q=0,2,3\).  But for \(q\ge2\),
+\[
+  p_q=(0,1_{\M\bar\otimes\ell^\infty_q})
+\]
+is a nonzero central projection killed by every pulled-back readout, while no
+such complementary killed projection exists for \(q=0\).  Thus quotient-visible
+data do not determine full ambient support, faithfulness on \(\widehat\B_q\),
+or the interpretation of the killed kernel as absent, null, gauge,
+inadmissible, or physical.  Comparing \(q=2\) and \(q=3\) also shows that the
+same data do not determine finite central cardinality or the two-atom
+predicate.
+
+This example is not a claim that the extra summand is physically present.  It
+is a no-go for deriving its absence from data that factor through \(\pi_q\).
+A physical theory evades the witness by supplying representation faithfulness,
+full central tomography, a factor hypothesis, or an explicit quotient/gauge/null
+or inadmissibility principle.
+
+\subsection{Generated algebra versus spatial tensor product}
+
+Let \(C=\ell^\infty(\{1,\ldots,n\})\) with \(n\ge2\), and view \(C\) twice as
+commuting subalgebras of itself.  The generated algebra is again \(C\), while
+the candidate spatial tensor product is \(C\bar\otimes C\).  Multiplication
+acts by
+\[
+  \mu(e_i\otimes e_j)=\delta_{ij}e_i,
+\]
+where \(e_i\) are the minimal central projections.  Hence
+\(e_i\otimes e_j\ne0\) for \(i\ne j\), but \(\mu(e_i\otimes e_j)=0\).  Normal
+states on the generated algebra see only the diagonal image.  Normal product
+states on \(C\bar\otimes C\) separate the off-diagonal tensor atom.
+
+Thus generated-algebra tomography is not the same as spatial tensor-product
+tomography.  The exact repair is the usual one: injectivity of multiplication,
+for example from a split or W*-tensor-product independence hypothesis.
+
+\subsection{Entropy density and Newton normalization}
+
+Let the displayed entropy data be insensitive to an unresolved finite center on
+a cut \(\Sigma\), but let an entropy convention count \(m(\Sigma)\) uniform
+\(q\)-point centers.  The counted entropy changes by
+\[
+  \Delta S(\Sigma)=m(\Sigma)\log q .
+\]
+If \(A(\Sigma)\to\infty\) and
+\[
+  \frac{m(\Sigma)}{A(\Sigma)}\longrightarrow \beta ,
+\]
+then the entropy-density coefficient changes by \(\beta\log q\).  The same
+displayed represented, retracted, relative-entropy, modular, or crossed-product
+data can therefore correspond to two coefficients unless the finite-center
+counting convention is calibrated, quotiented, or shown to have zero density.
+After geometric area units and \(\hbar\) are fixed, a positive coefficient
+\(c\) determines \(G=(4\hbar c)^{-1}\).  Thus a nonzero same-data residual in
+\(c\) is also a nonidentifiability of the Newton coupling inferred from the
+area law.
+
+This is compatible with the positive Bekenstein--Hawking, JLMS/OAQEC, and
+crossed-product entropy results \cite{Bekenstein,Hawking,JLMS,HarlowRT,DHW,
+WittenCrossed,LongoWitten,CLPW,CPW}.  Those results supply or compute entropy
+for specified algebras and normalizations.  The witness says only that a
+represented or retracted data map that does not include the finite central
+calibration cannot identify an absolute coefficient that counts it.
+
+\section{Tensor Factorization and Horizon Coefficient}
+
+\begin{theorem}[Tensor factors and entropy coefficient from operational data]
+\label{thm:tensor-entropy}
+Let \(O\mapsto\N(O)\) be a Haag--Kastler net on a fixed spacetime, or the
+objectwise net of a locally covariant theory on a fixed globally hyperbolic
+spacetime.  For each \(i\in\mathcal I\), let
+\(\A_i,\B_i\subset\N(O_i)\) be commuting von Neumann algebras and let
+\[
+  \mu_i:\A_i\bar\otimes\B_i\to\A_i\vee\B_i,\qquad a\otimes b\mapsto ab
+\]
+be multiplication.  Let \(\Gamma_i\subset(\A_i\vee\B_i)_*\) be the supplied
+normal correlation functionals.  Let \(E\) be a comparison class of entropy
+assignments on cuts \(\Sigma\), with fixed geometric areas \(A(\Sigma)>0\),
+\(A(\Sigma)\to\infty\), labelled entropy data \(D_E:E\to\D_E\), and coefficient
+\[
+  c(X)=\lim_{\Sigma}\frac{S_X(\Sigma)}{A(\Sigma)}
+\]
+when the limit exists.
+
+For \(x_i\in\A_i\bar\otimes\B_i\), define the labelled data
+\[
+  D((x_i),X)=
+  \left(
+    (\gamma(\mu_i(x_i)))_{i\in\mathcal I,\gamma\in\Gamma_i},
+    D_E(X)
+  \right).
+\]
+The target is the unquotiented tensor family \((x_i)_{i\in\mathcal I}\)
+together with \(c(X)\).  This target is reconstructible from \(D\) if and only
+if
+\[
+  \bigcap_{\gamma\in\Gamma_i}\ker(\gamma\circ\mu_i)=0
+  \quad\hbox{for every }i\in\mathcal I
+\]
+and
+\[
+  D_E(X)=D_E(Y)\Longrightarrow
+  \lim_{\Sigma}\frac{S_X(\Sigma)-S_Y(\Sigma)}{A(\Sigma)}=0 .
+\]
+If \(\Gamma_i=(\A_i\vee\B_i)_*\), the first condition is \(\ker\mu_i=0\).  If
+area units and \(\hbar\) are fixed and \(c>0\), the second condition is also the
+criterion for reconstructing the Newton coupling
+\[
+  G=\frac{1}{4\hbar c}.
+\]
+\end{theorem}
+
+\begin{proof}
+Apply Proposition \ref{prop:fiber} coordinatewise.  For fixed \(i\), equality
+of generated-algebra correlation data for \(x_i\) and \(y_i\) means
+\[
+  \gamma(\mu_i(x_i-y_i))=0\qquad(\gamma\in\Gamma_i),
+\]
+so \(x_i-y_i\) lies in the common tested multiplication kernel.  The
+unquotiented tensor coordinate is constant on the correlation fiber exactly
+when that kernel is zero.  If all normal functionals on the generated algebra
+are supplied, normal functionals separate points, so the common kernel is
+\(\ker\mu_i\).
+
+The entropy coefficient is constant on \(D_E\)-fibers exactly when every
+same-data residual has zero limiting density, which is the second displayed
+condition.  The map \(c\mapsto(4\hbar c)^{-1}\) is injective for positive
+\(c\), so the same criterion identifies the Newton coupling after the area
+scale and \(\hbar\) are fixed.  Failure of either condition gives a same-data
+pair by varying only the failed coordinate.
+\end{proof}
+
+\paragraph{Closest prior results and novelty for Theorem
+\ref{thm:tensor-entropy}.}
+The tensor positive direction is the standard split/W*-independence exit
+\cite{DoplicherLongoSplit,BuchholzWichmann,WernerSplit}.  The entropy positive
+inputs are Bekenstein--Hawking, FLM/JLMS/OAQEC, and Type II/crossed-product
+entropy for specified algebras and normalizations
+\cite{Bekenstein,Hawking,FLM,JLMS,HarlowRT,DHW,WittenCrossed,LongoWitten,CLPW,
+CPW}.  The new packaging is the product fiber statement: generated-algebra
+operational correlations and entropy data identify the joint target only when
+the tensor-kernel condition and entropy-density calibration both hold.  Either
+missing condition gives a same-data countermodel even if the other side is
+perfectly calibrated.
+
+\section{Relation to Positive Reconstruction Theorems}
+
+\begin{longtable}{p{0.24\linewidth}p{0.31\linewidth}p{0.34\linewidth}}
+\toprule
+Positive input & What it supplies & Finite-central limitation isolated here \\
+\midrule
+Tomita--Takesaki theory and crossed products & Modular flow and crossed
+product of a specified represented algebra and weight
+\cite{TakesakiI,TakesakiII,TakesakiDuality,WittenCrossed}. & They do not
+recover a finite central summand removed before representation; faithful full
+centers are carried along only when the full algebra is supplied. \\
+DHR/Doplicher--Roberts reconstruction & Field algebra and compact gauge group
+from a supplied sector category \cite{DHR1,DHR2,DRDuality,DR}. & If diagonal
+restriction forgets central characters, those characters are not in the input
+category. \\
+BFV/Fewster--Verch locally covariant QFT & Functorial dynamics, relative
+Cauchy evolution, dynamical locality, and local measurement schemes for a
+supplied functor and supplied probes
+\cite{BFV,FewsterVerch,FewsterVerchMeasurements}. & Constant finite-center
+copies remain same-data after retraction unless the probes or object algebras
+separate the center. \\
+Split inclusions & W*-tensor-product independence for a supplied bipartition
+\cite{DoplicherLongoSplit,BuchholzWichmann,WernerSplit}. & This is exactly the
+positive exit from the shared-center multiplication kernel; it is not implied
+by generated-algebra tomography alone. \\
+Process tomography & Channel reconstruction relative to supplied
+preparations and effects \cite{Jamiolkowski,Choi,ChuangNielsenProcess}. &
+Untested finite central input or output directions remain invisible. \\
+No-broadcasting & Noncommuting mixed states cannot be broadcast by a universal
+physical channel \cite{NoBroadcasting}. & The present obstruction is different:
+finite centers are commutative once supplied, but operational data that omit a
+central coordinate cannot infer which central coordinate or cardinality was
+present. \\
+JLMS/OAQEC and crossed-product entropy & Entropy, recovery, or Type II
+algebra statements for specified algebras and normalizations
+\cite{Petz,JLMS,HarlowRT,DHW,WittenCrossed,LongoWitten,CLPW,CPW}. & Absolute
+finite-center entropy terms and area coefficients require trace/area
+calibration or zero-density residuals. \\
+\bottomrule
+\end{longtable}
+
+The table is meant to prevent an inflated novelty claim.  The note does not
+show that finite centers occur in nature and does not refute the positive
+theorems.  It gives a test for proposed operational reconstructions: either
+the target factors through the supplied data, the hypotheses exclude the
+finite-central comparison pair, or the data contain the exact separator or
+calibration.  If none of these is true, the three countermodels above supply a
+same-data pair with different target.
+
+\section{Assumption Ledger for Referees}
+
+This section is included to make the submission checkable without reading the
+longer manuscript.  Each row separates a standard cited input from the new
+finite-central descent step and from the physical input that is deliberately
+not proved here.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.26\linewidth}
+                  >{\raggedright\arraybackslash}p{0.32\linewidth}
+                  >{\raggedright\arraybackslash}p{0.30\linewidth}}
+\toprule
+Hypothesis used & Why it is standard & What this note does not prove \\
+\midrule
+Normal quotients and represented support summands of von Neumann algebras. &
+Weak-* closed ideals are central summands, and normal representations have
+central support kernels \cite{Sakai,TakesakiI}. & That a proposed physical
+theory admits no additional central summand, or that every quotient-zero
+direction is physically null. \\
+Normal readouts restricted to a finite abelian center. & Finite-dimensional
+linear algebra: coordinate functionals separate
+\(\ell^\infty_n\), and positive functionals detect support exactly when every
+central atom is seen. & That a given operational principle supplies all such
+central readouts as physical effects. \\
+Generated-algebra correlations for commuting subalgebras. & Correlations on
+\(\A\vee\B\) are functions of the multiplication image
+\(\mu:\A\bar\otimes\B\to\A\vee\B\). & That \(\mu\) is injective; this is the
+split/W*-independence exit when it holds. \\
+Sector reconstruction from a supplied category. & DHR/Doplicher--Roberts
+reconstruction starts from the retained category of sectors
+\cite{DHR1,DHR2,DRDuality,DR}. & That a diagonal restriction has retained
+central-character labels it has already forgotten. \\
+Locally covariant relative Cauchy evolution and local probes. & BFV and
+Fewster--Verch formulate these notions for a supplied functor and supplied
+probe couplings \cite{BFV,FewsterVerch,FewsterVerchMeasurements}. & That every
+finite central direction has a source or induced probe effect separating it. \\
+Process tomography. & Choi--Jamiolkowski tomography reconstructs a channel
+relative to an informationally complete input/effect domain
+\cite{Jamiolkowski,Choi,ChuangNielsenProcess}. & That the admitted physical
+preparations and effects include the missing finite central directions. \\
+Relative entropy, exact recovery, and crossed-product entropy. & These are
+positive results for specified algebras, channels, traces, and state families
+\cite{ArakiRelativeEntropy,Petz,JLMS,HarlowRT,DHW,WittenCrossed,LongoWitten,
+CLPW,CPW}. & That an absolute finite-center entropy term or geometric area
+scale has been calibrated when the data include only relative or represented
+quantities. \\
+\bottomrule
+\end{longtable}
+
+The last column is not a defect in the cited theorems.  It is the boundary of
+this note.  A theory of quantum gravity may have a compelling physical reason
+for any of these exits: factor-valued local algebras, a gauge quotient, a
+superselection analysis retaining the relevant central characters, a split
+inclusion, or an absolute trace/area normalization.  The point is that such a
+reason must appear as an assumption or theorem.  It is not generated by data
+that were, by construction, constant on the finite-central comparison pair.
+
+\section{Novelty Boundary by Claim}
+
+\paragraph{Support and finite cardinality.}
+The closest known ingredients are standard central support and quotient facts
+for von Neumann algebras.  The new claim is not that central support exists, but
+that a quotient-visible operational package cannot reconstruct full ambient
+support, the kernel interpretation, or finite central rank unless the package
+contains a central separator or an exclusion rule.  The \(q=0\) versus
+\(q=2\) comparison tests support totality; the \(q=2\) versus \(q=3\)
+comparison tests finite central cardinality and the two-atom predicate.
+
+\paragraph{Tensor factorization.}
+The closest positive result is the split property and W*-tensor-product
+independence.  The note's contribution is the converse fiber formulation for
+operational data: generated-algebra correlations reconstruct only the
+multiplication image, so the unquotiented spatial tensor coordinate is
+identified exactly when the tested multiplication kernel vanishes.  This is a
+useful warning for operational reconstructions because full tomography of
+\(\A\vee\B\) is still tomography of the quotient by \(\ker\mu\), not of an
+arbitrary proposed tensor product.
+
+\paragraph{Sectors and locally covariant data.}
+DHR/DR and BFV/Fewster--Verch are positive frameworks for supplied data.  The
+finite-center point is that restriction, retraction, or copied-center
+amplification can make distinct central-character or finite-center theories
+look identical to those supplied data.  If a reconstruction theorem claims the
+full center anyway, it must include a sector-character separator, a probe
+effect/source separating the center, or an exclusion principle forbidding the
+comparison pair.
+
+\paragraph{Broadcasting and copying.}
+No-broadcasting theorems rule out a universal physical process broadcasting
+noncommuting mixed states.  This note does not strengthen that theorem.  Its
+finite centers are classical once included in the algebra; the obstruction is
+that represented, retracted, or restricted data may have omitted the central
+coordinate before any copying question is posed.  The repair is therefore
+central separation or an exclusion principle, not a broadcasting channel.
+
+\paragraph{Horizon entropy coefficient.}
+Bekenstein--Hawking, FLM/JLMS, OAQEC, and gravitational crossed-product papers
+provide positive entropy formulas for specified geometric and algebraic
+normalizations.  The finite-center descent statement is narrower: relative
+entropy, exact recovery, or a represented Type II algebra does not by itself
+identify an absolute finite-center counterterm if an affine, trace-weight, or
+counting residual has nonzero area density and is invisible to the data.  Thus
+the exact one-quarter coefficient requires an identifiable calibration or a
+proof that every same-data residual has zero density.
+
+\paragraph{Lean core.}
+The Lean file is not a formal proof of AQFT.  Its novelty status is modest but
+useful: it mechanically checks the finite logical fibers, quotient-factored
+no-go lemmas, diagonal tensor-kernel witness, and entropy-density descent
+criterion.  This removes the risk that the finite part of the argument is a
+verbal sleight of hand.  The infinite-dimensional reductions remain standard
+mathematical background, cited rather than formalized.
+
+\section{What Was Cut From the Long Manuscript}
+
+The longer manuscript contains many variants: modular-core refinements, OS
+specializations, process-tomography examples, local-probe protocols,
+sector-character wrappers, affine/JLMS calibration variants, and several Lean
+wrappers.  They are omitted here unless they are needed for one of the two main
+statements or for the three countermodels.  This is intentional.  A referee for
+the short note should have to check only the following chain:
+\begin{enumerate}
+\item the fiber criterion in Proposition \ref{prop:fiber};
+\item the standard operator-algebra facts cited in the assumption ledger;
+\item the row-by-row finite-center calculation in Theorem \ref{thm:main};
+\item the three same-data witnesses;
+\item the coordinatewise tensor/entropy-density criterion in Theorem
+      \ref{thm:tensor-entropy};
+\item the Lean file as a finite logical sanity check, not as evidence for any
+      analytic AQFT premise.
+\end{enumerate}
+Everything else is deferred to the longer manuscript or to future work.  In
+particular, this note does not attempt to prove a microscopic origin of a
+finite center, does not prove that physical local algebras fail to be factors,
+does not derive the Bekenstein--Hawking coefficient, and does not classify all
+locally covariant theories.  It gives a finite-central obstruction that a
+positive reconstruction theorem must evade explicitly.
+
+\section{Lean Core}
+
+The accompanying Lean 4 file
+\[
+  \texttt{formalization/FiniteCenterSupport.lean}
+\]
+does not formalize AQFT, Tomita--Takesaki theory, DHR sectors, or crossed
+products.  It formalizes the finite logical kernels that remain after the
+standard analytic hypotheses reduce the question to finite central fibers.
+The most relevant named statements are:
+\[
+\begin{gathered}
+\texttt{quotientFactoredInvariantNoGoCore},\\
+\texttt{quotientFactoredPropertyNoGoCore},\\
+\texttt{quotientVisibleUniversalNoGoCore},\\
+\texttt{finiteCenterOperationalCompletenessCore},\\
+\texttt{finiteCenterLocalNetClassificationCore},\\
+\texttt{localNetFamilyEntropyDescentCore},\\
+\texttt{refereeTensorEntropyCriterionCore},\\
+\texttt{universalFiniteCentralWitnessesCore}.
+\end{gathered}
+\]
+These lemmas mechanically check the fiber criterion, quotient-factored
+nonreconstruction, finite support coverage, finite coordinate separation,
+diagonal multiplication kernels, finite process-table completeness, and
+entropy-density descent.  The file therefore verifies the finite part of the
+paper's logic while leaving the infinite-dimensional operator-algebraic inputs
+to the cited literature.
+
+\section{Conclusion}
+
+The finite-central obstruction is small but sharp.  Operational data that have
+already passed through a quotient, representation, retraction, generated
+algebra, restricted test family, or incomplete calibration cannot reconstruct a
+full-algebra target that changes inside the corresponding data fiber.  For
+emergent-spacetime reconstructions, this means that tensor factorization and
+the exact horizon entropy coefficient require identifiable extra hypotheses:
+split/tensor independence for the former, and trace/area/entropy calibration
+with zero same-data density residual for the latter.  Those hypotheses may be
+physically correct in a given theory.  The theorem says only that they must be
+present and checkable; they cannot be replaced by operational data that have
+already forgotten the finite center.
+
+\begin{thebibliography}{99}
+\raggedright
+
+\bibitem{Sakai}
+S. Sakai, \emph{\(C^*\)-Algebras and \(W^*\)-Algebras}, Springer, 1971.
+
+\bibitem{TakesakiI}
+M. Takesaki, \emph{Theory of Operator Algebras I}, Springer, 1979.
+
+\bibitem{TakesakiII}
+M. Takesaki, \emph{Theory of Operator Algebras II}, Springer, 2003.
+
+\bibitem{TakesakiDuality}
+M. Takesaki,
+``Duality for crossed products and the structure of von Neumann algebras of
+type III,'' Acta Math. \textbf{131} (1973) 249--310,
+doi:10.1007/BF02392041.
+
+\bibitem{OS1}
+K. Osterwalder and R. Schrader,
+``Axioms for Euclidean Green's functions,''
+Commun. Math. Phys. \textbf{31} (1973) 83--112,
+doi:10.1007/BF01645738.
+
+\bibitem{OS2}
+K. Osterwalder and R. Schrader,
+``Axioms for Euclidean Green's functions II,''
+Commun. Math. Phys. \textbf{42} (1975) 281--305,
+doi:10.1007/BF01608978.
+
+\bibitem{HaagKastler}
+R. Haag and D. Kastler,
+``An algebraic approach to quantum field theory,''
+J. Math. Phys. \textbf{5} (1964) 848--861,
+doi:10.1063/1.1704187.
+
+\bibitem{BFV}
+R. Brunetti, K. Fredenhagen and R. Verch,
+``The generally covariant locality principle -- A new paradigm for local
+quantum physics,''
+Commun. Math. Phys. \textbf{237} (2003) 31--68,
+\href{https://arxiv.org/abs/math-ph/0112041}{arXiv:math-ph/0112041},
+doi:10.1007/s00220-003-0815-7.
+
+\bibitem{FewsterVerch}
+C. J. Fewster and R. Verch,
+``Dynamical locality and covariance: What makes a physical theory the same in
+all spacetimes?''
+Ann. Henri Poincare \textbf{13} (2012) 1613--1674,
+\href{https://arxiv.org/abs/1106.4785}{arXiv:1106.4785},
+doi:10.1007/s00023-012-0165-0.
+
+\bibitem{FewsterVerchMeasurements}
+C. J. Fewster and R. Verch,
+``Quantum fields and local measurements,''
+Commun. Math. Phys. \textbf{378} (2020) 851--889,
+\href{https://arxiv.org/abs/1810.06512}{arXiv:1810.06512},
+doi:10.1007/s00220-020-03800-6.
+
+\bibitem{DHR1}
+S. Doplicher, R. Haag and J. E. Roberts,
+``Fields, observables and gauge transformations I,''
+Commun. Math. Phys. \textbf{13} (1969) 1--23,
+doi:10.1007/BF01645267.
+
+\bibitem{DHR2}
+S. Doplicher, R. Haag and J. E. Roberts,
+``Local observables and particle statistics I,''
+Commun. Math. Phys. \textbf{23} (1971) 199--230,
+doi:10.1007/BF01877742.
+
+\bibitem{DRDuality}
+S. Doplicher and J. E. Roberts,
+``A new duality theory for compact groups,''
+Invent. Math. \textbf{98} (1989) 157--218,
+doi:10.1007/BF01388849.
+
+\bibitem{DR}
+S. Doplicher and J. E. Roberts,
+``Why there is a field algebra with a compact gauge group describing the
+superselection structure in particle physics,''
+Commun. Math. Phys. \textbf{131} (1990) 51--107,
+doi:10.1007/BF02097680.
+
+\bibitem{DoplicherLongoSplit}
+S. Doplicher and R. Longo,
+``Standard and split inclusions of von Neumann algebras,''
+Invent. Math. \textbf{75} (1984) 493--536,
+doi:10.1007/BF01388641.
+
+\bibitem{BuchholzWichmann}
+D. Buchholz and E. H. Wichmann,
+``Causal independence and the energy-level density of states in local quantum
+field theory,'' Commun. Math. Phys. \textbf{106} (1986) 321--344,
+doi:10.1007/BF01454978.
+
+\bibitem{WernerSplit}
+R. F. Werner,
+``Local preparability of states and the split property in quantum field
+theory,'' Lett. Math. Phys. \textbf{13} (1987) 325--329,
+doi:10.1007/BF00401161.
+
+\bibitem{Jamiolkowski}
+A. Jamio\l{}kowski,
+``Linear transformations which preserve trace and positive semidefiniteness of
+operators,'' Rep. Math. Phys. \textbf{3} (1972) 275--278,
+doi:10.1016/0034-4877(72)90011-0.
+
+\bibitem{Choi}
+M.-D. Choi,
+``Completely positive linear maps on complex matrices,''
+Linear Algebra Appl. \textbf{10} (1975) 285--290,
+doi:10.1016/0024-3795(75)90075-0.
+
+\bibitem{ChuangNielsenProcess}
+I. L. Chuang and M. A. Nielsen,
+``Prescription for experimental determination of the dynamics of a quantum
+black box,'' J. Mod. Opt. \textbf{44} (1997) 2455--2467,
+\href{https://arxiv.org/abs/quant-ph/9610001}{arXiv:quant-ph/9610001},
+doi:10.1080/09500349708231894.
+
+\bibitem{NoBroadcasting}
+H. Barnum, C. M. Caves, C. A. Fuchs, R. Jozsa and B. Schumacher,
+``Noncommuting mixed states cannot be broadcast,''
+Phys. Rev. Lett. \textbf{76} (1996) 2818--2821,
+\href{https://arxiv.org/abs/quant-ph/9511010}{arXiv:quant-ph/9511010},
+doi:10.1103/PhysRevLett.76.2818.
+
+\bibitem{ArakiRelativeEntropy}
+H. Araki,
+``Relative entropy of states of von Neumann algebras,''
+Publ. Res. Inst. Math. Sci. \textbf{11} (1976) 809--833,
+doi:10.2977/prims/1195191148.
+
+\bibitem{Petz}
+D. Petz,
+``Sufficient subalgebras and the relative entropy of states of a von Neumann
+algebra,'' Commun. Math. Phys. \textbf{105} (1986) 123--131,
+doi:10.1007/BF01212345.
+
+\bibitem{Bekenstein}
+J. D. Bekenstein,
+``Black holes and entropy,'' Phys. Rev. D \textbf{7} (1973) 2333--2346,
+doi:10.1103/PhysRevD.7.2333.
+
+\bibitem{Hawking}
+S. W. Hawking,
+``Particle creation by black holes,''
+Commun. Math. Phys. \textbf{43} (1975) 199--220,
+doi:10.1007/BF02345020.
+
+\bibitem{FLM}
+T. Faulkner, A. Lewkowycz and J. Maldacena,
+``Quantum corrections to holographic entanglement entropy,''
+JHEP \textbf{11} (2013) 074,
+\href{https://arxiv.org/abs/1307.2892}{arXiv:1307.2892},
+doi:10.1007/JHEP11(2013)074.
+
+\bibitem{JLMS}
+D. L. Jafferis, A. Lewkowycz, J. Maldacena and S. J. Suh,
+``Relative entropy equals bulk relative entropy,''
+JHEP \textbf{06} (2016) 004,
+\href{https://arxiv.org/abs/1512.06431}{arXiv:1512.06431},
+doi:10.1007/JHEP06(2016)004.
+
+\bibitem{HarlowRT}
+D. Harlow,
+``The Ryu--Takayanagi formula from quantum error correction,''
+Commun. Math. Phys. \textbf{354} (2017) 865--912,
+\href{https://arxiv.org/abs/1607.03901}{arXiv:1607.03901},
+doi:10.1007/s00220-017-2904-z.
+
+\bibitem{DHW}
+X. Dong, D. Harlow and A. C. Wall,
+``Reconstruction of bulk operators within the entanglement wedge in
+gauge-gravity duality,'' Phys. Rev. Lett. \textbf{117} (2016) 021601,
+\href{https://arxiv.org/abs/1601.05416}{arXiv:1601.05416},
+doi:10.1103/PhysRevLett.117.021601.
+
+\bibitem{WittenCrossed}
+E. Witten,
+``Gravity and the crossed product,''
+JHEP \textbf{10} (2022) 008,
+\href{https://arxiv.org/abs/2112.12828}{arXiv:2112.12828},
+doi:10.1007/JHEP10(2022)008.
+
+\bibitem{LongoWitten}
+R. Longo and E. Witten,
+``A note on continuous entropy,''
+\href{https://arxiv.org/abs/2202.03357}{arXiv:2202.03357}.
+
+\bibitem{CLPW}
+V. Chandrasekaran, R. Longo, G. Penington and E. Witten,
+``An algebra of observables for de Sitter space,''
+JHEP \textbf{02} (2023) 082,
+\href{https://arxiv.org/abs/2206.10780}{arXiv:2206.10780},
+doi:10.1007/JHEP02(2023)082.
+
+\bibitem{CPW}
+V. Chandrasekaran, G. Penington and E. Witten,
+``Large \(N\) algebras and generalized entropy,''
+JHEP \textbf{04} (2023) 009,
+\href{https://arxiv.org/abs/2209.10454}{arXiv:2209.10454},
+doi:10.1007/JHEP04(2023)009.
+
+\end{thebibliography}
+
+\end{document}
