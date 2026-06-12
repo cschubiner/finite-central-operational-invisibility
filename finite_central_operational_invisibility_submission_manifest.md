@@ -19,6 +19,8 @@
   `docs/finite_center_lean_verification_archive.tar.gz`
 - External-review request:
   `docs/finite_central_operational_invisibility_external_review_request.md`
+- Public verification package:
+  <https://github.com/cschubiner/finite-central-operational-invisibility>
 - Lean core: `formalization/FiniteCenterSupport.lean`
 - Repository Lean core path after push:
   <https://github.com/cschubiner/quantum-relativity-unification-lab/blob/main/formalization/FiniteCenterSupport.lean>
@@ -26,9 +28,8 @@
   <https://github.com/cschubiner/quantum-relativity-unification-lab/tree/main/docs/finite_center_lean_verification>
 - Repository Lean archive tarball path after push:
   <https://github.com/cschubiner/quantum-relativity-unification-lab/blob/main/docs/finite_center_lean_verification_archive.tar.gz>
-- Repository visibility at freeze check: `PRIVATE`; unauthenticated external
-  review requires either making the relevant repository paths public or moving
-  the frozen artifacts to a public host.
+- Source repository visibility at freeze check: `PRIVATE`.
+- Public package repository visibility at public-host check: `PUBLIC`.
 - Base commit inspected while preparing this package:
   `d41d5934b59ca1cf148f0f10245e3f1899192989`
 - Artifact identity is fixed by the SHA-256 values below; the Git commit hash is
@@ -199,10 +200,10 @@ retracted, restricted, or incompletely calibrated.
 ## Submission Caveats
 
 - The current PDF is a working repository artifact, not a posted arXiv record.
-- The repository Lean links point to tracked paths on `main`, but the repository
-  was private at freeze check.  If exact repository-state reproducibility is
-  desired in addition to artifact hashes, cite the pushed commit containing this
-  manifest.  If unauthenticated external review is desired, first make the
-  relevant paths public or move the frozen artifacts to a public host.
+- The source-repository Lean links point to tracked paths on `main`, but the
+  source repository was private at freeze check.  Unauthenticated external
+  review should use the public verification package linked above.  If exact
+  source-repository reproducibility is desired in addition to artifact hashes,
+  cite the pushed commit containing this manifest.
 - Remaining TeX warnings are underfull boxes in tables; the latest log scan
   found no overfull boxes, undefined references/citations, or TeX errors.
