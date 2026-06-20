@@ -13,6 +13,9 @@ For the narrow theorem residue to classify directly, use
 `team1_finite_center_residue_theorem_note.md`.
 For the constructive positive exit from that residue, use
 `team1_positive_accountability_theorem_note.md`.
+The shortest PDF version is
+`team1_positive_accountability_short_note.pdf`, with source
+`team1_positive_accountability_short_note.tex`.
 For the current internal novelty/publication verdict, use
 `team1_self_adjudication_decision_memo.md`.
 
@@ -36,6 +39,8 @@ Additional non-frozen review metadata on `main`:
 - `team1_standard_theorem_crosswalk.md`
 - `team1_finite_center_residue_theorem_note.md`
 - `team1_positive_accountability_theorem_note.md`
+- `team1_positive_accountability_short_note.tex`
+- `team1_positive_accountability_short_note.pdf`
 - `team1_self_adjudication_decision_memo.md`
 - `.github/workflows/verify-frozen-package.yml`
 - `finite_central_operational_invisibility_SHA256SUMS.txt`
@@ -102,5 +107,7 @@ The shortest theorem target is in
 `team1_finite_center_residue_theorem_note.md`.
 The constructive accountability criterion is in
 `team1_positive_accountability_theorem_note.md`.
+The compact referee-facing PDF is
+`team1_positive_accountability_short_note.pdf`.
 The internal publication posture is in
 `team1_self_adjudication_decision_memo.md`.

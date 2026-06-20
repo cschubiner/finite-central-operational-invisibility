@@ -4,6 +4,10 @@ Status: live referee-facing theorem note. This is not a frozen theorem artifact
 and does not modify either Team 1 manuscript, Lean archive, public mirror, or
 SHA manifest.
 
+Standalone TeX/PDF review version:
+`team1_positive_accountability_short_note.tex` /
+`team1_positive_accountability_short_note.pdf`.
+
 Purpose: state the constructive counterpart to the finite-center residue
 lemma. The negative papers show that quotient-visible data do not reconstruct
 hidden finite central rank or `q=2`. This note states the exact positive
