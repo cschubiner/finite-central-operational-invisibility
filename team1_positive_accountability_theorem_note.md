@@ -1,7 +1,8 @@
 # Team 1 Positive Accountability Theorem Note
 
 Status: live referee-facing theorem note. This is not a frozen theorem artifact
-and does not modify the frozen manuscript, Lean archive, or SHA manifest.
+and does not modify either Team 1 manuscript, Lean archive, public mirror, or
+SHA manifest.
 
 Purpose: state the constructive counterpart to the finite-center residue
 lemma. The negative papers show that quotient-visible data do not reconstruct
@@ -79,7 +80,86 @@ Consequently:
    `N_R`. No rule using only the declared `R`-visible data can reconstruct the
    hidden cardinality or the predicate `q=2`.
 
-## Proof Skeleton
+## Theorem A: Finite Accountability Quotient
+
+Let `F` be finite, let `Z_F = ell_infty(F)`, and let
+`V_F = Z_F / C1`. Let `R : V_F -> W` be any declared finite-dimensional
+readout map. Let `D_R` denote any data record that depends on a central
+contrast only through `R`.
+
+Then:
+
+1. `D_R` factors uniquely through `V_F / ker R`.
+2. Every invariant of the finite center that is not constant on cosets of
+   `ker R` is not reconstructible from `D_R`.
+3. The full finite-center cardinality `q` is reconstructible from `D_R` only
+   under the additional premises that `ker R = 0` and the represented finite
+   center is the full physical center rather than a quotient, null sector,
+   gauge reduction, or hidden extension.
+4. Under those additional premises, `q = dim(V_F / ker R) + 1`.
+
+### Proof
+
+The first statement is the universal property of the quotient by a kernel:
+if two contrasts `v, v' in V_F` satisfy `R(v) = R(v')`, then `v - v' in ker R`,
+so every record built from `R` assigns them the same value. Hence the record
+factors through `V_F / ker R`, and it cannot separate any target that varies
+inside a coset of `ker R`.
+
+The finite center `ell_infty(F)` has one atomic coordinate for each element of
+`F`. After quotienting constants, its contrast space has dimension `q - 1`.
+If `ker R = 0`, the readout is faithful on this contrast space, so the declared
+data determine `dim V_F` and therefore `q = dim V_F + 1`. If, in addition, the
+admissibility premise says the represented center is the full physical center,
+this recovered cardinality is the physical finite-center cardinality.
+
+If `ker R != 0`, choose a nonzero null contrast. Refining or splitting the
+hidden finite center inside that null direction changes the hidden central
+cardinality while preserving every `R`-visible record. If the represented
+center is only a quotient or admissible subcenter of a larger hidden finite
+center, the same conclusion holds even when `R` is faithful on the represented
+quotient: `R` recovers the accounted quotient, not the unaccounted extension.
+Thus full cardinality is not a consequence of the readout alone.
+
+## Corollary B: Binary Rank Needs Two Premises
+
+A conclusion `q = 2` from finite-center readout data requires both:
+
+1. one-dimensional accounted contrast, `dim(V_F / ker R) = 1`; and
+2. a maximality, admissibility, direct-measurement, or finite-alphabet theorem
+   identifying the accounted contrast as the full physical finite center.
+
+The first premise alone says only that the declared experiment has one
+accounted central contrast. It does not rule out a larger finite center with
+extra null, gauge, excluded, or unrepresented contrasts.
+
+## Relation To Standard Sufficiency
+
+This note should be easy to demote if the literature already contains the exact
+translation. In standard statistical language, `R` is the declared experiment or
+coarse graining, `ker R` is the information discarded by that experiment, and
+the theorem says that hidden finite-center cardinality is recoverable only when
+the experiment is sufficient for that target. In Petz-style operator-algebraic
+language, the same boundary is phrased relative to a declared subalgebra or
+channel: recovery is relative to the supplied object and does not by itself
+certify maximality against hidden finite central extensions.
+
+The Team 1 contribution, if any, is therefore not the quotient calculation. It
+is the black-hole/AQFT claim boundary: entropy, recovery, modular, sector, and
+locally covariant records determine `q` or `q=2` only after the finite-center
+accountability premise has been supplied in standard-language form.
+
+## Referee-Grade Claim Boundary
+
+| Claim | Status |
+| --- | --- |
+| `R` determines `V_F / ker R`. | Elementary finite-dimensional theorem. |
+| `R` determines full `q` when `ker R=0` and the represented center is physically exhaustive. | Positive accountability criterion. |
+| One accounted contrast implies `q=2`. | False without maximality/admissibility/direct finite-alphabet input. |
+| Blackwell/Petz sufficiency may already contain the criterion. | Must be checked and demoted if exact. |
+| AQFT/OAQEC hypotheses may already supply maximality or faithful support. | External reviewer should identify the named hypothesis if so. |
+
+## Finite Proof Checklist
 
 The proof is finite-dimensional linear algebra plus the ordinary
 central-projection quotient fact.
@@ -129,12 +209,18 @@ not another verifier.
 
 ## Primary Anchors
 
-- Blackwell comparison of experiments: sufficiency is relative to a declared
+- Blackwell, "Comparison of Experiments", Proceedings of the Second Berkeley
+  Symposium on Mathematical Statistics and Probability, 1951; and Blackwell,
+  "Equivalent Comparisons of Experiments", Annals of Mathematical Statistics
+  24 (1953), 265-272: sufficiency/comparison is relative to a declared
   experiment or decision task.
-- Petz sufficiency: recovery/equality of relative entropy is relative to a
-  declared subalgebra or channel.
+- Petz, "Sufficient Subalgebras and the Relative Entropy of States of a von
+  Neumann Algebra", Communications in Mathematical Physics 105 (1986),
+  123-131: recovery/equality of relative entropy is relative to a declared
+  subalgebra or channel.
 - Von Neumann algebra ideal theory: ultraweakly closed two-sided ideals are
-  central-projection summands.
+  central-projection summands; see for example Lurie, Math 261y Lecture 9,
+  Proposition 1.
 - BFV LCQFT, Fewster-Verch dynamical locality, DHR/DR reconstruction, and
   JLMS/OAQEC: positive reconstruction theorems reconstruct what their
   hypotheses supply; they do not automatically add a missing finite-center
