@@ -63,6 +63,11 @@ For the concrete discrete-spectroscopy alphabet boundary test, see
 TeX/PDF review version is
 `team1_discrete_spectroscopy_alphabet_boundary_short_note.tex` /
 `team1_discrete_spectroscopy_alphabet_boundary_short_note.pdf`.
+For the concrete local probe-measurement center-separation test, see
+`team1_probe_measurement_center_separation_note.md`; the compact TeX/PDF
+review version is
+`team1_probe_measurement_center_separation_short_note.tex` /
+`team1_probe_measurement_center_separation_short_note.pdf`.
 
 ## Positive-Exit Adjudication Map
 
@@ -131,6 +136,16 @@ area-quantization hypothesis that forces `q=2` without a finite-alphabet law or
 direct resolved line measurement; otherwise the row becomes the explicit
 positive-exit criterion that spectroscopy helps only when it is injective on
 the binary-vs-nonbinary fiber.
+
+The local measurement/probe row has now been sharpened to a concrete
+center-separation test in
+`team1_probe_measurement_center_separation_note.md`, with the standalone
+short note `team1_probe_measurement_center_separation_short_note.pdf`.
+A reviewer can kill it by naming the Fewster-Verch, LCQFT, or AQFT hypothesis
+that makes the induced probe effects automatically central-tomographically
+complete; otherwise the row becomes the explicit positive-exit criterion that
+measurements help only when their induced effects separate the finite central
+contrast.
 
 For a two-week frontier push, Team 1 should attempt to turn one row above into
 a precise theorem-or-demotion statement:

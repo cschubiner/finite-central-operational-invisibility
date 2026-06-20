@@ -1,0 +1,200 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1.12in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\I}{\mathcal I}
+
+\setlength{\emergencystretch}{3em}
+\hypersetup{
+  pdftitle={Probe Measurements Force Finite Centers Only Through Center-Separating Effects},
+  pdfsubject={Fewster-Verch measurements, finite centers, local probes, tomography},
+  pdfkeywords={Fewster-Verch, local measurement, finite centers, probe effects, tomography, AQFT}
+}
+
+\title{Probe Measurements Force Finite Centers\\
+Only Through Center-Separating Effects}
+\author{}
+\date{Live review note of June 20, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Local probe-measurement frameworks in algebraic quantum field theory provide a
+causal and covariant way to define induced system observables and instruments.
+They are therefore a possible positive route out of finite-center
+nonidentifiability.  This note isolates the finite-central boundary.  A
+probe/instrument family reconstructs a finite central target exactly when the
+induced system effects separate the corresponding central contrast fibers.
+If all induced effects factor through a quotient, retraction, or
+coarse-graining, then finite adaptive composition preserves that blindness.
+Thus a measurement formalism alone does not force hidden finite central rank or
+the predicate \(q=2\); the supplied probe effects must be informationally
+complete for that target, or a physical quotient/exclusion axiom must remove
+the hidden center.
+\end{abstract}
+
+\paragraph{Status.}
+This is non-frozen external-review metadata for Team 1.  It is intended as a
+small claim that a local-measurement, LCQFT, or AQFT reviewer can classify as
+known, false, missing-hypothesis, or useful.  It does not modify any frozen
+Team 1 manuscript, Lean archive, public mirror manifest, or SHA-256 package.
+
+\section{Primary sources}
+
+The boundary below was checked against the Fewster--Verch local measurement
+framework \cite{FewsterVerchMeasurements}, the Fewster--Verch review of
+measurement in QFT \cite{FewsterVerchReview}, the LCQFT/dynamical-locality
+setting \cite{FewsterVerchDynamical}, and recent work on measurements in the
+Fewster--Verch framework \cite{MandryschNavascues}.  These works are used here
+as positive measurement constructions, not as claims that finite-center
+separation is absent from physics.
+
+\section{Finite central readout}
+
+Let \(Z=\ell^\infty(\{1,\ldots,q\})\) be a finite center.  Its real contrast
+space is
+\[
+  V_q=\left\{x=(x_1,\ldots,x_q)\in\R^q:\sum_i x_i=0\right\}.
+\]
+A declared family of probe preparations, couplings, and probe readouts induces
+system effects.  Restricting those induced effects to \(Z\) gives vectors
+\(e_\alpha\in\R^q\), hence central contrast functionals
+\[
+  x\longmapsto \langle e_\alpha,x\rangle .
+\]
+Let
+\[
+  N=\{x\in V_q:\langle e_\alpha,x\rangle=0
+       \hbox{ for every supplied induced effect }\alpha\}.
+\]
+
+\begin{theorem}[probe effect-span criterion]
+\label{thm:effect-span}
+Let \(T:V_q\to X\) be a finite central target.  Then \(T\) is reconstructible
+from the supplied probe-measurement data if and only if \(T\) is constant on
+cosets of \(N\):
+\[
+  x-y\in N\quad\Longrightarrow\quad T(x)=T(y).
+  \tag{1}
+\]
+In particular, the full finite central contrast is reconstructible exactly
+when
+\[
+  \Span\{e_\alpha-\bar e_\alpha{\bf 1}\}_\alpha = V_q^*,
+  \qquad
+  \bar e_\alpha=\frac1q\sum_i(e_\alpha)_i.
+  \tag{2}
+\]
+\end{theorem}
+
+\begin{proof}
+The supplied central measurement record is the linear map
+\[
+  R:V_q\to\R^\I,\qquad R(x)_\alpha=\langle e_\alpha,x\rangle,
+\]
+whose kernel is \(N\).  A target is a function of the measurement record
+exactly when it is constant on the fibers of \(R\), which is (1).  Full
+contrast reconstruction means that \(R\) is injective on \(V_q\), equivalently
+that the restrictions of the induced effects span \(V_q^*\), which is (2).
+\end{proof}
+
+\section{Adaptive protocols}
+
+\begin{proposition}[adaptivity does not create a missing central separator]
+\label{prop:adaptive}
+Suppose each stage of a finite adaptive protocol has induced central effects
+that factor through a fixed central coarse-graining
+\[
+  C:\{1,\ldots,q\}\to\{1,\ldots,r\}.
+\]
+Then every joint outcome probability of the finite protocol factors through
+the same coarse-graining.  Consequently no target that varies inside a
+\(C\)-fiber is reconstructible from the protocol.
+\end{proposition}
+
+\begin{proof}
+At each stage, conditioning on previous outcomes may choose a different
+coupling, probe state, or probe effect, but by hypothesis the induced central
+functional is constant on the fibers of \(C\).  Products, sums, and conditional
+branches of functions constant on \(C\)-fibers remain constant on
+\(C\)-fibers.  Induction over the finitely many stages shows that every joint
+outcome probability is constant on \(C\)-fibers.  Any target that changes
+within such a fiber therefore fails the fiber-constancy condition of
+Theorem~\ref{thm:effect-span}.
+\end{proof}
+
+\section{Positive exits and referee question}
+
+\begin{center}
+\begin{tabular}{p{0.35\linewidth}p{0.50\linewidth}}
+\toprule
+Exit premise & Effect \\
+\midrule
+Center-separating induced effects & The probe observables span the central
+contrast dual \(V_q^*\), so finite central states are tomographically visible.
+\\
+\addlinespace
+Direct atomic central readout & Effects proportional to the minimal central
+projections \(e_i\) separate every central atom. \\
+\addlinespace
+Factor, quotient, or inadmissibility axiom & The hidden finite center is
+removed from the comparison class rather than reconstructed by measurement. \\
+\addlinespace
+Full physical tomography assumption & If the theorem assumes tomography for
+the full physical algebra, finite central separation is part of the hypothesis.
+\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The exact external question is:
+
+\begin{quote}
+Does the local probe-measurement setup in the target setting supply induced
+system effects that separate the finite central contrasts, or does it only
+provide a causal measurement framework whose chosen effects may still factor
+through a quotient or retraction?
+\end{quote}
+
+If the first holds, the measurement scheme is a positive exit from the Team 1
+finite-center obstruction.  If the second holds, the framework alone does not
+force hidden finite central rank or \(q=2\).
+
+\begin{thebibliography}{9}
+
+\bibitem{FewsterVerchMeasurements}
+C. J. Fewster and R. Verch,
+\emph{Quantum fields and local measurements},
+Commun. Math. Phys. 378 (2020), 851--889,
+\href{https://arxiv.org/abs/1810.06512}{arXiv:1810.06512}.
+
+\bibitem{FewsterVerchReview}
+C. J. Fewster and R. Verch,
+\emph{Measurement in Quantum Field Theory},
+\href{https://arxiv.org/abs/2304.13356}{arXiv:2304.13356}.
+
+\bibitem{FewsterVerchDynamical}
+C. J. Fewster and R. Verch,
+\emph{Dynamical locality and covariance: What makes a physical theory the same in all spacetimes?},
+Ann. Henri Poincare 13 (2012), 1613--1674,
+\href{https://arxiv.org/abs/1106.4785}{arXiv:1106.4785}.
+
+\bibitem{MandryschNavascues}
+J. Mandrysch and M. Navascu\'es,
+\emph{Quantum Field Measurements in the Fewster--Verch Framework},
+\href{https://arxiv.org/abs/2411.13605}{arXiv:2411.13605}.
+
+\end{thebibliography}
+
+\end{document}
