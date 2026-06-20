@@ -43,6 +43,7 @@ Public GitHub comments may be linked directly.
 | `docs/team1_finite_center_residue_theorem_note.md` | Response concerns the negative same-data finite-center residue. | Patch residue statement or comparison class first; avoid adding downstream physics claims. |
 | `docs/team1_standard_theorem_crosswalk.md` | Response gives a theorem name, missing hypothesis, or demotion lane. | Add the exact source under the matching standard theorem row. |
 | `docs/team1_referee_claim_boundary_matrix.md` | Response classifies a claim as known, false, too broad, or missing-hypothesis. | Update the matrix row and recommended action. |
+| `team1_lcqft_constant_center_extension_note.md` | Response classifies the constant finite-center LCQFT/RCE construction as known, false, or killed by a named locality/center-reduction axiom. | Patch the lemma statement first; if false, record the named axiom and demote the LCQFT row before touching frozen artifacts. |
 | Public mirrors | Any source-facing patch changes reviewer-facing files. | Publish as non-frozen review metadata; never mutate frozen hashes unless maintainer explicitly unfreezes. |
 | Frozen manuscripts / Lean archives | Only written external feedback or maintainer unfreeze decision justifies mutation. | Log response first, patch narrowly, rebuild, and refresh manifests/hashes. |
 

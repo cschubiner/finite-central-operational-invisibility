@@ -41,6 +41,9 @@ is too broad.
 | Entropy calibration | Witten crossed product, `arXiv:2112.12828` | Do not claim new crossed-product entropy or black-hole entropy theorem. | Does the crossed-product additive constant leave the finite-center calibration freedom Team 1 isolates? |
 | Binary spectroscopy | Bekenstein-Mukhanov, `arXiv:gr-qc/9505012` | Do not claim entropy alone derives a binary alphabet. Resolved spectroscopy is a separate measurement route. | Is there a weaker standard axiom forcing `q=2` without a finite-alphabet law or direct binary measurement? |
 
+For the concrete LCQFT/RCE countermodel family now under review, see
+`team1_lcqft_constant_center_extension_note.md`.
+
 ## Positive-Exit Adjudication Map
 
 This is the current referee-grade fork.  A standard theorem kills or demotes
@@ -59,6 +62,11 @@ channel, or experiment.
 | Classical/quantum comparison | Blackwell; Le Cam; Petz; Shmaya; Buscemi | A theorem states exactly that the finite-center contrast target is recoverable iff the comparison channel/model is sufficient for that target. | Team 1 must demote the math to sufficiency theory, but the black-hole/AQFT warning may remain as an application note. |
 | Crossed-product entropy | Witten black-hole crossed product, `arXiv:2112.12828` | The construction fixes the same finite-center additive/calibration constant under the Team 1 hypotheses. | Entropy rows should be framed as calibration non-identifiability, not a new entropy theorem. |
 | Discrete spectroscopy | Bekenstein-Mukhanov, `arXiv:gr-qc/9505012` | There is a direct finite-alphabet measurement law, or a standard physical axiom deriving binary rank without one. | Entropy/recovery records alone do not force `q=2`; binary rank is a separate measurement or dynamics input. |
+
+The LCQFT row has now been sharpened to a concrete constant-center extension
+test in `team1_lcqft_constant_center_extension_note.md`.  A reviewer can
+kill it by naming the LCQFT axiom that forbids the construction; otherwise the
+row becomes an explicit BFV/time-slice/RCE non-identifiability example.
 
 For a two-week frontier push, Team 1 should attempt to turn one row above into
 a precise theorem-or-demotion statement:

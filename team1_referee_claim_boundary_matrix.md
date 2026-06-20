@@ -32,6 +32,8 @@ It is not a derivation of a microscopic quantum-gravity primitive.
 
 For the stricter standard-theorem demotion pass, see
 `team1_standard_theorem_crosswalk.md`.
+For the concrete LCQFT constant-center extension test, see
+`team1_lcqft_constant_center_extension_note.md`.
 
 ## Primary-Source Boundary Pass
 
@@ -53,7 +55,7 @@ reviewer attack, not priority claims.
 | Claim row | What would kill or demote it | What would survive |
 | --- | --- | --- |
 | Finite central support is invisible after quotienting | A standard von Neumann algebra theorem already states the exact iff descent criterion in the needed language. | A pedagogical short note remains only if it packages the theorem for black-hole/AQFT quotient data without overstating novelty. |
-| LCQFT/RCE records do not force hidden finite centers | A standard LCQFT or dynamical-locality hypothesis is already included in the manuscript's data and excludes the hidden completion. | If that hypothesis is extra, Team 1's result becomes a clean no-go identifying source-faithfulness/dynamical locality as the needed positive input. |
+| LCQFT/RCE records do not force hidden finite centers | A standard LCQFT, dynamical-locality, extended-locality, local-definiteness, center-reduction, or measurement hypothesis forbids the constant-center construction in `team1_lcqft_constant_center_extension_note.md`. | If that hypothesis is extra, Team 1 has a concrete BFV/time-slice/RCE non-identifiability example: quotient-visible records factor through a selected central character and forget the finite center. |
 | Sector/recovery/JLMS data reconstruct only inside supplied algebra | DHR/DR or OAQEC/JLMS has a theorem that recovers omitted central-character fibers or proves maximality from the stated data. | If no such maximality theorem applies, the finite-center obstruction is a useful boundary statement for algebra-relative reconstruction. |
 | Support/readout accountability is the missing route to finite rank | Blackwell/Petz sufficiency or another comparison theorem already states the rank-accountability criterion exactly. | Team 1 should cite and demote, but the binary-rank application can still be publishable as an explicit finite-center corollary if not already standard. |
 | Binary `q=2` is not forced by quotient-visible entropy/recovery data | A weaker accepted physical axiom derives `q=2` after accountability without a separate alphabet law or direct measurement. | If no such axiom is known, Paper 2's negative result is the strongest publishable Team 1 target: binary requires additional physics, not just quotient-visible data. |
@@ -78,7 +80,9 @@ recorded in the outreach tracker.
 Before sending, use `team1_standard_theorem_crosswalk.md` to avoid
 overclaiming anything already standard in operator algebra, LCQFT,
 superselection reconstruction, OAQEC, sufficiency theory, crossed-product
-entropy, or black-hole spectroscopy.
+entropy, or black-hole spectroscopy. For the LCQFT/dynamical-locality lane,
+send `team1_lcqft_constant_center_extension_note.md` as the concrete claim to
+classify.
 
 ## One-Week Frontier Work
 
