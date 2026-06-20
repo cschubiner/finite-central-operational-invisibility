@@ -51,6 +51,7 @@ No written external adjudication response has been logged yet.
 
 ## First Files To Read
 
+0. `team1_minimal_expert_classification_request.md`
 1. `team1_self_adjudication_decision_memo.md`
 2. `team1_referee_claim_boundary_matrix.md`
 3. `team1_standard_theorem_crosswalk.md`
@@ -60,9 +61,9 @@ No written external adjudication response has been logged yet.
 7. `team1_positive_accountability_theorem_note.md`
 8. `team1_external_review_response_triage.md`
 
-In the source repo these live under `docs/`. In the Paper 1 mirror most Team 1
+In the source repo these live under ``. In the Paper 1 mirror most Team 1
 review files live at repository root. In the Paper 2 mirror they live under
-`docs/`.
+``.
 
 ## Row-Level Attack Packet
 
