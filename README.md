@@ -11,6 +11,8 @@ For a stricter first-pass classification, use
 `team1_referee_claim_boundary_matrix.md` before reading the full manuscript.
 For the narrow theorem residue to classify directly, use
 `team1_finite_center_residue_theorem_note.md`.
+For the constructive positive exit from that residue, use
+`team1_positive_accountability_theorem_note.md`.
 For the current internal novelty/publication verdict, use
 `team1_self_adjudication_decision_memo.md`.
 
@@ -33,6 +35,7 @@ Additional non-frozen review metadata on `main`:
 - `team1_referee_claim_boundary_matrix.md`
 - `team1_standard_theorem_crosswalk.md`
 - `team1_finite_center_residue_theorem_note.md`
+- `team1_positive_accountability_theorem_note.md`
 - `team1_self_adjudication_decision_memo.md`
 - `.github/workflows/verify-frozen-package.yml`
 - `finite_central_operational_invisibility_SHA256SUMS.txt`
@@ -97,5 +100,7 @@ For reviewers likely to classify the result as standard, start with
 up front and isolates the possible publishable residue.
 The shortest theorem target is in
 `team1_finite_center_residue_theorem_note.md`.
+The constructive accountability criterion is in
+`team1_positive_accountability_theorem_note.md`.
 The internal publication posture is in
 `team1_self_adjudication_decision_memo.md`.
