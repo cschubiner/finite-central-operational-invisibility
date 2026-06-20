@@ -18,6 +18,8 @@ The shortest PDF version is
 `team1_positive_accountability_short_note.tex`.
 For the current internal novelty/publication verdict, use
 `team1_self_adjudication_decision_memo.md`.
+For maintainer-side response classification, use
+`team1_external_review_response_triage.md`.
 
 It contains only the frozen Team 1 package artifacts:
 
@@ -42,6 +44,7 @@ Additional non-frozen review metadata on `main`:
 - `team1_positive_accountability_short_note.tex`
 - `team1_positive_accountability_short_note.pdf`
 - `team1_self_adjudication_decision_memo.md`
+- `team1_external_review_response_triage.md`
 - `.github/workflows/verify-frozen-package.yml`
 - `finite_central_operational_invisibility_SHA256SUMS.txt`
 
@@ -111,3 +114,5 @@ The compact referee-facing PDF is
 `team1_positive_accountability_short_note.pdf`.
 The internal publication posture is in
 `team1_self_adjudication_decision_memo.md`.
+The response triage protocol is in
+`team1_external_review_response_triage.md`.
