@@ -43,6 +43,9 @@ correlations \(\gamma(\mu(x))\), then a candidate tensor-product element
 multiplication kernel.  In particular, a shared nontrivial central projection
 \(p\in\A\cap\B\) gives \(0\ne p\otimes(1-p)\in\ker\mu\).  Thus
 generated-algebra tomography is not, by itself, a split/tensor-factor theorem.
+The positive exit is exact: once split or W*-tensor-product independence makes
+\(\mu\) a normal isomorphism, \(\mu^{-1}\) recovers the unquotiented tensor
+coordinate.
 \end{abstract}
 
 \paragraph{Status.}
@@ -127,6 +130,28 @@ Because \(p\) is a common projection, multiplication sends it to
 this element and to \(0\).
 \end{proof}
 
+\begin{proposition}[split inverse recovers the tensor coordinate]
+\label{prop:split-inverse}
+Assume the target AQFT hypotheses supply a split inclusion, type-I
+interpolation, or W*-tensor-product independence strong enough that
+\[
+  \mu:\A\barotimes\B\longrightarrow\A\vee\B
+\]
+is a normal isomorphism.  Then full generated-algebra data determine the
+unquotiented spatial tensor-product coordinate: for every \(y\in\A\vee\B\), the
+unique tensor coordinate is \(\mu^{-1}(y)\).  Equivalently, for every
+\(x\in\A\barotimes\B\), the generated-algebra element \(\mu(x)\) determines
+\(x\).
+\end{proposition}
+
+\begin{proof}
+A normal isomorphism is injective and has a normal inverse onto its range,
+which is \(\A\vee\B\).  Hence if \(\mu(x)=\mu(x')\), then applying \(\mu^{-1}\)
+gives \(x=x'\).  Conversely, every generated-algebra element \(y\in\A\vee\B\)
+has exactly one preimage under \(\mu\), namely \(\mu^{-1}(y)\).  The kernel
+obstruction in Theorem~\ref{thm:multiplication-kernel} is therefore absent.
+\end{proof}
+
 \section{Positive exits}
 
 \begin{center}
@@ -135,7 +160,8 @@ this element and to \(0\).
 Exit premise & Effect \\
 \midrule
 Split inclusion or type-I interpolation & Supplies the standard
-W*-tensor-product independence structure for the bipartition. \\
+W*-tensor-product independence structure for the bipartition; when this makes
+\(\mu\) a normal isomorphism, Proposition~\ref{prop:split-inverse} applies. \\
 \addlinespace
 Normal isomorphism \(\A\barotimes\B\simeq\A\vee\B\) & Makes \(\mu\) injective;
 the inverse of \(\mu\) reconstructs the tensor coordinate. \\

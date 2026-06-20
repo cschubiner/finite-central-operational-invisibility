@@ -72,6 +72,27 @@ So generated-algebra data cannot distinguish the zero tensor-product element
 from this nonzero kernel direction. The hidden tensor coordinate is not a
 function of the generated-algebra record.
 
+## Proposition: Split Inverse Recovers The Tensor Coordinate
+
+There is an exact positive exit. If the target AQFT hypotheses supply a split
+inclusion, type-I interpolation, or W*-tensor-product independence strong
+enough that
+
+```text
+mu : A tensorbar B -> A vee B
+```
+
+is a normal isomorphism, then full generated-algebra data determine the
+unquotiented spatial tensor-product coordinate. For every generated-algebra
+element `y in A vee B`, the unique tensor coordinate is
+
+```text
+mu^{-1}(y).
+```
+
+Equivalently, if `mu(x) = mu(x')`, applying the normal inverse gives `x = x'`.
+The multiplication-kernel obstruction is gone precisely because `ker(mu)=0`.
+
 ## Positive Exits
 
 This is exactly where split theory helps. If the physical hypotheses supply a
@@ -111,5 +132,10 @@ concrete claim is:
 > their absence, correlations in the generated algebra reconstruct the
 > candidate spatial tensor product only modulo the multiplication kernel, and a
 > shared hidden finite center can live inside that kernel.
+
+The positive counterpart is equally explicit: once the target hypotheses make
+the multiplication map a normal isomorphism, the inverse map reconstructs the
+unquotiented tensor coordinate. Team 1's obstruction applies only before that
+split/kernel-separating premise has been supplied.
 
 That is the split/tensor-factor row for external adjudication.
