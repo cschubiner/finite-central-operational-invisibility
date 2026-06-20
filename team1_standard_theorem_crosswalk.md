@@ -48,6 +48,8 @@ For the concrete OAQEC/JLMS algebra-relative nonmaximality test, see
 TeX/PDF review version is
 `team1_oaqec_jlms_algebra_relative_nonmaximality_short_note.tex` /
 `team1_oaqec_jlms_algebra_relative_nonmaximality_short_note.pdf`.
+For the one-page OAQEC/JLMS question to send first, see
+`team1_oaqec_jlms_maximality_question.md`.
 For the concrete DHR/DR sector-character nonmaximality test, see
 `team1_dhr_dr_sector_character_nonmaximality_note.md`; the compact TeX/PDF
 review version is
@@ -201,6 +203,10 @@ a precise theorem-or-demotion statement:
 3. or cite the exact standard theorem that already states the row.
 
 Any of these is real progress.  Another internal consistency gate is not.
+The current sprint plan is
+`team1_two_week_theorem_or_demotion_sprint.md`; it prioritizes the
+OAQEC/JLMS maximality question because that row is closest to black-hole
+reconstruction practice and has the crispest missing-hypothesis form.
 
 ## Publication Triage
 

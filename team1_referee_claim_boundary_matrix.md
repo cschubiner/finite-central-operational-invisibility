@@ -41,6 +41,8 @@ For the concrete OAQEC/JLMS algebra-relative nonmaximality test, see
 `team1_oaqec_jlms_algebra_relative_nonmaximality_note.md` and the
 standalone review PDF
 `team1_oaqec_jlms_algebra_relative_nonmaximality_short_note.pdf`.
+For the one-page OAQEC/JLMS maximality classification request, see
+`team1_oaqec_jlms_maximality_question.md`.
 For the concrete DHR/DR sector-character nonmaximality test, see
 `team1_dhr_dr_sector_character_nonmaximality_note.md` and the standalone
 review PDF `team1_dhr_dr_sector_character_nonmaximality_short_note.pdf`.
@@ -87,6 +89,7 @@ reviewer attack, not priority claims.
 | Generated-algebra correlations do not force spatial tensor factors | A standard split inclusion, type-I interpolation, factor-valuedness, W*-tensor-product independence, or tested-kernel separator is part of the target setup; the concrete target is `team1_split_tensor_factor_boundary_note.md`. | Without that hypothesis, generated-algebra data reconstruct candidate tensor-product elements only modulo the multiplication kernel. |
 | LCQFT/RCE/probe records do not force hidden finite centers | A standard LCQFT, dynamical-locality, extended-locality, local-definiteness, center-reduction, or measurement hypothesis forbids the constant-center construction in `team1_lcqft_constant_center_extension_note.md`, or the induced probe effects are automatically central-tomographically complete as tested in `team1_probe_measurement_center_separation_note.md`. | If that hypothesis is extra, Team 1 has a concrete BFV/time-slice/RCE/probe-measurement non-identifiability example: quotient-visible records factor through a selected central character and forget the finite center. |
 | Sector/recovery/JLMS data reconstruct only inside supplied algebra | DHR/DR or OAQEC/JLMS has a theorem that recovers omitted central-character fibers or proves maximality from the stated data; for DHR/DR, the concrete target is `team1_dhr_dr_sector_character_nonmaximality_note.md`; for OAQEC/JLMS, the concrete target is `team1_oaqec_jlms_algebra_relative_nonmaximality_note.md`. | If no such maximality theorem applies, the finite-center obstruction is a useful boundary statement for supplied-category or algebra-relative reconstruction. |
+| OAQEC/JLMS maximality question | Harlow/Dong-Harlow-Wall/JLMS hypotheses already state full logical-algebra maximality, complementary recovery, or full central-sector accountability strongly enough to exclude finite direct-sum refinements. | If maximality is extra, Team 1 has a sharp black-hole reconstruction-boundary warning: recovery/relative entropy for a supplied algebra is not a hidden finite-center rank certificate. |
 | Support/readout accountability is the missing route to finite rank | The finite rank-accountability criterion is Blackwell/Le Cam/Petz/Buscemi-style target-specific sufficiency/factorization. | The theorem core is now internally demoted. What may survive is only the black-hole/AQFT translation: binary rank needs sufficiency for that exact finite-center target, not generic recovery or entropy equality. |
 | Noisy readout accountability needs an error budget | A standard AQFT/OAQEC/spectroscopy setup supplies a lower readout modulus, Le Cam/deficiency bound, or line-resolution estimate; the concrete target is `team1_quantitative_readout_accountability_note.md`. | Formal rank is not enough for a finite-precision finite-center or `q=2` claim; the separation margin must dominate the uncertainty. |
 | Binary `q=2` is not forced by quotient-visible entropy/recovery data | A weaker accepted physical axiom derives `q=2` after accountability without a separate alphabet law or direct measurement; for spectroscopy, the concrete target is `team1_discrete_spectroscopy_alphabet_boundary_note.md`. | If no such axiom is known, Paper 2's negative result is the strongest publishable Team 1 target: binary requires additional physics, not just quotient-visible data. |
@@ -116,6 +119,8 @@ entropy, or black-hole spectroscopy. For the LCQFT/dynamical-locality lane,
 send `team1_lcqft_constant_center_extension_note.md` as the concrete
 claim to classify.
 For the OAQEC/JLMS lane, send
+`team1_oaqec_jlms_maximality_question.md` first; if the reviewer wants
+details, add
 `team1_oaqec_jlms_algebra_relative_nonmaximality_note.md` plus the compact
 short note
 `team1_oaqec_jlms_algebra_relative_nonmaximality_short_note.pdf`.
