@@ -48,6 +48,11 @@ For the concrete OAQEC/JLMS algebra-relative nonmaximality test, see
 review version is
 `team1_oaqec_jlms_algebra_relative_nonmaximality_short_note.tex` /
 `team1_oaqec_jlms_algebra_relative_nonmaximality_short_note.pdf`.
+For the concrete DHR/DR sector-character nonmaximality test, see
+`team1_dhr_dr_sector_character_nonmaximality_note.md`; the compact TeX/PDF
+review version is
+`team1_dhr_dr_sector_character_nonmaximality_short_note.tex` /
+`team1_dhr_dr_sector_character_nonmaximality_short_note.pdf`.
 
 ## Positive-Exit Adjudication Map
 
@@ -80,6 +85,14 @@ short note `team1_oaqec_jlms_algebra_relative_nonmaximality_short_note.pdf`.
 A reviewer can kill it by naming the OAQEC/JLMS hypothesis that makes the
 supplied code algebra maximal; otherwise the row becomes an explicit
 algebra-relative recovery example.
+
+The DHR/DR row has now been sharpened to a concrete sector-character
+nonmaximality test in `team1_dhr_dr_sector_character_nonmaximality_note.md`,
+with the standalone short note
+`team1_dhr_dr_sector_character_nonmaximality_short_note.pdf`.  A reviewer can
+kill it by naming the DHR/DR hypothesis that makes the supplied sector category
+faithful on finite central-character fibers; otherwise the row becomes an
+explicit supplied-category nonfaithfulness example.
 
 For a two-week frontier push, Team 1 should attempt to turn one row above into
 a precise theorem-or-demotion statement:

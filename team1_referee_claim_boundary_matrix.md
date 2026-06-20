@@ -38,6 +38,9 @@ For the concrete OAQEC/JLMS algebra-relative nonmaximality test, see
 `team1_oaqec_jlms_algebra_relative_nonmaximality_note.md` and the standalone
 review PDF
 `team1_oaqec_jlms_algebra_relative_nonmaximality_short_note.pdf`.
+For the concrete DHR/DR sector-character nonmaximality test, see
+`team1_dhr_dr_sector_character_nonmaximality_note.md` and the standalone review
+PDF `team1_dhr_dr_sector_character_nonmaximality_short_note.pdf`.
 
 ## Primary-Source Boundary Pass
 
@@ -60,7 +63,7 @@ reviewer attack, not priority claims.
 | --- | --- | --- |
 | Finite central support is invisible after quotienting | A standard von Neumann algebra theorem already states the exact iff descent criterion in the needed language. | A pedagogical short note remains only if it packages the theorem for black-hole/AQFT quotient data without overstating novelty. |
 | LCQFT/RCE records do not force hidden finite centers | A standard LCQFT, dynamical-locality, extended-locality, local-definiteness, center-reduction, or measurement hypothesis forbids the constant-center construction in `team1_lcqft_constant_center_extension_note.md`. | If that hypothesis is extra, Team 1 has a concrete BFV/time-slice/RCE non-identifiability example: quotient-visible records factor through a selected central character and forget the finite center. |
-| Sector/recovery/JLMS data reconstruct only inside supplied algebra | DHR/DR or OAQEC/JLMS has a theorem that recovers omitted central-character fibers or proves maximality from the stated data; for OAQEC/JLMS, the concrete target is `team1_oaqec_jlms_algebra_relative_nonmaximality_note.md`. | If no such maximality theorem applies, the finite-center obstruction is a useful boundary statement for algebra-relative reconstruction. |
+| Sector/recovery/JLMS data reconstruct only inside supplied algebra | DHR/DR or OAQEC/JLMS has a theorem that recovers omitted central-character fibers or proves maximality from the stated data; for DHR/DR, the concrete target is `team1_dhr_dr_sector_character_nonmaximality_note.md`; for OAQEC/JLMS, the concrete target is `team1_oaqec_jlms_algebra_relative_nonmaximality_note.md`. | If no such maximality theorem applies, the finite-center obstruction is a useful boundary statement for supplied-category or algebra-relative reconstruction. |
 | Support/readout accountability is the missing route to finite rank | Blackwell/Petz sufficiency or another comparison theorem already states the rank-accountability criterion exactly. | Team 1 should cite and demote, but the binary-rank application can still be publishable as an explicit finite-center corollary if not already standard. |
 | Binary `q=2` is not forced by quotient-visible entropy/recovery data | A weaker accepted physical axiom derives `q=2` after accountability without a separate alphabet law or direct measurement. | If no such axiom is known, Paper 2's negative result is the strongest publishable Team 1 target: binary requires additional physics, not just quotient-visible data. |
 | Entropy-density/Newton normalization needs calibration | Crossed-product or horizon-entropy literature fixes the additive/finite-center calibration under exactly the stated assumptions. | If calibration is not fixed, Paper 1's entropy row should be presented as an obstruction to overclaiming, not as a new entropy theorem. |
@@ -90,6 +93,9 @@ classify.
 For the OAQEC/JLMS lane, send
 `team1_oaqec_jlms_algebra_relative_nonmaximality_note.md` plus the compact
 short note `team1_oaqec_jlms_algebra_relative_nonmaximality_short_note.pdf`.
+For the DHR/DR lane, send
+`team1_dhr_dr_sector_character_nonmaximality_note.md` plus the compact short
+note `team1_dhr_dr_sector_character_nonmaximality_short_note.pdf`.
 
 ## One-Week Frontier Work
 

@@ -1,0 +1,259 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1.12in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\B}{\mathcal B}
+\newcommand{\C}{\mathbb C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\Obj}{\operatorname{Obj}}
+\newcommand{\Sectors}{\mathcal S}
+
+\setlength{\emergencystretch}{3em}
+\hypersetup{
+  pdftitle={DHR/DR Sector Reconstruction Does Not Invert a Nonfaithful Restriction},
+  pdfsubject={DHR superselection sectors, Doplicher-Roberts reconstruction, finite centers},
+  pdfkeywords={DHR, Doplicher-Roberts, superselection sectors, finite centers, sector faithfulness}
+}
+
+\title{DHR/DR Sector Reconstruction\\
+Does Not Invert a Nonfaithful Restriction}
+\author{}
+\date{Live review note of June 20, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Doplicher--Haag--Roberts and Doplicher--Roberts reconstruction theorems start
+from a supplied superselection sector structure.  They reconstruct the field
+algebra and compact gauge group associated with that supplied structure.  This
+note isolates the finite-central boundary: if a finite central amplification
+\[
+  \A^{(n)}(O)=\A(O)\,\bar\otimes\,\ell^\infty(\{1,\ldots,n\})
+\]
+is first restricted to the diagonal subnet \(a\mapsto a\otimes1\), then the
+central-character sectors over a fixed sector become identical in the supplied
+restricted category.  Applying DHR/DR reconstruction after that restriction
+cannot recover the central characters, the central cardinality \(n\), or the
+predicate \(n=2\).  The sharp positive exit is sector-faithfulness: the sector
+datum supplied to reconstruction must be injective on the finite
+central-character fibers, or the theory must explicitly quotient, factor, or
+exclude those fibers.
+\end{abstract}
+
+\paragraph{Status.}
+This is non-frozen external-review metadata for Team 1.  It is intended as a
+small claim that a superselection/DHR reviewer can classify as known, false,
+missing-hypothesis, or useful.  It does not modify any frozen Team 1
+manuscript, Lean archive, public mirror manifest, or SHA-256 package.
+
+\section{Setup}
+
+Let \(O\mapsto\A(O)\) be a Haag--Kastler net and let
+\(\Sectors(\A)\) be a chosen DHR-type sector category of representations of
+\(\A\).  For \(n\ge2\), define the finite central amplification
+\[
+  \A^{(n)}(O)=\A(O)\,\bar\otimes\,\ell^\infty(\{1,\ldots,n\}).
+\]
+Let \(e_i\) be the minimal central projections of
+\(\ell^\infty(\{1,\ldots,n\})\), and let
+\(\chi_i:\ell^\infty(\{1,\ldots,n\})\to\C\) be the corresponding characters.
+The diagonal subnet is the inclusion
+\[
+  \iota_O:\A(O)\to\A^{(n)}(O),\qquad \iota_O(a)=a\otimes1.
+\]
+
+For an object \(\pi\in\Sectors(\A)\), define a representation \(\pi_i\) of
+\(\A^{(n)}\) by
+\[
+  \pi_{i,O}(a\otimes z)=\pi_O(a)\chi_i(z).
+\]
+Let \(\Sectors_{\mathrm{char}}^{(n)}\) be the full sector category generated
+by these objects \(\pi_i\).
+
+\begin{theorem}[sector-character restriction fiber]
+\label{thm:sector-character-fiber}
+The category \(\Sectors_{\mathrm{char}}^{(n)}\) is the disjoint union of \(n\)
+copies of \(\Sectors(\A)\).  More precisely,
+\[
+  \Hom_{\Sectors_{\mathrm{char}}^{(n)}}(\pi_i,\rho_j)
+  =
+  \begin{cases}
+    \Hom_{\Sectors(\A)}(\pi,\rho),& i=j,\\
+    0,& i\ne j.
+  \end{cases}
+\]
+Restriction to the diagonal subnet sends every \(\pi_i\) to \(\pi\).  Thus the
+restricted sector datum is the projection
+\[
+  \Sectors(\A)\times\{1,\ldots,n\}\longrightarrow \Sectors(\A),
+  \qquad (\pi,i)\longmapsto\pi,
+\]
+and it is not faithful on finite central-character fibers.
+\end{theorem}
+
+\begin{proof}
+For \(i=j\), an intertwiner \(T:\pi_i\to\rho_i\) satisfies
+\[
+  T\pi_O(a)\chi_i(z)=\rho_O(a)\chi_i(z)T
+\]
+for all \(a\otimes z\).  Taking \(z=1\) shows that \(T\) is exactly an
+intertwiner \(\pi\to\rho\) in \(\Sectors(\A)\), and every such intertwiner
+plainly intertwines \(\pi_i\) and \(\rho_i\).
+
+For \(i\ne j\), if \(T:\pi_i\to\rho_j\), then
+\[
+  T=\pi_i(1\otimes e_i)T=T\rho_j(1\otimes e_i)=0,
+\]
+since \(\pi_i(1\otimes e_i)=1\) while \(\rho_j(1\otimes e_i)=0\).  Hence
+different central characters have no intertwiners.  Finally,
+\[
+  \pi_i(\iota_O(a))=\pi_i(a\otimes1)=\pi_O(a),
+\]
+so diagonal restriction forgets \(i\).
+\end{proof}
+
+\begin{theorem}[sharp categorical exit]
+\label{thm:sharp-exit}
+Let \(\mathcal C\) be a sector category before a possible restriction, let
+\[
+  F:\mathcal C\to\D
+\]
+be the sector datum actually supplied to a reconstruction procedure, and let
+\(\kappa:\Obj(\mathcal C)/{\simeq}\to X\) be a finite central-character label.
+Then \(\kappa\) is reconstructible from \(F\) if and only if
+\[
+  F(\rho)\simeq F(\sigma)\quad\Longrightarrow\quad
+  \kappa(\rho)=\kappa(\sigma)
+  \tag{1}
+\]
+for all objects \(\rho,\sigma\in\mathcal C\).  Equivalently, the supplied
+sector datum must be faithful on the fibers that \(\kappa\) separates.
+\end{theorem}
+
+\begin{proof}
+If \(\kappa\) is reconstructible from \(F\), then
+\(\kappa=\widehat\kappa\circ F\) on isomorphism classes, so (1) follows.  If
+(1) holds, define \(\widehat\kappa\) on the image of \(F\) by choosing any
+\(\rho\) with prescribed image and setting
+\(\widehat\kappa(F(\rho))=\kappa(\rho)\).  Condition (1) is exactly the
+well-definedness of this assignment.
+\end{proof}
+
+\section{DHR/DR Boundary}
+
+DHR analysis supplies localized superselection sectors under its selection
+criterion.  Doplicher--Roberts reconstruction and compact-group duality then
+apply to the symmetric tensor \(C^*\)-category and fiber structure that are
+actually supplied.
+
+\begin{proposition}[DHR/DR does not recreate omitted central characters]
+\label{prop:dr-boundary}
+Suppose the sector data supplied to DHR/DR reconstruction are formed only
+after restricting the finite central amplification \(\A^{(n)}\) to the
+diagonal subnet \(\A\otimes1\).  Then, for every \(n\ge2\), the supplied
+restricted sector category is equivalent to \(\Sectors(\A)\).  Consequently
+DHR/DR reconstruction from that restricted category cannot determine the
+central-character label \(i\), the finite central cardinality \(n\), or the
+two-atom predicate \(n=2\).
+\end{proposition}
+
+\begin{proof}
+By Theorem~\ref{thm:sector-character-fiber}, the full central-character sector
+category is \(\Sectors(\A)\times\{1,\ldots,n\}\), and diagonal restriction is
+the projection to \(\Sectors(\A)\).  Therefore the category supplied after
+restriction is equivalent to \(\Sectors(\A)\), independently of \(n\).
+Invariants of the supplied restricted category, including any reconstruction
+procedure whose input is that category, cannot distinguish \(n=2\) from
+\(n=3\), nor can they distinguish the central characters over a fixed
+\(\pi\).  The sharp exit is Theorem~\ref{thm:sharp-exit}: retain a sector datum
+faithful on these fibers, or exclude/quotient the amplified comparison class.
+\end{proof}
+
+\section{Positive Exits}
+
+\begin{center}
+\begin{tabular}{p{0.33\linewidth}p{0.53\linewidth}}
+\toprule
+Exit premise & Effect \\
+\midrule
+Full sector category retained & If the supplied category is
+\(\Sectors(\A)\times\{1,\ldots,n\}\), the finite central characters are part of
+the input and DHR/DR is not being asked to recover forgotten labels. \\
+\addlinespace
+Faithful sector functor & A restriction or forgetful datum \(F\) is sufficient
+exactly when it is injective on the central-character fibers relevant to the
+target label. \\
+\addlinespace
+Central-character readout & Minimal central projections, central characters,
+or equivalent sector labels separate the \(i\)-fibers. \\
+\addlinespace
+Quotient or exclusion & If the finite central amplification is
+explicitly quotiented, factor-valuedness is imposed, or such sectors are
+physically inadmissible, then the comparison class is removed. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Referee Question}
+
+The classification question is precise:
+
+\begin{quote}
+Does the DHR/DR sector structure being supplied in the target setting already
+retain finite central-character fibers, or impose a quotient/factor/exclusion
+axiom that removes them?  If not, reconstruction from the supplied restricted
+category does not certify finite-center accountability or binary rank.
+\end{quote}
+
+The desired external response is one of: known theorem, false statement,
+missing positive hypothesis, physically irrelevant comparison class, or useful
+expository no-go.
+
+\begin{thebibliography}{99}
+
+\bibitem{DHRFieldsI}
+S. Doplicher, R. Haag, and J. E. Roberts,
+Fields, observables and gauge transformations I,
+\emph{Communications in Mathematical Physics} \textbf{13} (1969), 1--23.
+
+\bibitem{DHRFieldsII}
+S. Doplicher, R. Haag, and J. E. Roberts,
+Fields, observables and gauge transformations II,
+\emph{Communications in Mathematical Physics} \textbf{15} (1969), 173--200.
+
+\bibitem{DHRStatsI}
+S. Doplicher, R. Haag, and J. E. Roberts,
+Local observables and particle statistics I,
+\emph{Communications in Mathematical Physics} \textbf{23} (1971), 199--230.
+
+\bibitem{DHRStatsII}
+S. Doplicher, R. Haag, and J. E. Roberts,
+Local observables and particle statistics II,
+\emph{Communications in Mathematical Physics} \textbf{35} (1974), 49--85.
+
+\bibitem{DRDuality}
+S. Doplicher and J. E. Roberts,
+A new duality theory for compact groups,
+\emph{Inventiones Mathematicae} \textbf{98} (1989), 157--218.
+
+\bibitem{DR}
+S. Doplicher and J. E. Roberts,
+Why there is a field algebra with a compact gauge group describing the
+superselection structure in particle physics,
+\emph{Communications in Mathematical Physics} \textbf{131} (1990), 51--107.
+
+\end{thebibliography}
+
+\end{document}
