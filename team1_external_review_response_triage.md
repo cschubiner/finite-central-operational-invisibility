@@ -39,7 +39,7 @@ Public GitHub comments may be linked directly.
 
 | Affected artifact | When to patch | Patch rule |
 | --- | --- | --- |
-| `docs/team1_positive_accountability_short_note.{tex,pdf}` | Response concerns the positive readout/accountability theorem or binary-rank corollary. | Patch only the stated theorem boundary, proof sentence, or citation. Rebuild PDF and preserve public note status as non-frozen. |
+| `docs/team1_positive_accountability_short_note.{tex,pdf}` | Response concerns the positive readout/accountability theorem or binary-rank corollary. | Treat the finite quotient theorem core as already demoted to Blackwell/Le Cam/Petz/Buscemi sufficiency unless the reviewer identifies a genuinely new formulation; patch only the black-hole/AQFT translation, proof sentence, or citation. Rebuild PDF and preserve public note status as non-frozen. |
 | `docs/team1_finite_center_residue_theorem_note.md` | Response concerns the negative same-data finite-center residue. | Patch residue statement or comparison class first; avoid adding downstream physics claims. |
 | `docs/team1_standard_theorem_crosswalk.md` | Response gives a theorem name, missing hypothesis, or demotion lane. | Add the exact source under the matching standard theorem row. |
 | `docs/team1_referee_claim_boundary_matrix.md` | Response classifies a claim as known, false, too broad, or missing-hypothesis. | Update the matrix row and recommended action. |
@@ -75,8 +75,9 @@ The current decisive questions are:
 4. OAQEC/JLMS/black-hole algebra: do recovery/relative entropy/crossed-product
    entropy theorems imply maximality of the supplied algebra, or only recovery
    inside it?
-5. Positive accountability: is the finite accountability quotient just
-   Blackwell/Petz sufficiency in finite-center language?
+5. Positive accountability: the finite accountability quotient is internally
+   demoted to Blackwell/Le Cam/Petz/Buscemi sufficiency; is the black-hole/AQFT
+   translation still useful, or already standard in the target literature?
 
 Until one of these questions receives a written classification, the package is
 externally reviewable but not externally adjudicated.

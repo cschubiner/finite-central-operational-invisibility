@@ -157,6 +157,29 @@ is the black-hole/AQFT claim boundary: entropy, recovery, modular, sector, and
 locally covariant records determine `q` or `q=2` only after the finite-center
 accountability premise has been supplied in standard-language form.
 
+## Internal Classification After Sufficiency Pass
+
+After checking the Blackwell comparison theorem, Le Cam deficiency theory, Petz
+sufficiency, and Buscemi/Shmaya quantum comparison results, Team 1 should
+internally classify the mathematical core of Theorem A as `known/demote`.
+The finite quotient calculation is not a new theorem: it is the target-specific
+sufficiency/factorization condition for a declared experiment, channel,
+subalgebra, or statistical model.
+
+The only remaining candidate value is expository and translational:
+
+```text
+In black-hole/AQFT reconstruction arguments, the finite alphabet or binary
+rank is not obtained from entropy, recovery, sector, modular, or LCQFT records
+unless those records are sufficient for that exact finite-center target.
+```
+
+This is still worth external review because the physics literature may be
+silently using recovery or entropy equalities as if they supplied maximal
+finite-center accountability. But Team 1 should not present the
+finite-accountability theorem itself as novel mathematics unless a sufficiency
+expert identifies a genuinely uncovered formulation.
+
 ## Referee-Grade Claim Boundary
 
 | Claim | Status |

@@ -37,7 +37,7 @@ is too broad.
 | Dynamical-locality exit | Fewster-Verch, `arXiv:1106.4785` | Treat dynamical locality as a named standard exit, not Team 1 terminology. | Is dynamical locality implicit in the target physical setting, making the finite-center comparison class too broad? |
 | DHR/DR sector reconstruction | Doplicher-Roberts, `Commun. Math. Phys. 131 (1990), 51-107` | Do not claim new field-algebra or compact-gauge-group reconstruction. | If the supplied sector category omits central-character fibers, is there a standard theorem that recovers them anyway? |
 | OAQEC/JLMS rows | JLMS `arXiv:1512.06431`; Dong-Harlow-Wall `arXiv:1601.05416`; Harlow `arXiv:1607.03901` | Do not claim new entanglement-wedge or algebraic-QEC reconstruction. | Does reconstruction relative to a declared algebra imply maximality against hidden finite central extensions? |
-| Support/readout accountability | Blackwell comparison; Le Cam deficiency; Petz sufficiency and recovery; Shmaya/Buscemi quantum comparison | Demote generic "data-processing/recovery is relative to a channel" content. | Is Team 1's finite rank-accountability condition exactly a known sufficiency/comparison criterion? |
+| Support/readout accountability | Blackwell comparison; Le Cam deficiency; Petz sufficiency and recovery; Shmaya/Buscemi quantum comparison | Demote the finite quotient/readout theorem core: it is target-specific sufficiency/factorization for a declared experiment, channel, subalgebra, or statistical model. | Is the black-hole/AQFT translation useful enough as an expository warning, or is even that already standard in the relevant physics literature? |
 | Entropy calibration | Witten crossed product, `arXiv:2112.12828` | Do not claim new crossed-product entropy or black-hole entropy theorem. | Does the crossed-product additive constant leave the finite-center calibration freedom Team 1 isolates? |
 | Binary spectroscopy | Bekenstein-Mukhanov, `arXiv:gr-qc/9505012` | Do not claim entropy alone derives a binary alphabet. Resolved spectroscopy is a separate measurement route. | Is there a weaker standard axiom forcing `q=2` without a finite-alphabet law or direct binary measurement? |
 
@@ -69,7 +69,7 @@ channel, or experiment.
 | Split/tensor factorization | Doplicher-Longo split inclusions, `Invent. Math. 75 (1984), 493-536` | The target statement assumes split/nuclearity/type-I interpolation strongly enough to supply the tensor coordinate or maximal support. | Tensor-factor claims remain quotient-relative; Team 1 should state split as a positive hypothesis, not a conclusion. |
 | Superselection reconstruction | Doplicher-Roberts reconstruction, `Commun. Math. Phys. 131 (1990), 51-107` | The supplied superselection category already contains the central-character fibers and DR hypotheses recover the full field algebra. | Reconstruction of the supplied category does not recover sectors omitted before forming the category. |
 | OAQEC/JLMS | JLMS `arXiv:1512.06431`; Dong-Harlow-Wall `arXiv:1601.05416`; Harlow `arXiv:1607.03901` | The code algebra is stipulated to be the full logical algebra, or complementary recovery/maximality is part of the hypothesis. | Recovery and relative entropy hold inside the declared algebra; hidden finite central refinements remain outside the target. |
-| Classical/quantum comparison | Blackwell; Le Cam; Petz; Shmaya; Buscemi | A theorem states exactly that the finite-center contrast target is recoverable iff the comparison channel/model is sufficient for that target. | Team 1 must demote the math to sufficiency theory, but the black-hole/AQFT warning may remain as an application note. |
+| Classical/quantum comparison | Blackwell; Le Cam; Petz; Shmaya; Buscemi | The finite-center contrast target is recoverable iff the supplied experiment/channel/model is sufficient for that target. This is now internally classified as known/demoted. | The black-hole/AQFT warning may remain as an application note only if reviewers agree that recovery/entropy/sector arguments are often overread as finite-center maximality. |
 | Crossed-product entropy | Witten black-hole crossed product, `arXiv:2112.12828` | The construction fixes the same finite-center additive/calibration constant under the Team 1 hypotheses. | Entropy rows should be framed as calibration non-identifiability, not a new entropy theorem. |
 | Discrete spectroscopy | Bekenstein-Mukhanov, `arXiv:gr-qc/9505012` | There is a direct finite-alphabet measurement law, or a standard physical axiom deriving binary rank without one. | Entropy/recovery records alone do not force `q=2`; binary rank is a separate measurement or dynamics input. |
 
@@ -93,6 +93,13 @@ with the standalone short note
 kill it by naming the DHR/DR hypothesis that makes the supplied sector category
 faithful on finite central-character fibers; otherwise the row becomes an
 explicit supplied-category nonfaithfulness example.
+
+The Blackwell/Le Cam/Petz/Buscemi row has now been internally demoted in
+`team1_positive_accountability_theorem_note.md` and
+`team1_positive_accountability_short_note.pdf`: the finite-accountability
+quotient is known sufficiency/factorization theory.  The remaining candidate
+value is only the black-hole/AQFT translation and the warning that binary rank
+requires sufficiency for that exact finite-center target.
 
 For a two-week frontier push, Team 1 should attempt to turn one row above into
 a precise theorem-or-demotion statement:
