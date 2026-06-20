@@ -53,15 +53,16 @@ No written external adjudication response has been logged yet.
 
 0. `team1_minimal_expert_classification_request.md`
 1. `team1_oaqec_jlms_maximality_question.md`
-2. `team1_two_week_theorem_or_demotion_sprint.md`
-3. `team1_self_adjudication_decision_memo.md`
-4. `team1_referee_claim_boundary_matrix.md`
-5. `team1_standard_theorem_crosswalk.md`
-6. `team1_finite_center_residue_theorem_note.md`
-7. `team1_finite_center_residue_short_note.pdf`
-8. `team1_positive_accountability_short_note.pdf`
-9. `team1_positive_accountability_theorem_note.md`
-10. `team1_external_review_response_triage.md`
+2. `team1_dhr_dr_sector_faithfulness_question.md`
+3. `team1_two_week_theorem_or_demotion_sprint.md`
+4. `team1_self_adjudication_decision_memo.md`
+5. `team1_referee_claim_boundary_matrix.md`
+6. `team1_standard_theorem_crosswalk.md`
+7. `team1_finite_center_residue_theorem_note.md`
+8. `team1_finite_center_residue_short_note.pdf`
+9. `team1_positive_accountability_short_note.pdf`
+10. `team1_positive_accountability_theorem_note.md`
+11. `team1_external_review_response_triage.md`
 
 In the source repo these live under ``. In the Paper 1 mirror most Team 1
 review files live at repository root. In the Paper 2 mirror they live under
@@ -78,7 +79,7 @@ review files live at repository root. In the Paper 2 mirror they live under
 | LCQFT/RCE | `team1_lcqft_constant_center_extension_note.md` / `team1_lcqft_constant_center_short_note.pdf` | Do BFV/time-slice/RCE records exclude constant hidden finite centers, or is extended locality/local definiteness/source faithfulness an extra premise? |
 | Split/tensor factor | `team1_split_tensor_factor_boundary_note.md` / `team1_split_tensor_factor_boundary_short_note.pdf` | Do generated-algebra correlations reconstruct the spatial tensor product, or only modulo `ker(mu)` until split/kernel separation is supplied? |
 | Local probe measurement | `team1_probe_measurement_center_separation_note.md` / `team1_probe_measurement_center_separation_short_note.pdf` | Do the induced Fewster-Verch probe effects separate the finite central contrasts, or can they factor through a quotient/retraction? |
-| DHR/DR sectors | `team1_dhr_dr_sector_character_nonmaximality_note.md` / `team1_dhr_dr_sector_character_nonmaximality_short_note.pdf` | Does the supplied sector category retain central-character fibers, or only the diagonal restricted category? |
+| DHR/DR sectors | `team1_dhr_dr_sector_faithfulness_question.md`; details in `team1_dhr_dr_sector_character_nonmaximality_note.md` / `team1_dhr_dr_sector_character_nonmaximality_short_note.pdf` | Does the supplied sector category retain central-character fibers, or only the diagonal restricted category? |
 | OAQEC/JLMS | `team1_oaqec_jlms_algebra_relative_nonmaximality_note.md` / `team1_oaqec_jlms_algebra_relative_nonmaximality_short_note.pdf` | Does recovery/relative entropy imply maximality of the supplied logical algebra, or only reconstruction inside it? |
 | Crossed-product entropy | `team1_crossed_product_entropy_calibration_note.md` / `team1_crossed_product_entropy_calibration_short_note.pdf` | Does the Type II/crossed-product construction fix finite central trace/area calibration, or only entropy for a specified algebra and trace? |
 | Relative-entropy central face | `team1_relative_entropy_central_face_calibration_note.md` / `team1_relative_entropy_central_face_calibration_short_note.pdf` | Do pairwise relative-entropy/JLMS comparisons fix the affine finite-center trace/area calibration, or only probability ratios inside the supplied face? |
@@ -104,7 +105,9 @@ before the response is recorded.
 
 The package is externally reviewable but not externally adjudicated. The next
 frontier-relevant step is the OAQEC/JLMS maximality classification request in
-`team1_oaqec_jlms_maximality_question.md`, followed by a written
+`team1_oaqec_jlms_maximality_question.md` and the DHR/DR
+sector-faithfulness request in `team1_dhr_dr_sector_faithfulness_question.md`,
+followed by a written
 classification from at least one expert in one of these lanes:
 
 - LCQFT/dynamical locality/source faithfulness;

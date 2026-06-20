@@ -121,6 +121,7 @@ classification, or permission to frame the row as an expository no-go.
 ## Deliverable 3: DHR/DR Sector-Faithfulness Boundary
 
 Target file:
+`team1_dhr_dr_sector_faithfulness_question.md`, with details in
 `team1_dhr_dr_sector_character_nonmaximality_note.md`.
 
 Referee-grade theorem target:
@@ -139,8 +140,10 @@ Work to do:
 
 1. Check Doplicher-Roberts for any hypothesis that already enforces
    sector-faithfulness/full central-character retention.
-2. Ask a DHR/DR or tensor-category reviewer whether diagonal restriction is
-   already a standard quotient/forgetful-functor example.
+2. Send the one-page question in
+   `team1_dhr_dr_sector_faithfulness_question.md` to a DHR/DR or
+   tensor-category reviewer and ask whether diagonal restriction is already a
+   standard quotient/forgetful-functor example.
 3. If the answer is "standard", add the exact categorical theorem name and
    demote. If the answer is "useful boundary", prepare it as an example row in
    the short Team 1 note.

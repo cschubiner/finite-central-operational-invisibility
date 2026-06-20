@@ -31,30 +31,32 @@ Structured public review issue template:
    one-page verdict request.
 3. Read `team1_oaqec_jlms_maximality_question.md` for the highest-priority
    one-page OAQEC/JLMS missing-hypothesis test.
-4. Read `team1_two_week_theorem_or_demotion_sprint.md` for the current
+4. Read `team1_dhr_dr_sector_faithfulness_question.md` for the one-page
+   DHR/DR sector-faithfulness classification request.
+5. Read `team1_two_week_theorem_or_demotion_sprint.md` for the current
    theorem-or-demotion work queue.
-5. Read `team1_external_review_dispatch_dossier.md` for the compact
+6. Read `team1_external_review_dispatch_dossier.md` for the compact
    row-by-row attack packet.
-6. Read `finite_central_operational_invisibility_external_review_request.md`.
-7. Read `finite_central_operational_invisibility_short_note.pdf`.
-8. Check the frozen claim boundary in
+7. Read `finite_central_operational_invisibility_external_review_request.md`.
+8. Read `finite_central_operational_invisibility_short_note.pdf`.
+9. Check the frozen claim boundary in
    `finite_central_operational_invisibility_submission_manifest.md`.
-9. Check the primary-source attack map in
+10. Check the primary-source attack map in
    `finite_central_literature_boundary_index.md`.
-10. For a quick standard-theorem demotion pass, read
+11. For a quick standard-theorem demotion pass, read
    `team1_standard_theorem_crosswalk.md` and
    `team1_referee_claim_boundary_matrix.md`.
-11. For the shortest theorem target, read
+12. For the shortest theorem target, read
    `team1_finite_center_residue_theorem_note.md`.
-12. For the positive accountability criterion, read
+13. For the positive accountability criterion, read
    `team1_positive_accountability_short_note.pdf`, then
    `team1_positive_accountability_theorem_note.md` if a proof-note view is
    useful.
-13. For the current internal novelty verdict, read
+14. For the current internal novelty verdict, read
    `team1_self_adjudication_decision_memo.md`.
-14. For how responses will be classified into source actions, read
+15. For how responses will be classified into source actions, read
    `team1_external_review_response_triage.md`.
-15. Verify the finite Lean kernel if desired:
+16. Verify the finite Lean kernel if desired:
 
 ```bash
 shasum -a 256 -c finite_central_operational_invisibility_SHA256SUMS.txt
