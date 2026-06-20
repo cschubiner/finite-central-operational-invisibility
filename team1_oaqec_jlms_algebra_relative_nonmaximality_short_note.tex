@@ -38,7 +38,10 @@ Does Not Certify Maximality}
 \begin{abstract}
 Let \(\M\subseteq\B(\Hcode)\) be a finite-dimensional von Neumann algebra
 reconstructable on a boundary region or boundary algebra in the usual
-operator-algebra quantum-error-correction sense.  For every \(q\geq 2\), the
+operator-algebra quantum-error-correction sense.  The cited OAQEC/JLMS
+theorems are statements about this supplied algebra or entanglement-wedge
+algebra; they are not, without an extra hypothesis, automatic maximality
+statements for all hidden finite central refinements.  For every \(q\geq 2\), the
 finite central direct-sum extension
 \[
   \Hcode^{(q)}=\bigoplus_{j=1}^{q}\Hcode,\qquad
@@ -64,6 +67,19 @@ small claim that a holographic-QEC referee can classify as known, false,
 missing-hypothesis, or useful.  It does not modify any frozen Team 1
 manuscript, Lean archive, public mirror manifest, or SHA-256 package.
 
+\paragraph{Primary-source checkpoint.}
+Harlow's OAQEC theorem is formulated for a specified finite-dimensional
+von Neumann algebra \(\M\) acting on the code, and its algebraic entropy
+contains the classical distribution over the center of that supplied algebra.
+Kamal--Penington extend the algebraic RT/OAQEC picture to boundary algebras
+with centers and formulate reconstruction from a specified boundary algebra.
+JLMS and Dong--Harlow--Wall supply the relative-entropy/reconstruction inputs
+for the entanglement-wedge algebra under discussion.  The question here is
+therefore not whether those theorems reconstruct a declared algebra; it is
+whether reconstructability of that declared algebra also certifies maximality
+as the full logical algebra against a larger finite central direct-sum
+refinement.
+
 \section{Setup}
 
 Let \(\Hcode\) be finite-dimensional and let
@@ -77,7 +93,10 @@ In operator-algebra quantum error correction, a boundary region or boundary
 algebra reconstructs \(\M\) when every \(x\in\M\) has a boundary
 representative acting identically on the code, equivalently when the relevant
 erasure/recovery, commutant, and relative-entropy tests hold for the declared
-algebra.
+algebra.  Throughout this note, \emph{declared} is the operative word:
+reconstruction of \(\M\) means reconstruction of the algebra supplied to the
+theorem.  It does not by itself assert that \(\M\) is the maximal logical
+algebra compatible with all hidden finite central refinements.
 
 Fix \(q\geq 2\).  Define
 \[
@@ -152,6 +171,15 @@ quotient state nor the quotient algebra element.  Thus the same
 quotient-visible JLMS/OAQEC record is compatible with multiple values of
 \(q\) and with multiple hidden central supports.
 \end{proof}
+
+Equivalently, in this finite test model,
+\begin{align*}
+  &\text{reconstructable supplied algebra } \M \\
+  &\qquad\not\Rightarrow
+    \text{ maximal full logical algebra, full hidden center, or } q=2 .
+\end{align*}
+The implication becomes valid only after a positive exit is added to the
+hypotheses.
 
 \begin{remark}
 If instead the state family includes all central sectors and their classical
@@ -237,6 +265,12 @@ superselection labels, the extra premise should be named. \\
 \bottomrule
 \end{tabular}
 \end{center}
+
+This table is also the clean demotion rule.  If the OAQEC/JLMS theorem being
+invoked already includes the full central-sector state family and a maximal
+logical algebra as part of its hypotheses, Team 1's hidden-center comparison is
+outside that setup.  The row should then be demoted to that named
+maximality/full-center hypothesis, not presented as a new theorem.
 
 \section{Referee Question}
 
