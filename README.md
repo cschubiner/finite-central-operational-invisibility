@@ -4,6 +4,9 @@ This repository is a public verification package for the frozen short note
 `Finite Central Invisibility in Operational Reconstructions of Tensor
 Factorization and Horizon Entropy`.
 
+External reviewers should start with `REVIEWER_START_HERE.md`. Public review
+and verification status is tracked in `PUBLIC_REVIEW_STATUS.md`.
+
 It contains only the frozen Team 1 package artifacts:
 
 - `finite_central_operational_invisibility_short_note.tex`
@@ -13,6 +16,15 @@ It contains only the frozen Team 1 package artifacts:
 - `finite_center_lean_verification_archive.tar.gz`
 - `finite_central_operational_invisibility_external_review_request.md`
 - `finite_central_operational_invisibility_submission_manifest.md`
+
+Additional non-frozen review metadata on `main`:
+
+- `REVIEWER_START_HERE.md`
+- `REVIEW_RESPONSE_TEMPLATE.md`
+- `PUBLIC_REVIEW_STATUS.md`
+- `finite_central_literature_boundary_index.md`
+- `.github/workflows/verify-frozen-package.yml`
+- `finite_central_operational_invisibility_SHA256SUMS.txt`
 
 ## Frozen Hashes
 
@@ -25,6 +37,9 @@ b0a3a06fbc4a2b7b7aeeda103451e4324e7a41e590e994ea6855fda71da77936  finite_center_
 ```
 
 The submission manifest records the exact novelty claim and freeze boundary.
+
+The same hashes are available as a command-line manifest:
+`finite_central_operational_invisibility_SHA256SUMS.txt`.
 
 ## Build Checks
 
