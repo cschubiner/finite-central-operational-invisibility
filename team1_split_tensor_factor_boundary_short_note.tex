@@ -1,0 +1,187 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1.12in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\B}{\mathcal B}
+\newcommand{\Hcal}{\mathcal H}
+\newcommand{\W}{\mathcal W}
+\newcommand{\barotimes}{\mathbin{\bar\otimes}}
+\newcommand{\id}{\operatorname{id}}
+
+\setlength{\emergencystretch}{3em}
+\hypersetup{
+  pdftitle={Generated-Algebra Correlations Reconstruct Tensor Factors Only After Split or Kernel Separation},
+  pdfsubject={split inclusions, tensor products, finite centers, AQFT},
+  pdfkeywords={split property, tensor product, von Neumann algebra, multiplication kernel, finite center}
+}
+
+\title{Generated-Algebra Correlations Reconstruct\\
+Tensor Factors Only After Split or Kernel Separation}
+\author{}
+\date{Live review note of June 20, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Split inclusions and W*-tensor-product independence are standard positive
+hypotheses in algebraic quantum field theory: when the multiplication map
+\(\mu:\A\bar\otimes\B\to\A\vee\B\) is a normal isomorphism, the generated
+algebra determines the spatial tensor-product coordinate.  This note isolates
+the converse boundary.  If the supplied data are only generated-algebra
+correlations \(\gamma(\mu(x))\), then a candidate tensor-product element
+\(x\in\A\bar\otimes\B\) is reconstructed exactly modulo the common tested
+multiplication kernel.  In particular, a shared nontrivial central projection
+\(p\in\A\cap\B\) gives \(0\ne p\otimes(1-p)\in\ker\mu\).  Thus
+generated-algebra tomography is not, by itself, a split/tensor-factor theorem.
+\end{abstract}
+
+\paragraph{Status.}
+This is non-frozen external-review metadata for Team 1.  It is intended as a
+small claim that an operator-algebra or AQFT reviewer can classify as known,
+false, missing-hypothesis, or useful.  It does not modify any frozen Team 1
+manuscript, Lean archive, public mirror manifest, or SHA-256 package.
+
+\section{Primary sources}
+
+The boundary below was checked against Doplicher--Longo split inclusions
+\cite{DoplicherLongo}, Buchholz--Wichmann nuclearity and causal independence
+\cite{BuchholzWichmann}, and Werner local preparability
+\cite{WernerSplit}.  These works are used here as positive routes to split
+independence, not as claims that split theory is absent from physics.
+
+\section{Generated algebra versus spatial tensor product}
+
+Let \(\A,\B\subset B(\Hcal)\) be commuting von Neumann algebras, and let
+\(\A\vee\B\) be the von Neumann algebra they generate.  Suppose multiplication
+extends to a normal representation
+\[
+  \mu:\A\barotimes\B\longrightarrow \A\vee\B,
+  \qquad
+  \mu(a\otimes b)=ab .
+\]
+Let \(\Gamma\subset(\A\vee\B)_*\) be the normal functionals used as supplied
+generated-algebra correlations:
+\[
+  D_\Gamma(x)=\bigl(\gamma(\mu(x))\bigr)_{\gamma\in\Gamma},
+  \qquad x\in\A\barotimes\B .
+\]
+
+\begin{theorem}[multiplication-kernel criterion]
+\label{thm:multiplication-kernel}
+The data \(D_\Gamma\) reconstruct the spatial tensor-product element \(x\)
+if and only if
+\[
+  \bigcap_{\gamma\in\Gamma}\ker(\gamma\circ\mu)=\{0\}.
+  \tag{1}
+\]
+If \(\Gamma\) separates points of \(\A\vee\B\), then (1) is equivalent to
+\[
+  \ker\mu=\{0\}.
+  \tag{2}
+\]
+Thus full generated-algebra tomography reconstructs the unquotiented spatial
+tensor-product coordinate exactly when the multiplication representation is
+injective.
+\end{theorem}
+
+\begin{proof}
+Two candidates \(x,y\in\A\barotimes\B\) have the same supplied data exactly
+when
+\[
+  \gamma(\mu(x-y))=0\qquad(\gamma\in\Gamma),
+\]
+that is, when \(x-y\) lies in the common kernel in (1).  Therefore the data
+separate all candidates precisely when that kernel is zero.  If \(\Gamma\)
+separates \(\A\vee\B\), then \(\gamma(\mu(z))=0\) for all \(\gamma\in\Gamma\)
+is equivalent to \(\mu(z)=0\), giving (2).
+\end{proof}
+
+\begin{proposition}[shared-center witness]
+\label{prop:shared-center}
+If \(\A\cap\B\) contains a projection \(0\ne p\ne1\), then
+\[
+  0\ne p\otimes(1-p)\in\A\barotimes\B,
+  \qquad
+  \mu\bigl(p\otimes(1-p)\bigr)=0 .
+\]
+Consequently no data package that factors only through \(\A\vee\B\) can
+distinguish the zero tensor-product element from this nonzero tensor-kernel
+direction.
+\end{proposition}
+
+\begin{proof}
+The projections \(p\) and \(1-p\) are nonzero in the two tensor factors, so
+\(p\otimes(1-p)\) is a nonzero positive element of the spatial tensor product.
+Because \(p\) is a common projection, multiplication sends it to
+\(p(1-p)=0\).  Any datum that factors through \(\mu\) assigns the same value to
+this element and to \(0\).
+\end{proof}
+
+\section{Positive exits}
+
+\begin{center}
+\begin{tabular}{p{0.34\linewidth}p{0.51\linewidth}}
+\toprule
+Exit premise & Effect \\
+\midrule
+Split inclusion or type-I interpolation & Supplies the standard
+W*-tensor-product independence structure for the bipartition. \\
+\addlinespace
+Normal isomorphism \(\A\barotimes\B\simeq\A\vee\B\) & Makes \(\mu\) injective;
+the inverse of \(\mu\) reconstructs the tensor coordinate. \\
+\addlinespace
+Kernel-separating tests & Adds data that distinguish directions in
+\(\ker\mu\). \\
+\addlinespace
+Quotient, factor, or inadmissibility axiom & Removes the kernel directions
+from the physical target instead of reconstructing them. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The exact external question is:
+
+\begin{quote}
+Does the target AQFT setup assume split/W*-tensor-product independence, type-I
+interpolation, factor-valuedness, or kernel-separating tests for the
+bipartition?  If not, generated-algebra correlations reconstruct only the
+quotient of the candidate spatial tensor product by \(\ker\mu\).
+\end{quote}
+
+If the split hypothesis is supplied, it is a positive exit from the Team 1
+finite-center obstruction.  If it is absent, the Team 1 row is only the
+standard multiplication-kernel boundary, not a new split theorem.
+
+\begin{thebibliography}{9}
+
+\bibitem{DoplicherLongo}
+S. Doplicher and R. Longo,
+\emph{Standard and split inclusions of von Neumann algebras},
+Invent. Math. 75 (1984), 493--536,
+\href{https://link.springer.com/article/10.1007/BF01388641}{doi:10.1007/BF01388641}.
+
+\bibitem{BuchholzWichmann}
+D. Buchholz and E. H. Wichmann,
+\emph{Causal independence and the energy-level density of states in local quantum field theory},
+Commun. Math. Phys. 106 (1986), 321--344,
+\href{https://link.springer.com/article/10.1007/BF01454978}{doi:10.1007/BF01454978}.
+
+\bibitem{WernerSplit}
+R. F. Werner,
+\emph{Local preparability of states and the split property in quantum field theory},
+Lett. Math. Phys. 13 (1987), 325--329,
+\href{https://link.springer.com/article/10.1007/BF00401161}{doi:10.1007/BF00401161}.
+
+\end{thebibliography}
+
+\end{document}

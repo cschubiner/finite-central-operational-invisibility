@@ -68,6 +68,11 @@ For the concrete local probe-measurement center-separation test, see
 review version is
 `team1_probe_measurement_center_separation_short_note.tex` /
 `team1_probe_measurement_center_separation_short_note.pdf`.
+For the concrete split/tensor-factor boundary test, see
+`team1_split_tensor_factor_boundary_note.md`; the compact TeX/PDF review
+version is
+`team1_split_tensor_factor_boundary_short_note.tex` /
+`team1_split_tensor_factor_boundary_short_note.pdf`.
 
 ## Positive-Exit Adjudication Map
 
@@ -146,6 +151,15 @@ that makes the induced probe effects automatically central-tomographically
 complete; otherwise the row becomes the explicit positive-exit criterion that
 measurements help only when their induced effects separate the finite central
 contrast.
+
+The split/tensor-factor row has now been sharpened to a concrete
+multiplication-kernel boundary test in
+`team1_split_tensor_factor_boundary_note.md`, with the standalone short
+note `team1_split_tensor_factor_boundary_short_note.pdf`.  A reviewer can
+kill it by naming the split/type-I/factor/tensor-independence hypothesis that
+is already part of the target AQFT setup; otherwise the row becomes the
+explicit warning that generated-algebra correlations reconstruct only modulo
+the multiplication kernel.
 
 For a two-week frontier push, Team 1 should attempt to turn one row above into
 a precise theorem-or-demotion statement:

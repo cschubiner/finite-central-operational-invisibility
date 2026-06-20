@@ -50,6 +50,9 @@ review PDF `team1_discrete_spectroscopy_alphabet_boundary_short_note.pdf`.
 For the concrete local probe-measurement center-separation test, see
 `team1_probe_measurement_center_separation_note.md` and the standalone
 review PDF `team1_probe_measurement_center_separation_short_note.pdf`.
+For the concrete split/tensor-factor boundary test, see
+`team1_split_tensor_factor_boundary_note.md` and the standalone review PDF
+`team1_split_tensor_factor_boundary_short_note.pdf`.
 
 ## Primary-Source Boundary Pass
 
@@ -71,6 +74,7 @@ reviewer attack, not priority claims.
 | Claim row | What would kill or demote it | What would survive |
 | --- | --- | --- |
 | Finite central support is invisible after quotienting | A standard von Neumann algebra theorem already states the exact iff descent criterion in the needed language. | A pedagogical short note remains only if it packages the theorem for black-hole/AQFT quotient data without overstating novelty. |
+| Generated-algebra correlations do not force spatial tensor factors | A standard split inclusion, type-I interpolation, factor-valuedness, W*-tensor-product independence, or tested-kernel separator is part of the target setup; the concrete target is `team1_split_tensor_factor_boundary_note.md`. | Without that hypothesis, generated-algebra data reconstruct candidate tensor-product elements only modulo the multiplication kernel. |
 | LCQFT/RCE/probe records do not force hidden finite centers | A standard LCQFT, dynamical-locality, extended-locality, local-definiteness, center-reduction, or measurement hypothesis forbids the constant-center construction in `team1_lcqft_constant_center_extension_note.md`, or the induced probe effects are automatically central-tomographically complete as tested in `team1_probe_measurement_center_separation_note.md`. | If that hypothesis is extra, Team 1 has a concrete BFV/time-slice/RCE/probe-measurement non-identifiability example: quotient-visible records factor through a selected central character and forget the finite center. |
 | Sector/recovery/JLMS data reconstruct only inside supplied algebra | DHR/DR or OAQEC/JLMS has a theorem that recovers omitted central-character fibers or proves maximality from the stated data; for DHR/DR, the concrete target is `team1_dhr_dr_sector_character_nonmaximality_note.md`; for OAQEC/JLMS, the concrete target is `team1_oaqec_jlms_algebra_relative_nonmaximality_note.md`. | If no such maximality theorem applies, the finite-center obstruction is a useful boundary statement for supplied-category or algebra-relative reconstruction. |
 | Support/readout accountability is the missing route to finite rank | The finite rank-accountability criterion is Blackwell/Le Cam/Petz/Buscemi-style target-specific sufficiency/factorization. | The theorem core is now internally demoted. What may survive is only the black-hole/AQFT translation: binary rank needs sufficiency for that exact finite-center target, not generic recovery or entropy equality. |
@@ -115,6 +119,9 @@ short note `team1_discrete_spectroscopy_alphabet_boundary_short_note.pdf`.
 For the local probe-measurement lane, send
 `team1_probe_measurement_center_separation_note.md` plus the compact short
 note `team1_probe_measurement_center_separation_short_note.pdf`.
+For the split/tensor-factor lane, send
+`team1_split_tensor_factor_boundary_note.md` plus the compact short note
+`team1_split_tensor_factor_boundary_short_note.pdf`.
 
 ## One-Week Frontier Work
 
