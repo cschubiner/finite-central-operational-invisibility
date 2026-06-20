@@ -4,6 +4,10 @@ Status: live referee-facing theorem note. This is not a frozen theorem artifact
 and does not modify either Team 1 manuscript, Lean archive, public mirror, or
 SHA manifest.
 
+Standalone TeX/PDF review version:
+`team1_finite_center_residue_short_note.tex` /
+`team1_finite_center_residue_short_note.pdf`.
+
 Purpose: isolate the smallest standard-language theorem residue that external
 reviewers should classify. The point is to make the possible contribution easy
 to demote, kill, or preserve.

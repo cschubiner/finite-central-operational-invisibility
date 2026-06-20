@@ -32,6 +32,9 @@ It is not a derivation of a microscopic quantum-gravity primitive.
 
 For the stricter standard-theorem demotion pass, see
 `team1_standard_theorem_crosswalk.md`.
+For the compact negative residue theorem/proof, see
+`team1_finite_center_residue_theorem_note.md` and the standalone review
+PDF `team1_finite_center_residue_short_note.pdf`.
 For the concrete LCQFT constant-center extension test, see
 `team1_lcqft_constant_center_extension_note.md`.
 For the concrete OAQEC/JLMS algebra-relative nonmaximality test, see

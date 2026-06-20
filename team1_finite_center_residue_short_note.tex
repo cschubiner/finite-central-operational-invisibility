@@ -1,0 +1,278 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1.12in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\C}{\mathbb C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\F}{\mathcal F}
+\newcommand{\M}{\mathcal M}
+\newcommand{\N}{\mathcal N}
+\newcommand{\W}{\mathcal W}
+\newcommand{\Z}{\mathcal Z}
+
+\setlength{\emergencystretch}{3em}
+\hypersetup{
+  pdftitle={A Finite-Center No-Go Boundary for Quotient-Visible Reconstruction},
+  pdfsubject={Operator algebras, finite centers, sufficiency, and AQFT reconstruction},
+  pdfkeywords={von Neumann algebras, finite centers, Blackwell sufficiency, Petz sufficiency, AQFT, binary rank}
+}
+
+\title{A Finite-Center No-Go Boundary for Quotient-Visible Reconstruction}
+\author{}
+\date{Live review note of June 20, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note states the smallest Team 1 residue in standard language.  Let \(A\)
+be the represented von Neumann algebra of supplied observable data, and let
+\(\widehat A_q=A\oplus (N\overline\otimes \ell^\infty(F_q))\) be a finite
+central extension with quotient map \(\pi_q:\widehat A_q\to A\).  Any record
+formed only after applying \(\pi_q\) is constant on the hidden finite central
+fiber.  Therefore no rule whose input is only that quotient-visible record can
+determine targets that vary on the fiber: hidden central support, ambient
+faithfulness, finite central cardinality, the predicate \(q=2\), unquotiented
+tensor coordinates, omitted sector-character fibers, or absolute finite-center
+entropy calibration.
+
+The proof is elementary: normal quotients of von Neumann algebras are
+central-projection quotients, and reconstruction from a record is possible only
+for functions constant on its fibers.  The result should therefore be treated
+as demotion-ready.  In statistical language it is a Blackwell/Le Cam/Petz/
+Buscemi sufficiency boundary for a declared experiment, channel, subalgebra, or
+model.  The possible contribution is not new operator algebra; it is the
+black-hole/AQFT warning that recovery, sector, modular, locally covariant, or
+entropy records reconstruct only what their hypotheses supply.  Binary finite
+rank follows only after a separator, physical-exclusion/maximality premise,
+finite-alphabet law, or direct measurement channel is added.
+\end{abstract}
+
+\paragraph{Status.}
+This is live non-frozen review metadata.  It does not modify either frozen Team
+1 paper, Lean archive, public mirror manifest, or SHA-256 package.  Its purpose
+is external classification: known theorem, false statement, missing hypothesis,
+too broad physically, or useful expository corollary.
+
+\section{Question}
+
+Standard reconstruction theorems reconstruct supplied structure: a represented
+algebra, a functor, a sector category, a code algebra, a channel, a split
+inclusion, a trace-normalized Type II algebra, or a measured spectrum.  Team 1's
+remaining question is the converse:
+
+\begin{quote}
+If the displayed record is already quotient-visible with respect to a hidden
+finite central completion, what further premise is required before one may
+reconstruct hidden finite central rank, ambient faithfulness, unquotiented
+coordinates, or the binary predicate \(q=2\)?
+\end{quote}
+
+The word ``reconstruct'' means ``is a function of the displayed data on the
+declared comparison class.''  There is no obstruction if the model supplies the
+full finite center, the atomic measurement, or \(q\) itself as input.  The
+obstruction is to inferring those targets from records that have already
+forgotten finite central directions.
+
+\section{Same-Data Finite-Center Extensions}
+
+\begin{definition}[quotient-visible record]
+Let \(A\) and \(N\) be von Neumann algebras, let \(F_q\) be a finite set with
+\(|F_q|=q\), and set
+\[
+  \widehat A_q=A\oplus \left(N\overline\otimes \ell^\infty(F_q)\right).
+\]
+Let
+\[
+  \pi_q:\widehat A_q\to A,\qquad
+  \pi_q(a,x)=a
+\]
+be the normal quotient map.  A record \(D_q\) is quotient-visible if every
+state, effect, channel, sector label, recovery map, modular datum, tensor
+coordinate, spectroscopy datum, or entropy quantity used to form \(D_q\)
+factors through \(\pi_q\).  Equivalently, \(D_q\) is constant on the kernel
+fiber \(0\oplus (N\overline\otimes \ell^\infty(F_q))\).
+\end{definition}
+
+\begin{theorem}[same-data finite-center obstruction]
+\label{thm:same-data}
+Let \(\mathcal C\) be a comparison class containing at least two quotient maps
+\(\pi_q:\widehat A_q\to A\) as above, or hidden refinements of one such finite
+central summand, with quotient-visible records \(D_q\) having the same
+displayed value after applying \(\pi_q\).  Then no reconstruction rule whose
+input is only that displayed record can determine any target that is not
+constant on the comparison fiber.  In particular it cannot determine:
+\begin{enumerate}
+  \item whether the represented algebra \(A\) was ambient-faithful;
+  \item the nonzero finite central support in the hidden summand;
+  \item the hidden finite central cardinality \(q\);
+  \item the predicate \(q=2\);
+  \item unquotiented tensor coordinates in the hidden finite central summand;
+  \item omitted central-character sector fibers; or
+  \item an absolute finite-center entropy calibration attached to that summand.
+\end{enumerate}
+Those targets become determinate only after adding a datum that separates,
+excludes, identifies as null or gauge, calibrates, or directly measures the
+hidden finite central directions.
+\end{theorem}
+
+\begin{proof}
+The kernel of \(\pi_q\) is the normal central summand
+\[
+  0\oplus \left(N\overline\otimes \ell^\infty(F_q)\right).
+\]
+More generally, ultraweakly closed two-sided ideals in von Neumann algebras are
+central-projection summands, so ordinary normal quotients forget precisely a
+central summand.  Since \(D_q\) factors through \(\pi_q\), all hidden choices in
+that summand give the same displayed record.  But the targets listed in the
+theorem vary over same-record completions: take \(q=2\) and \(q=3\), vary the
+hidden central support, refine an omitted central-character fiber, change an
+unrepresented tensor coordinate, or change an additive finite-center entropy
+normalization while preserving the quotient record.  A function of the
+displayed record must assign the same value to all same-record completions, so
+it cannot equal a target that differs between them.  The only exits are
+premises that remove the comparison fiber: a separating readout, a maximality
+or physical-exclusion theorem, a null/gauge identification, a calibration
+rule, a finite-alphabet law, or a direct measurement channel.
+\end{proof}
+
+\begin{corollary}[binary rank is not a quotient-visible consequence]
+\label{cor:binary}
+In the comparison class of Theorem~\ref{thm:same-data}, the predicate \(q=2\)
+is reconstructible from quotient-visible records only if the records are
+injective on the binary-versus-nonbinary fiber, or if an added physical premise
+collapses that fiber.  Entropy, recovery, sector, modular, or locally
+covariant data that are identical for \(q=2\) and \(q=3\) do not force binary
+rank.
+\end{corollary}
+
+\section{Positive Exits}
+
+The theorem is a no-go only relative to quotient-visible data.  It is killed,
+demoted, or made inapplicable by any of the following positive hypotheses:
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.35\linewidth}>{\raggedright\arraybackslash}p{0.53\linewidth}}
+\toprule
+Positive input & Effect \\
+\midrule
+Faithful finite-center readout & Separates the finite-center contrast space;
+then the accounted rank is recoverable. \\
+\addlinespace
+Physical maximality or source faithfulness & Says the represented algebra is
+the full physical algebra, not a quotient of a hidden central extension. \\
+\addlinespace
+Split, type-I, or tensor-independence hypothesis & Supplies spatial tensor
+coordinates instead of asking generated-algebra data to reconstruct them. \\
+\addlinespace
+Full sector category or full code algebra & Makes DHR/DR or OAQEC/JLMS
+reconstruction apply to the intended object, rather than to an omitted quotient. \\
+\addlinespace
+Trace or area calibration & Fixes the finite-center entropy normalization. \\
+\addlinespace
+Finite-alphabet law or direct spectroscopy & Measures the relevant finite
+fiber and can make \(q=2\) a genuine output rather than an inference from
+quotient-visible entropy. \\
+\bottomrule
+\end{longtable}
+
+\section{Demotion Boundary}
+
+The mathematical core of Theorem~\ref{thm:same-data} is not a Clay- or
+Nobel-level new theorem.  It is the central-projection quotient theorem plus
+the elementary fact that functions of a record are constant on record fibers.
+Blackwell comparison of experiments and Le Cam deficiency theory say the same
+thing in decision-theoretic language \cite{Blackwell1951,Blackwell1953,
+LeCam1964,LeCam1986}.  Petz sufficiency and later quantum comparison theorems
+say the noncommutative version relative to a declared subalgebra, channel, or
+statistical model \cite{Petz1986,Petz1988,Shmaya2005,Buscemi2012}.
+
+The possible Team 1 value is therefore a precise black-hole/AQFT claim
+boundary:
+
+\begin{quote}
+Recovery, sector, modular, locally covariant, split, spectroscopy, or entropy
+records reconstruct the object supplied by their hypotheses.  They do not, by
+themselves, certify maximality against hidden finite central extensions or
+derive binary rank.  To force \(q\) or \(q=2\), the finite-center separator,
+exclusion, calibration, or direct measurement premise must be named.
+\end{quote}
+
+\section{Reviewer Question}
+
+Is this note merely a known sufficiency/central-quotient corollary under
+another name, or is the black-hole/AQFT translation a useful claim boundary?
+The desired external response is one of:
+
+\begin{itemize}
+  \item \emph{known}: cite the exact theorem and demote the note;
+  \item \emph{false}: give the counterexample or hidden assumption;
+  \item \emph{missing hypothesis}: name the positive premise that makes the
+    target reconstructible;
+  \item \emph{too broad}: name the physical axiom always assumed in the
+    intended setting;
+  \item \emph{useful}: say the finite-center no-go is worth writing as an
+    expository reconstruction boundary.
+\end{itemize}
+
+\begin{thebibliography}{99}
+
+\bibitem{Blackwell1951}
+D. Blackwell,
+Comparison of experiments,
+in \emph{Proceedings of the Second Berkeley Symposium on Mathematical
+Statistics and Probability}, University of California Press, 1951, 93--102.
+
+\bibitem{Blackwell1953}
+D. Blackwell,
+Equivalent comparisons of experiments,
+\emph{Annals of Mathematical Statistics} \textbf{24} (1953), 265--272.
+
+\bibitem{LeCam1964}
+L. Le Cam,
+Sufficiency and approximate sufficiency,
+\emph{Annals of Mathematical Statistics} \textbf{35} (1964), 1419--1455.
+
+\bibitem{LeCam1986}
+L. Le Cam,
+\emph{Asymptotic Methods in Statistical Decision Theory},
+Springer, 1986.
+
+\bibitem{Petz1986}
+D. Petz,
+Sufficient subalgebras and the relative entropy of states of a von Neumann
+algebra,
+\emph{Communications in Mathematical Physics} \textbf{105} (1986), 123--131.
+
+\bibitem{Petz1988}
+D. Petz,
+Sufficiency of channels over von Neumann algebras,
+\emph{Quarterly Journal of Mathematics} \textbf{39} (1988), 97--108.
+
+\bibitem{Shmaya2005}
+E. Shmaya,
+Comparison of information structures and completely positive maps,
+\emph{Journal of Physics A: Mathematical and General} \textbf{38} (2005),
+9717--9727.
+
+\bibitem{Buscemi2012}
+F. Buscemi,
+Comparison of quantum statistical models: equivalent conditions for
+sufficiency,
+\emph{Communications in Mathematical Physics} \textbf{310} (2012), 625--647.
+
+\end{thebibliography}
+
+\end{document}

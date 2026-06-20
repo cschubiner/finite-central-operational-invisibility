@@ -198,7 +198,10 @@ This is the sentence to ask experts to classify as `known`, `false`, `missing
 hypothesis`, `too broad`, or `plausibly new`.
 
 For the explicit finite-center theorem residue and proof skeleton, see
-`team1_finite_center_residue_theorem_note.md`.
+`team1_finite_center_residue_theorem_note.md`.  The compact TeX/PDF
+review version is
+`team1_finite_center_residue_short_note.tex` /
+`team1_finite_center_residue_short_note.pdf`.
 
 For the constructive positive exit from that residue, see
 `team1_positive_accountability_theorem_note.md`.
