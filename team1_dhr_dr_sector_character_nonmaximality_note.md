@@ -95,6 +95,29 @@ fibers. The concrete exits are:
 - impose an explicit quotient/factor/inadmissibility axiom excluding the
   finite central amplification.
 
+## Proposition: Full Character Fiber Recovers Cardinality
+
+There is a corresponding positive theorem, not merely a no-go. If the supplied
+sector datum retains the full central-character category `S(A) x F`, and also
+retains the projection to the base sector category, then the finite central
+cardinality is readable as a fiber cardinality.
+
+For any base sector `pi`, the retained fiber
+
+```text
+{ rho in Obj(S(A) x F)/isomorphism : rho maps to pi }
+```
+
+has exactly `|F|` objects. The representatives are `(pi,i)` for `i in F`;
+different characters are nonisomorphic because their intertwiner spaces vanish,
+and same-character copies carry the original intertwiner spaces of `S(A)`.
+Thus `|F|=2` is reconstructible exactly when this retained fiber has two
+objects.
+
+This is the sharp boundary. DHR/DR need not recover forgotten labels if the
+category was first diagonally projected, but there is no obstruction once the
+character fiber is actually part of the supplied sector datum.
+
 ## Referee Classification
 
 This note should be classified as one of:
@@ -120,5 +143,10 @@ Team 1 should not claim a new DHR/DR theorem. The concrete claim is:
 > DHR/DR does not reconstruct them back. Finite central rank, and the predicate
 > `n=2`, require a sector-faithful input, a center-separating datum, or an
 > exclusion/quotient premise.
+
+The positive counterpart is equally explicit: if the full character-labeled
+sector category and its projection to the base sector category are retained,
+then finite central rank is just the cardinality of the retained character
+fiber.
 
 That is the DHR/DR row for external adjudication.

@@ -49,7 +49,9 @@ cannot recover the central characters, the central cardinality \(n\), or the
 predicate \(n=2\).  The sharp positive exit is sector-faithfulness: the sector
 datum supplied to reconstruction must be injective on the finite
 central-character fibers, or the theory must explicitly quotient, factor, or
-exclude those fibers.
+exclude those fibers.  If the full character-labeled sector category is
+retained instead, the finite central cardinality is already readable as the
+cardinality of the retained character fiber.
 \end{abstract}
 
 \paragraph{Status.}
@@ -151,6 +153,34 @@ If \(\kappa\) is reconstructible from \(F\), then
 well-definedness of this assignment.
 \end{proof}
 
+\begin{proposition}[full character fiber recovers cardinality]
+\label{prop:full-character-fiber}
+Assume the supplied sector datum retains the full central-character category
+\(\Sectors(\A)\times F\), rather than its diagonal projection, and that the
+projection to the base sector category is part of the supplied comparison
+data.  For any base object \(\pi\), the retained fiber
+\[
+  \{\rho\in\Obj(\Sectors(\A)\times F)/{\simeq}:\rho\mapsto\pi\}
+\]
+has cardinality \(|F|\).  Hence the finite central cardinality is
+reconstructible from the supplied category-with-character-fiber data, and the
+predicate \(|F|=2\) is reconstructible exactly when this retained fiber has
+two objects.
+\end{proposition}
+
+\begin{proof}
+In the full category, the objects over \(\pi\) are precisely \((\pi,i)\) for
+\(i\in F\).  Theorem~\ref{thm:sector-character-fiber} shows that objects with
+different characters have no intertwiners, hence are nonisomorphic, while
+same-character copies have the usual intertwiners of \(\Sectors(\A)\).
+Therefore the retained fiber has exactly one isomorphism class for each
+\(i\in F\), so its cardinality is \(|F|\).  If the projection to the base
+sector category is retained, this fiber is a function of the supplied data.  If
+the category is instead replaced by the diagonal restricted category, the fiber
+is collapsed before reconstruction and its cardinality is no longer a function
+of the supplied datum.
+\end{proof}
+
 \section{DHR/DR Boundary}
 
 DHR analysis supplies localized superselection sectors under its selection
@@ -190,7 +220,9 @@ Exit premise & Effect \\
 \midrule
 Full sector category retained & If the supplied category is
 \(\Sectors(\A)\times\{1,\ldots,n\}\), the finite central characters are part of
-the input and DHR/DR is not being asked to recover forgotten labels. \\
+the input, the retained character fiber has cardinality \(n\) by
+Proposition~\ref{prop:full-character-fiber}, and DHR/DR is not being asked to
+recover forgotten labels. \\
 \addlinespace
 Faithful sector functor & A restriction or forgetful datum \(F\) is sufficient
 exactly when it is injective on the central-character fibers relevant to the
