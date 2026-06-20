@@ -6,6 +6,9 @@ Factorization and Horizon Entropy`.
 
 External reviewers should start with `REVIEWER_START_HERE.md`. Public review
 and verification status is tracked in `PUBLIC_REVIEW_STATUS.md`.
+For a stricter first-pass classification, use
+`team1_standard_theorem_crosswalk.md` and
+`team1_referee_claim_boundary_matrix.md` before reading the full manuscript.
 
 It contains only the frozen Team 1 package artifacts:
 
@@ -23,6 +26,8 @@ Additional non-frozen review metadata on `main`:
 - `REVIEW_RESPONSE_TEMPLATE.md`
 - `PUBLIC_REVIEW_STATUS.md`
 - `finite_central_literature_boundary_index.md`
+- `team1_referee_claim_boundary_matrix.md`
+- `team1_standard_theorem_crosswalk.md`
 - `.github/workflows/verify-frozen-package.yml`
 - `finite_central_operational_invisibility_SHA256SUMS.txt`
 
@@ -80,3 +85,7 @@ operator-algebraic inputs are cited in the note.
 See `finite_central_operational_invisibility_external_review_request.md` for
 the main claim, novelty boundary, and three concrete questions for external
 reviewers.
+
+For reviewers likely to classify the result as standard, start with
+`team1_standard_theorem_crosswalk.md`. It concedes the standard theorem lanes
+up front and isolates the possible publishable residue.

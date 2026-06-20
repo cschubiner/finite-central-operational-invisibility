@@ -30,7 +30,10 @@ Public review and verification status:
    `finite_central_operational_invisibility_submission_manifest.md`.
 5. Check the primary-source attack map in
    `finite_central_literature_boundary_index.md`.
-6. Verify the finite Lean kernel if desired:
+6. For a quick standard-theorem demotion pass, read
+   `team1_standard_theorem_crosswalk.md` and
+   `team1_referee_claim_boundary_matrix.md`.
+7. Verify the finite Lean kernel if desired:
 
 ```bash
 shasum -a 256 -c finite_central_operational_invisibility_SHA256SUMS.txt
@@ -54,6 +57,8 @@ products, or black-hole entropy.
 3. Does the entropy-coefficient theorem require an additional analytic
    hypothesis on the area limit, trace normalization, or comparison class?
 4. Does the Lean finite kernel faithfully abstract the standard-language claim?
+5. Is the surviving residue in `team1_standard_theorem_crosswalk.md` already a
+   named theorem or only an elementary corollary package?
 
 ## Response Format
 
