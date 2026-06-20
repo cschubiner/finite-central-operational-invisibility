@@ -101,6 +101,42 @@ L_a(p) - L_b(p) = (1/2) log(3/4) != 0.
 So a Type II trace/entropy construction for the supplied algebra is not by
 itself a calibration principle for an omitted finite central trace density.
 
+## Proposition: Atomic Calibration Recovers the Entropy Term
+
+There is a sharp positive exit. If the full finite central core
+
+```text
+K tensor l^\infty({1,...,n})
+```
+
+is retained, and the supplied calibration includes atomic trace values
+
+```text
+tau_a(h tensor e_i) = a_i tau(h),     i = 1,...,n
+```
+
+for some positive finite-trace `h in K`, then the central trace weights `a_i`
+are determined up to the same convention used to normalize `tau(h)`.
+Consequently
+
+```text
+L_a(p) = sum_i p_i log(a_i)
+```
+
+is determined for every retained central probability vector `p`.
+
+If the trace normalization is specified only projectively, so that
+`a -> lambda a` is still allowed, then
+
+```text
+L_{lambda a}(p) = L_a(p) + log(lambda).
+```
+
+The ambiguity is a common state-independent additive constant. Thus entropy
+differences between retained central states are determined exactly, while an
+absolute entropy-density coefficient still needs the matching absolute trace,
+area, or Newton-constant convention.
+
 ## Entropy-Density Boundary
 
 If a black-hole or horizon calculation claims an absolute area-density
@@ -147,5 +183,10 @@ claim is:
 > the algebra and trace/normalization data supplied to them. They do not, by
 > themselves, identify a finite central calibration that was quotient-hidden,
 > diagonally tested, or omitted before the Type II entropy calculation.
+
+The positive counterpart is also explicit: retained atomic trace calibration
+does recover the finite-center entropy term, modulo only the common additive
+trace-normalization convention when that convention is intentionally left
+projective.
 
 That is the crossed-product entropy row for external adjudication.

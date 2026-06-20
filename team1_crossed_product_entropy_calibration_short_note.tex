@@ -52,7 +52,9 @@ weights relevant to the claimed state family.  Therefore Witten-style
 crossed-product entropy is a positive entropy construction for the supplied
 algebra and trace; it is not, by itself, a principle that reconstructs an
 omitted finite central summand, finite central trace weights, or an absolute
-entropy-density coefficient.
+entropy-density coefficient.  The positive exit is equally concrete: atomic
+trace calibration on the retained finite central summands recovers the
+finite-center entropy term up to the intended common trace convention.
 \end{abstract}
 
 \paragraph{Status.}
@@ -164,6 +166,38 @@ Thus the same diagonal Type II trace data can leave different absolute
 finite-center entropy terms.
 \end{proof}
 
+\begin{proposition}[atomic calibration recovers the finite-center entropy term]
+\label{prop:atomic-calibration}
+Assume the full finite central core
+\(\K\,\bar\otimes\,\ell^\infty(\{1,\ldots,n\})\) is retained and the supplied
+calibration contains, for some positive \(h\in\K\) with \(0<\tau(h)<\infty\),
+the atomic trace values
+\[
+  \tau_a(h\otimes e_i)=a_i\tau(h),\qquad i=1,\ldots,n .
+\]
+Then the central trace weights \(a_i\) are determined up to the same convention
+used to normalize \(\tau(h)\).  In particular, for every retained central
+probability vector \(p\), the finite-center entropy contribution
+\[
+  L_a(p)=\sum_i p_i\log a_i
+\]
+is determined.  If only the projective class \([a]\) is fixed, then \(L_a(p)\)
+is determined up to a common additive constant independent of \(p\), and all
+differences \(L_a(p)-L_a(p')\) are determined exactly.
+\end{proposition}
+
+\begin{proof}
+Dividing the supplied value \(\tau_a(h\otimes e_i)\) by the fixed normalization
+\(\tau(h)\) gives \(a_i\).  Substitution gives \(L_a(p)\).  If the trace is
+specified only up to common rescaling \(a\mapsto\lambda a\), then
+\[
+  L_{\lambda a}(p)=\sum_i p_i\log(\lambda a_i)
+  =L_a(p)+\log\lambda,
+\]
+because \(\sum_i p_i=1\).  The shift is independent of \(p\), so it cancels in
+differences between retained central states.
+\end{proof}
+
 \section{Entropy-density boundary}
 
 Let \(D\) be the crossed-product, relative-entropy, or operational data
@@ -198,7 +232,8 @@ specified entropy algebra, rather than omitted before the entropy calculation.
 \\
 \addlinespace
 Atomic trace calibration & Tests \(h\otimes e_i\) recover the central trace
-weights \(a_i\) up to the intended convention. \\
+weights \(a_i\), hence the finite-center entropy contribution, by
+Proposition~\ref{prop:atomic-calibration}. \\
 \addlinespace
 Absolute area/entropy calibration & An affinely spanning calibrated state
 family fixes the additive or affine entropy residual. \\
