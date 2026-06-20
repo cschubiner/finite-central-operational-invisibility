@@ -1,0 +1,235 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1.12in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\B}{\mathcal B}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Hcode}{\mathcal H_{\mathrm{code}}}
+\newcommand{\M}{\mathcal M}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\id}{\operatorname{id}}
+
+\setlength{\emergencystretch}{3em}
+\hypersetup{
+  pdftitle={Algebra-Relative OAQEC/JLMS Reconstruction Does Not Certify Maximality},
+  pdfsubject={Operator-algebra quantum error correction, JLMS, finite centers, and maximality},
+  pdfkeywords={OAQEC, JLMS, entanglement wedge reconstruction, finite centers, algebra-relative recovery}
+}
+
+\title{Algebra-Relative OAQEC/JLMS Reconstruction\\
+Does Not Certify Maximality}
+\author{}
+\date{Live review note of June 20, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let \(\M\subseteq\B(\Hcode)\) be a finite-dimensional von Neumann algebra
+reconstructable on a boundary region or boundary algebra in the usual
+operator-algebra quantum-error-correction sense.  For every \(q\geq 2\), the
+finite central direct-sum extension
+\[
+  \Hcode^{(q)}=\bigoplus_{j=1}^{q}\Hcode,\qquad
+  \M_q=\M\otimes \C^q\simeq \bigoplus_{j=1}^{q}\M
+\]
+is reconstructable blockwise whenever the boundary representation and recovery
+are extended blockwise.  A quotient-visible record obtained by composing with
+a central character \(\pi_k:\C^q\to\C\) sees only the selected summand:
+\[
+  Q_k=\id_{\M}\otimes \pi_k:\M_q\to \M.
+\]
+Thus OAQEC/JLMS data certify reconstruction of the supplied algebra.  They do
+not, by themselves, certify that the supplied algebra is the full logical
+algebra against hidden finite central refinements.  The obstruction disappears
+only after adding a maximality premise, complementary recovery/full-algebra
+identification, center-separating states or operations, or a physical rule
+excluding the finite center.
+\end{abstract}
+
+\paragraph{Status.}
+This is non-frozen external-review metadata for Team 1.  It is intended as a
+small claim that a holographic-QEC referee can classify as known, false,
+missing-hypothesis, or useful.  It does not modify any frozen Team 1
+manuscript, Lean archive, public mirror manifest, or SHA-256 package.
+
+\section{Setup}
+
+Let \(\Hcode\) be finite-dimensional and let
+\(\M\subseteq\B(\Hcode)\) be a finite-dimensional von Neumann algebra.  The
+finite-dimensional structure theorem writes
+\[
+  \M \simeq \bigoplus_{\alpha}
+  \bigl(\B(\mathcal H_{a_\alpha})\otimes I_{\bar a_\alpha}\bigr).
+\]
+In operator-algebra quantum error correction, a boundary region or boundary
+algebra reconstructs \(\M\) when every \(x\in\M\) has a boundary
+representative acting identically on the code, equivalently when the relevant
+erasure/recovery, commutant, and relative-entropy tests hold for the declared
+algebra.
+
+Fix \(q\geq 2\).  Define
+\[
+  \Hcode^{(q)}=\bigoplus_{j=1}^{q}\Hcode,\qquad
+  \M_q=\M\otimes \C^q\simeq\bigoplus_{j=1}^{q}\M.
+\]
+Let \(p_j\) be the minimal central idempotents of \(\C^q\).  For a selected
+character \(\pi_k:\C^q\to\C\), set
+\[
+  Q_k=\id_{\M}\otimes \pi_k:\M_q\to\M.
+\]
+
+\begin{theorem}[finite central direct-sum extension]
+\label{thm:oaqec-direct-sum}
+Suppose \(\M\) is reconstructable on a boundary region or algebra \(A\) in the
+finite-dimensional OAQEC sense.  If the code, boundary representation, and
+recovery map are extended blockwise to \(\Hcode^{(q)}\), then
+\(\M_q=\M\otimes\C^q\) is reconstructable blockwise on \(A\).  However, every
+declared reconstruction, recovery, modular, entropy, or JLMS record that
+factors through \(Q_k\) is insensitive to the nonselected central supports
+\(\sum_{j\ne k}p_j\) and to the hidden central cardinality \(q\).
+\end{theorem}
+
+\begin{proof}
+Let \(R_A:\M\to\B(\mathcal H_A)\) denote a boundary representation of the
+declared algebra.  Define
+\[
+  R_A^{(q)}(x_1,\ldots,x_q)
+  =
+  \bigoplus_{j=1}^{q} R_A(x_j)
+\]
+on the blockwise boundary representation space.  Since each component
+\(R_A(x_j)\) acts on the corresponding copy of the code as \(x_j\), the direct
+sum acts on \(\Hcode^{(q)}\) as \((x_1,\ldots,x_q)\).  The same componentwise
+construction extends any recovery channel or algebra homomorphism used to
+state the OAQEC condition.  Therefore \(\M_q\) is reconstructable blockwise.
+
+Now suppose a record factors through \(Q_k\).  If
+\[
+  (x_1,\ldots,x_q),(y_1,\ldots,y_q)\in\M_q
+  \quad\text{with}\quad x_k=y_k,
+\]
+then \(Q_k(x_1,\ldots,x_q)=Q_k(y_1,\ldots,y_q)\).  Consequently every
+boundary representative, recovery task, modular comparison, or relative
+entropy equality evaluated after the quotient has the same value for the two
+tuples, even if their nonselected components or central supports differ.  The
+quotient-visible data therefore cannot determine the omitted finite central
+fiber or the number \(q\).
+\end{proof}
+
+\section{Relation To JLMS}
+
+The JLMS statement compares boundary and bulk relative entropies for the bulk
+algebra or entanglement-wedge algebra under discussion.  In the
+operator-algebra QEC formulation, the theorem is algebra-relative: the
+recovered object is the stated von Neumann algebra, possibly with center.  The
+direct-sum extension above leaves that algebra-relative statement intact.
+
+\begin{proposition}[quotient-visible JLMS nonidentifiability]
+\label{prop:jlms-quotient}
+Consider any family of code states, modular-flow tests, or relative-entropy
+comparisons whose declared bulk algebra is \(Q_k(\M_q)\simeq\M\), or whose
+observed records factor through \(Q_k\).  The resulting JLMS/OAQEC data do not
+distinguish \(\M\) from the selected quotient of \(\M\otimes\C^q\), and hence
+do not certify that no hidden finite central direct-sum refinement was present.
+\end{proposition}
+
+\begin{proof}
+Relative entropy and modular data in the declared quotient are functions of
+the selected block.  Changes to nonselected blocks change neither the
+quotient state nor the quotient algebra element.  Thus the same
+quotient-visible JLMS/OAQEC record is compatible with multiple values of
+\(q\) and with multiple hidden central supports.
+\end{proof}
+
+\begin{remark}
+If instead the state family includes all central sectors and their classical
+probabilities, full direct-sum relative entropy contains the usual classical
+relative-entropy term between central distributions.  That is not a
+counterexample to the obstruction; it is a center-separating positive exit.
+\end{remark}
+
+\section{Positive Exits}
+
+The obstruction is intentionally conditional.  It is killed, or demoted to a
+routine application, by any hypothesis that supplies finite-center
+accountability:
+
+\begin{center}
+\begin{tabular}{p{0.33\linewidth}p{0.53\linewidth}}
+\toprule
+Exit premise & Effect \\
+\midrule
+Full logical algebra stipulated & If \(\M\) is defined to be the complete
+logical algebra of the code, then \(\M\otimes\C^q\) is a different code
+algebra, not a hidden refinement of the same target. \\
+\addlinespace
+Complementary recovery/maximality & If the theorem being invoked proves a
+unique maximal algebra from both region and complement data, then omitted
+central summands are excluded by hypothesis or theorem. \\
+\addlinespace
+Center-separating states or operations & If the comparison includes states,
+operations, or boundary readouts that distinguish the central projections
+\(p_j\), then the data no longer factor through \(Q_k\). \\
+\addlinespace
+Physical exclusion & If the holographic model forbids such finite classical
+superselection labels, the extra premise should be named. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Referee Question}
+
+The classification question is precise:
+
+\begin{quote}
+Does the standard OAQEC/JLMS hypothesis being used already imply that the
+supplied algebra is maximal as the full logical algebra, or that all finite
+central sectors are measured, included, or physically excluded?  If so, name
+the theorem or axiom.  If not, algebra-relative reconstruction does not by
+itself certify finite-center accountability.
+\end{quote}
+
+The desired external response is not encouragement.  It is one of: known
+finite-dimensional OAQEC fact, false statement, missing positive hypothesis,
+physically irrelevant comparison class, or useful expository no-go.
+
+\begin{thebibliography}{99}
+
+\bibitem{JLMS}
+D. L. Jafferis, A. Lewkowycz, J. Maldacena, and S. J. Suh,
+Relative entropy equals bulk relative entropy,
+\emph{Journal of High Energy Physics} \textbf{2016}, 004 (2016);
+\texttt{arXiv:1512.06431}.
+
+\bibitem{DHW}
+X. Dong, D. Harlow, and A. C. Wall,
+Reconstruction of bulk operators within the entanglement wedge in gauge-gravity
+duality,
+\emph{Physical Review Letters} \textbf{117}, 021601 (2016);
+\texttt{arXiv:1601.05416}.
+
+\bibitem{Harlow}
+D. Harlow,
+The Ryu-Takayanagi formula from quantum error correction,
+\emph{Communications in Mathematical Physics} \textbf{354} (2017), 865--912;
+\texttt{arXiv:1607.03901}.
+
+\bibitem{KamalPenington}
+A. A. Kamal and G. Penington,
+The Ryu-Takayanagi formula from quantum error correction: an algebraic
+treatment of the boundary CFT,
+\texttt{arXiv:1912.02240}.
+
+\end{thebibliography}
+
+\end{document}

@@ -3,6 +3,10 @@
 Status: live referee-facing theorem note. This is not a frozen manuscript or
 Lean artifact.
 
+Short TeX/PDF version:
+`team1_oaqec_jlms_algebra_relative_nonmaximality_short_note.tex` /
+`team1_oaqec_jlms_algebra_relative_nonmaximality_short_note.pdf`.
+
 Purpose: turn the OAQEC/JLMS adjudication row into a concrete standard-language
 test. The target is not a new entanglement-wedge reconstruction theorem. The
 target is the exact boundary between:
