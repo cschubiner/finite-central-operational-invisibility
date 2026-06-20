@@ -70,6 +70,9 @@ hypothesis`, `too broad`, or `plausibly new`.
 For the explicit finite-center theorem residue and proof skeleton, see
 `team1_finite_center_residue_theorem_note.md`.
 
+For the current internal verdict on novelty and publication posture, see
+`team1_self_adjudication_decision_memo.md`.
+
 ## Next External Action
 
 Send the crosswalk together with
