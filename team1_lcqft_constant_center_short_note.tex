@@ -2,6 +2,7 @@
 
 \usepackage[margin=1.12in]{geometry}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{array}
 \usepackage{booktabs}
 \usepackage{hyperref}
 
@@ -168,14 +169,47 @@ If \(\A_{\mathrm{kin}}(M;O)=\A_{\mathrm{dyn}}(M;O)\), then
 \((\A_q)_{\mathrm{kin}}(M;O)=(\A_q)_{\mathrm{dyn}}(M;O)\).
 \end{proof}
 
+\begin{proposition}[extended locality and local definiteness are positive exits]
+\label{prop:extended-locality}
+Let \(q>1\).  Suppose a spacetime \(M\) contains two nonempty causally disjoint
+admissible regions \(O_1,O_2\), and let their kinematic images in
+\(\A_q(M)\) be denoted by \((\A_q)_{\mathrm{kin}}(M;O_i)\).  Then
+\[
+  \C 1_{\A(M)}\otimes Z_q
+  \subset
+  (\A_q)_{\mathrm{kin}}(M;O_1)
+  \cap
+  (\A_q)_{\mathrm{kin}}(M;O_2).
+\]
+Consequently \(\A_q\) violates any extended-locality axiom requiring causally
+disjoint nonempty local algebras to intersect only in scalars.  Likewise, if a
+local-definiteness axiom requires the intersection of algebras for regions
+shrinking to a point to be only \(\C 1\), then \(\A_q\) violates that axiom for
+the same reason: the constant finite center remains present in every local
+kinematic algebra.
+\end{proposition}
+
+\begin{proof}
+For every admissible inclusion \(\iota_O:M|_O\to M\), the element
+\(1_{\A(M|_O)}\otimes z\in \A(M|_O)\otimes Z_q\) is mapped by
+\(\A(\iota_O)\otimes\operatorname{id}_{Z_q}\) to
+\(1_{\A(M)}\otimes z\).  Hence the same central copy
+\(\C 1_{\A(M)}\otimes Z_q\) lies in the kinematic image of every nonempty
+region.  If \(q>1\), this copy contains non-scalar central idempotents, so the
+intersection of two causally disjoint local algebras is not just \(\C 1\).
+The shrinking-region statement is identical: every algebra in the shrinking
+family contains the same central copy.
+\end{proof}
+
 \section{Positive Exits}
 
-The proposition is narrow.  It says that the RCE-defined equality of
-kinematic and dynamical local subobjects does not by itself remove a constant
-finite center.  Stronger physical assumptions can remove it:
+Proposition~\ref{prop:dynloc} is narrow.  It says that the RCE-defined equality
+of kinematic and dynamical local subobjects does not by itself remove a
+constant finite center.  Proposition~\ref{prop:extended-locality} gives the
+matching positive exit: stronger physical assumptions can remove it.
 
 \begin{center}
-\begin{tabular}{p{0.28\linewidth}p{0.58\linewidth}}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.30\linewidth}>{\raggedright\arraybackslash}p{0.56\linewidth}}
 \toprule
 Exit premise & Effect on \(\A_q\) for \(q>1\) \\
 \midrule
