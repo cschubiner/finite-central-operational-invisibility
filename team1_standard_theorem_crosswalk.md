@@ -67,10 +67,14 @@ The cleanest version to test externally is:
 This is the sentence to ask experts to classify as `known`, `false`, `missing
 hypothesis`, `too broad`, or `plausibly new`.
 
+For the explicit finite-center theorem residue and proof skeleton, see
+`team1_finite_center_residue_theorem_note.md`.
+
 ## Next External Action
 
 Send the crosswalk together with
-`team1_referee_claim_boundary_matrix.md` to one operator-algebra/AQFT
-reviewer first. The best first response is not a long report; it is the exact
-standard theorem or missing hypothesis that decides whether the residue above
-is publishable.
+`team1_referee_claim_boundary_matrix.md` and
+`team1_finite_center_residue_theorem_note.md` to the first-wave reviewers when
+they ask for a narrower target. The best response is not a long report; it is
+the exact standard theorem or missing hypothesis that decides whether the
+residue above is publishable.
