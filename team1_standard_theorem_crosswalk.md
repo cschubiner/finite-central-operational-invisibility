@@ -58,6 +58,11 @@ For the concrete crossed-product entropy calibration boundary test, see
 review version is
 `team1_crossed_product_entropy_calibration_short_note.tex` /
 `team1_crossed_product_entropy_calibration_short_note.pdf`.
+For the concrete quantitative readout-accountability boundary test, see
+`team1_quantitative_readout_accountability_note.md`; the compact TeX/PDF
+review version is
+`team1_quantitative_readout_accountability_short_note.tex` /
+`team1_quantitative_readout_accountability_short_note.pdf`.
 For the concrete relative-entropy central-face calibration boundary test, see
 `team1_relative_entropy_central_face_calibration_note.md`; the compact
 TeX/PDF review version is
@@ -126,6 +131,16 @@ The Blackwell/Le Cam/Petz/Buscemi row has now been internally demoted in
 quotient is known sufficiency/factorization theory.  The remaining candidate
 value is only the black-hole/AQFT translation and the warning that binary rank
 requires sufficiency for that exact finite-center target.
+
+The quantitative readout-accountability row has now been sharpened to a
+finite-precision boundary in
+`team1_quantitative_readout_accountability_note.md`, with the standalone
+short note `team1_quantitative_readout_accountability_short_note.pdf`.
+A reviewer can kill or demote it by naming the standard Le Cam/deficiency,
+spectroscopy, or AQFT/OAQEC stability theorem that already supplies the lower
+readout modulus and error budget. Otherwise the row becomes the explicit
+warning that formal rank/separation is not enough for a referee-grade
+finite-center or `q=2` claim.
 
 The crossed-product entropy row has now been sharpened to a concrete
 calibration-boundary test in

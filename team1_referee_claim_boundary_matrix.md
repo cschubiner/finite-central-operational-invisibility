@@ -47,6 +47,9 @@ review PDF `team1_dhr_dr_sector_character_nonmaximality_short_note.pdf`.
 For the concrete crossed-product entropy calibration boundary test, see
 `team1_crossed_product_entropy_calibration_note.md` and the standalone
 review PDF `team1_crossed_product_entropy_calibration_short_note.pdf`.
+For the concrete quantitative readout-accountability test, see
+`team1_quantitative_readout_accountability_note.md` and the standalone
+review PDF `team1_quantitative_readout_accountability_short_note.pdf`.
 For the concrete relative-entropy central-face calibration test, see
 `team1_relative_entropy_central_face_calibration_note.md` and the
 standalone review PDF
@@ -85,6 +88,7 @@ reviewer attack, not priority claims.
 | LCQFT/RCE/probe records do not force hidden finite centers | A standard LCQFT, dynamical-locality, extended-locality, local-definiteness, center-reduction, or measurement hypothesis forbids the constant-center construction in `team1_lcqft_constant_center_extension_note.md`, or the induced probe effects are automatically central-tomographically complete as tested in `team1_probe_measurement_center_separation_note.md`. | If that hypothesis is extra, Team 1 has a concrete BFV/time-slice/RCE/probe-measurement non-identifiability example: quotient-visible records factor through a selected central character and forget the finite center. |
 | Sector/recovery/JLMS data reconstruct only inside supplied algebra | DHR/DR or OAQEC/JLMS has a theorem that recovers omitted central-character fibers or proves maximality from the stated data; for DHR/DR, the concrete target is `team1_dhr_dr_sector_character_nonmaximality_note.md`; for OAQEC/JLMS, the concrete target is `team1_oaqec_jlms_algebra_relative_nonmaximality_note.md`. | If no such maximality theorem applies, the finite-center obstruction is a useful boundary statement for supplied-category or algebra-relative reconstruction. |
 | Support/readout accountability is the missing route to finite rank | The finite rank-accountability criterion is Blackwell/Le Cam/Petz/Buscemi-style target-specific sufficiency/factorization. | The theorem core is now internally demoted. What may survive is only the black-hole/AQFT translation: binary rank needs sufficiency for that exact finite-center target, not generic recovery or entropy equality. |
+| Noisy readout accountability needs an error budget | A standard AQFT/OAQEC/spectroscopy setup supplies a lower readout modulus, Le Cam/deficiency bound, or line-resolution estimate; the concrete target is `team1_quantitative_readout_accountability_note.md`. | Formal rank is not enough for a finite-precision finite-center or `q=2` claim; the separation margin must dominate the uncertainty. |
 | Binary `q=2` is not forced by quotient-visible entropy/recovery data | A weaker accepted physical axiom derives `q=2` after accountability without a separate alphabet law or direct measurement; for spectroscopy, the concrete target is `team1_discrete_spectroscopy_alphabet_boundary_note.md`. | If no such axiom is known, Paper 2's negative result is the strongest publishable Team 1 target: binary requires additional physics, not just quotient-visible data. |
 | Entropy-density/Newton normalization needs calibration | Crossed-product or horizon-entropy literature fixes the additive/finite-center calibration under exactly the stated assumptions; the concrete target is `team1_crossed_product_entropy_calibration_note.md`. | If calibration is not fixed, Paper 1's entropy row should be presented as an obstruction to overclaiming, not as a new entropy theorem. |
 | Relative entropy fixes central probabilities but not affine calibration | JLMS/OAQEC/crossed-product hypotheses include the full central face plus absolute affine trace/area calibration; the concrete target is `team1_relative_entropy_central_face_calibration_note.md`. | Pairwise relative entropies cancel common central trace weights and therefore do not determine the absolute finite-center entropy representative. |
@@ -121,6 +125,9 @@ short note `team1_dhr_dr_sector_character_nonmaximality_short_note.pdf`.
 For the crossed-product entropy lane, send
 `team1_crossed_product_entropy_calibration_note.md` plus the compact short
 note `team1_crossed_product_entropy_calibration_short_note.pdf`.
+For the quantitative readout-accountability lane, send
+`team1_quantitative_readout_accountability_note.md` plus the compact short
+note `team1_quantitative_readout_accountability_short_note.pdf`.
 For the relative-entropy central-face lane, send
 `team1_relative_entropy_central_face_calibration_note.md` plus the compact
 short note
