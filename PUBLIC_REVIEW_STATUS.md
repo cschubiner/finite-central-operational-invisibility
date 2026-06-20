@@ -34,8 +34,9 @@ infrastructure. This is reproducibility evidence, not novelty adjudication.
 
 - Public issue:
   <https://github.com/cschubiner/finite-central-operational-invisibility/issues/1>
-- Current known public response state at this status update: issue open, no
-  public comments.
+- Current known public response state at this status update: issue open;
+  maintainer metadata comments are present; no written external adjudication
+  response has been logged.
 
 The issue should be the preferred public place to report one of:
 
