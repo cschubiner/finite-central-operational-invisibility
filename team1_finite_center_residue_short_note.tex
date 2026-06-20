@@ -159,6 +159,41 @@ covariant data that are identical for \(q=2\) and \(q=3\) do not force binary
 rank.
 \end{corollary}
 
+\section{A Three-Atom Counterexample to Binary Inference}
+
+The obstruction can be seen without any infinite-dimensional machinery.  Let
+\[
+  Z_3=\ell^\infty(\{0,1,2\}),\qquad
+  V_3=Z_3/\C 1 .
+\]
+Define a binary pooled readout
+\[
+  R_3([x_0,x_1,x_2])=x_0-\frac{x_1+x_2}{2}.
+\]
+Then \(R_3\) has rank one, but \(V_3\) has dimension two and
+\[
+  [0,1,-1]\in \ker R_3 .
+\]
+Thus the readout sees exactly one accounted contrast: atom \(0\) versus the
+pooled pair \(\{1,2\}\).  It does not see the contrast separating atoms \(1\)
+and \(2\).
+
+Equivalently, at the level of central probability vectors,
+\[
+  (p_0,p_1,p_2)\longmapsto (p_0,p_1+p_2)
+\]
+has exactly the same displayed binary statistics as the genuine two-atom
+center \(\ell^\infty(\{0,1\})\).  Every decision rule, entropy record, recovery
+record, sector label, modular datum, or spectroscopy record that depends only
+on the pooled binary data gives the same answer for the two-atom model and the
+three-atom model with hidden split \(1|2\).  The accounted contrast rank is
+one in both cases, but \(q=2\) in one model and \(q=3\) in the other.
+
+This is the finite counterexample behind Corollary~\ref{cor:binary}.  A binary
+quotient is not a binary center.  To conclude \(q=2\), one needs not only a
+one-dimensional accounted readout but also a theorem or measurement saying the
+pooled quotient is the full physical finite center.
+
 \section{Positive Exits}
 
 The theorem is a no-go only relative to quotient-visible data.  It is killed,

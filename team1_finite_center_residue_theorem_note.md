@@ -75,6 +75,37 @@ The proof is the elementary fiber argument.
    identification, calibration, finite-alphabet law, or direct measurement
    channel.
 
+## Explicit Binary-Quotient Counterexample
+
+The binary-rank warning has a completely finite counterexample. Let
+
+```text
+    Z_3 = ell_infty({0,1,2}),      V_3 = Z_3 / C1.
+```
+
+Define the pooled binary readout
+
+```text
+    R_3([x0,x1,x2]) = x0 - (x1+x2)/2.
+```
+
+Then `rank R_3 = 1`, but `dim V_3 = 2` and `[0,1,-1]` lies in `ker R_3`.
+The readout sees the binary contrast "atom 0 versus the pooled pair {1,2}",
+but it does not see the hidden split between atoms 1 and 2.
+
+Equivalently, central probability vectors are sent by
+
+```text
+    (p0,p1,p2) |-> (p0, p1+p2).
+```
+
+Every record depending only on this pooled binary datum agrees with a genuine
+two-atom center. Thus the accounted contrast rank is one in both cases, while
+the hidden finite central cardinality is `q=2` in one model and `q=3` in the
+other. A binary quotient is not a binary center; `q=2` follows only after an
+extra maximality, admissibility, finite-alphabet, or direct-measurement premise
+identifies the accounted quotient as the full physical center.
+
 ## Exact Reviewer Question
 
 Is this residue:
