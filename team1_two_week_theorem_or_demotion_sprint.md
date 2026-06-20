@@ -51,6 +51,7 @@ used.
 ## Deliverable 1: LCQFT Positive-Exit Theorem Or Demotion
 
 Target file:
+`team1_lcqft_dynamical_locality_question.md`, with details in
 `team1_lcqft_constant_center_extension_note.md`.
 
 Referee-grade theorem target:
@@ -184,16 +185,14 @@ At the end of the sprint, Team 1 should make exactly one of these decisions:
 
 ## Immediate Next Step
 
-Start with Deliverable 2. The OAQEC/JLMS row is closest to the black-hole
-reconstruction literature and gives the best chance of a useful external
-classification. The next concrete work item is to produce a one-page
-OAQEC/JLMS maximality question:
+The OAQEC/JLMS and DHR/DR one-page requests now exist. The next concrete work
+item is to send the LCQFT/dynamical-locality one-page request:
 
 ```text
-Does algebra-relative entanglement-wedge/OAQEC reconstruction imply that the
-declared logical algebra is maximal against finite central direct-sum
-refinements, or is maximality/full central-sector accountability an additional
-hypothesis?
+Do BFV functoriality, time-slice, and relative Cauchy evolution alone exclude
+a constant finite central extension, or is extended locality, local
+definiteness, source faithfulness, center reduction, or center-separating
+measurement the first positive exit?
 ```
 
 That question, not another internal certificate, is the current Team 1

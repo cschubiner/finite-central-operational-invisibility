@@ -54,15 +54,16 @@ No written external adjudication response has been logged yet.
 0. `team1_minimal_expert_classification_request.md`
 1. `team1_oaqec_jlms_maximality_question.md`
 2. `team1_dhr_dr_sector_faithfulness_question.md`
-3. `team1_two_week_theorem_or_demotion_sprint.md`
-4. `team1_self_adjudication_decision_memo.md`
-5. `team1_referee_claim_boundary_matrix.md`
-6. `team1_standard_theorem_crosswalk.md`
-7. `team1_finite_center_residue_theorem_note.md`
-8. `team1_finite_center_residue_short_note.pdf`
-9. `team1_positive_accountability_short_note.pdf`
-10. `team1_positive_accountability_theorem_note.md`
-11. `team1_external_review_response_triage.md`
+3. `team1_lcqft_dynamical_locality_question.md`
+4. `team1_two_week_theorem_or_demotion_sprint.md`
+5. `team1_self_adjudication_decision_memo.md`
+6. `team1_referee_claim_boundary_matrix.md`
+7. `team1_standard_theorem_crosswalk.md`
+8. `team1_finite_center_residue_theorem_note.md`
+9. `team1_finite_center_residue_short_note.pdf`
+10. `team1_positive_accountability_short_note.pdf`
+11. `team1_positive_accountability_theorem_note.md`
+12. `team1_external_review_response_triage.md`
 
 In the source repo these live under ``. In the Paper 1 mirror most Team 1
 review files live at repository root. In the Paper 2 mirror they live under
@@ -76,7 +77,7 @@ review files live at repository root. In the Paper 2 mirror they live under
 | Positive accountability | `team1_positive_accountability_theorem_note.md` / `team1_positive_accountability_short_note.pdf` | Is this only Blackwell/Le Cam/Petz/Buscemi sufficiency in finite-center notation, and is the black-hole/AQFT translation useful? |
 | OAQEC/JLMS maximality question | `team1_oaqec_jlms_maximality_question.md` | Does algebra-relative recovery/relative entropy imply full logical-algebra maximality against finite central direct-sum refinements, or is maximality/full central-sector accountability an additional hypothesis? |
 | Quantitative readout accountability | `team1_quantitative_readout_accountability_note.md` / `team1_quantitative_readout_accountability_short_note.pdf` | Does finite-center rank or `q=2` require a lower readout modulus/error budget, or is formal separation enough in the target setting? |
-| LCQFT/RCE | `team1_lcqft_constant_center_extension_note.md` / `team1_lcqft_constant_center_short_note.pdf` | Do BFV/time-slice/RCE records exclude constant hidden finite centers, or is extended locality/local definiteness/source faithfulness an extra premise? |
+| LCQFT/RCE | `team1_lcqft_dynamical_locality_question.md`; details in `team1_lcqft_constant_center_extension_note.md` / `team1_lcqft_constant_center_short_note.pdf` | Do BFV/time-slice/RCE records exclude constant hidden finite centers, or is extended locality/local definiteness/source faithfulness an extra premise? |
 | Split/tensor factor | `team1_split_tensor_factor_boundary_note.md` / `team1_split_tensor_factor_boundary_short_note.pdf` | Do generated-algebra correlations reconstruct the spatial tensor product, or only modulo `ker(mu)` until split/kernel separation is supplied? |
 | Local probe measurement | `team1_probe_measurement_center_separation_note.md` / `team1_probe_measurement_center_separation_short_note.pdf` | Do the induced Fewster-Verch probe effects separate the finite central contrasts, or can they factor through a quotient/retraction? |
 | DHR/DR sectors | `team1_dhr_dr_sector_faithfulness_question.md`; details in `team1_dhr_dr_sector_character_nonmaximality_note.md` / `team1_dhr_dr_sector_character_nonmaximality_short_note.pdf` | Does the supplied sector category retain central-character fibers, or only the diagonal restricted category? |
@@ -105,8 +106,10 @@ before the response is recorded.
 
 The package is externally reviewable but not externally adjudicated. The next
 frontier-relevant step is the OAQEC/JLMS maximality classification request in
-`team1_oaqec_jlms_maximality_question.md` and the DHR/DR
+`team1_oaqec_jlms_maximality_question.md`, the DHR/DR
 sector-faithfulness request in `team1_dhr_dr_sector_faithfulness_question.md`,
+and the LCQFT/dynamical-locality request in
+`team1_lcqft_dynamical_locality_question.md`,
 followed by a written
 classification from at least one expert in one of these lanes:
 

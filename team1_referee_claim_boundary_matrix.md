@@ -36,6 +36,7 @@ For the compact negative residue theorem/proof, see
 `team1_finite_center_residue_theorem_note.md` and the standalone review
 PDF `team1_finite_center_residue_short_note.pdf`.
 For the concrete LCQFT constant-center extension test, see
+`team1_lcqft_dynamical_locality_question.md`; details are in
 `team1_lcqft_constant_center_extension_note.md`.
 For the concrete OAQEC/JLMS algebra-relative nonmaximality test, see
 `team1_oaqec_jlms_algebra_relative_nonmaximality_note.md` and the
@@ -117,8 +118,9 @@ Before sending, use `team1_standard_theorem_crosswalk.md` to avoid
 overclaiming anything already standard in operator algebra, LCQFT,
 superselection reconstruction, OAQEC, sufficiency theory, crossed-product
 entropy, or black-hole spectroscopy. For the LCQFT/dynamical-locality lane,
-send `team1_lcqft_constant_center_extension_note.md` as the concrete
-claim to classify.
+send `team1_lcqft_dynamical_locality_question.md` first; if the reviewer
+wants details, add `team1_lcqft_constant_center_extension_note.md` plus
+the compact short note `team1_lcqft_constant_center_short_note.pdf`.
 For the OAQEC/JLMS lane, send
 `team1_oaqec_jlms_maximality_question.md` first; if the reviewer wants
 details, add

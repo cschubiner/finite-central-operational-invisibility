@@ -42,6 +42,7 @@ is too broad.
 | Binary spectroscopy | Bekenstein-Mukhanov, `arXiv:gr-qc/9505012` | Do not claim entropy alone derives a binary alphabet. Resolved spectroscopy is a separate measurement route. | Is there a weaker standard axiom forcing `q=2` without a finite-alphabet law or direct binary measurement? |
 
 For the concrete LCQFT/RCE countermodel family now under review, see
+`team1_lcqft_dynamical_locality_question.md`; details are in
 `team1_lcqft_constant_center_extension_note.md`.
 For the concrete OAQEC/JLMS algebra-relative nonmaximality test, see
 `team1_oaqec_jlms_algebra_relative_nonmaximality_note.md`; the compact
@@ -107,9 +108,10 @@ channel, or experiment.
 | Discrete spectroscopy | Bekenstein-Mukhanov, `arXiv:gr-qc/9505012` | There is a direct finite-alphabet measurement law, or a standard physical axiom deriving binary rank without one. | Entropy/recovery records alone do not force `q=2`; binary rank is a separate measurement or dynamics input. |
 
 The LCQFT row has now been sharpened to a concrete constant-center extension
-test in `team1_lcqft_constant_center_extension_note.md`.  A reviewer can
-kill it by naming the LCQFT axiom that forbids the construction; otherwise the
-row becomes an explicit BFV/time-slice/RCE non-identifiability example.
+test in `team1_lcqft_dynamical_locality_question.md` and
+`team1_lcqft_constant_center_extension_note.md`.  A reviewer can kill it
+by naming the LCQFT axiom that forbids the construction; otherwise the row
+becomes an explicit BFV/time-slice/RCE non-identifiability example.
 
 The OAQEC/JLMS row has now been sharpened to a concrete direct-sum
 nonmaximality test in
