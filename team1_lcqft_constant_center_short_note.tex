@@ -1,0 +1,252 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1.12in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\C}{\mathbb C}
+\newcommand{\M}{\mathcal M}
+\newcommand{\Ocal}{\mathcal O}
+\newcommand{\rce}{\operatorname{rce}}
+
+\setlength{\emergencystretch}{3em}
+\hypersetup{
+  pdftitle={A Constant Finite-Center LCQFT Extension and the Accountability Premise},
+  pdfsubject={Locally covariant QFT, dynamical locality, finite centers, and quotient-visible data},
+  pdfkeywords={LCQFT, dynamical locality, relative Cauchy evolution, finite centers, accountability}
+}
+
+\title{A Constant Finite-Center LCQFT Extension\\
+and the Accountability Premise}
+\author{}
+\date{Live review note of June 20, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let \(\A\) be a BFV locally covariant quantum field theory valued in unital
+\(*\)-algebras, and let \(Z_q=\C^q\).  The constant finite-center extension
+\[
+  \A_q(M)=\A(M)\otimes Z_q,\qquad
+  \A_q(\psi)=\A(\psi)\otimes \operatorname{id}_{Z_q}
+\]
+preserves functoriality, injective morphisms, and the time-slice axiom.  Its
+relative Cauchy evolution is
+\[
+  \rce_q[h]=\rce[h]\otimes \operatorname{id}_{Z_q}.
+\]
+If dynamical locality is understood in the Fewster-Verch RCE sense, and the
+target tensor product identifies \(\A(M)\otimes \C^q\) with
+\(\bigoplus_{j=1}^q\A(M)\), then dynamical locality is inherited from
+\(\A\): both the kinematic and dynamical local subobjects are tensored by
+\(Z_q\).  Nevertheless any record that factors through a character
+\(\pi_j:Z_q\to \C\) is blind to the nonselected finite-center directions.  Thus
+BFV functoriality, time-slice, RCE, and RCE dynamical locality alone do not
+reconstruct hidden finite central rank.  A positive result must add the exact
+premise that removes or measures the center: extended locality, local
+definiteness, center reduction, indecomposability, or a center-separating
+measurement channel.
+\end{abstract}
+
+\paragraph{Status.}
+This is non-frozen external-review metadata for Team 1.  It is intended as a
+small claim that an LCQFT referee can classify as known, false,
+missing-hypothesis, or useful.  It is not a new construction of LCQFT, and it
+does not modify any frozen Team 1 manuscript, Lean archive, public mirror
+manifest, or SHA-256 package.
+
+\section{Setup}
+
+Let \(\mathsf{Loc}\) denote the usual BFV category of globally hyperbolic
+spacetimes and admissible embeddings, and let \(\mathsf{Alg}\) be a category of
+unital \(*\)-algebras with injective morphisms.  A locally covariant theory is
+a functor
+\[
+  \A:\mathsf{Loc}\longrightarrow \mathsf{Alg}.
+\]
+It obeys the time-slice axiom if \(\A(\psi)\) is an isomorphism whenever
+\(\psi\) is a Cauchy morphism.  Relative Cauchy evolution is the automorphism
+of \(\A(M)\) obtained from the time-slice zig-zag associated with a compactly
+supported metric perturbation.
+
+Fix \(q\geq 2\), let \(Z_q=\C^q\), and define
+\[
+  \A_q(M)=\A(M)\otimes Z_q,\qquad
+  \A_q(\psi)=\A(\psi)\otimes \operatorname{id}_{Z_q}.
+\]
+For a character \(\pi_j:Z_q\to\C\), define the quotient-visible natural map
+\[
+  Q_{j,M}=\operatorname{id}_{\A(M)}\otimes \pi_j:\A_q(M)\to \A(M).
+\]
+
+\begin{theorem}[constant finite-center extension]
+\label{thm:constant-center}
+If \(\A\) is a BFV locally covariant theory with injective morphisms, then
+\(\A_q\) is also a BFV locally covariant theory with injective morphisms.  If
+\(\A\) obeys the time-slice axiom, then so does \(\A_q\), and
+\[
+  \rce_q[h]=\rce[h]\otimes \operatorname{id}_{Z_q}.
+\]
+Any operational, sector, recovery, modular, or RCE record factoring through
+\(Q_{j,M}\) is insensitive to the nonselected central idempotents and to every
+nonconstant central contrast in \(\ker\pi_j\).
+\end{theorem}
+
+\begin{proof}
+Functoriality, identities, and composition are componentwise.  Injectivity is
+preserved because tensoring with the finite-dimensional algebra \(Z_q\) is
+exact here; equivalently, \(\A(M)\otimes \C^q\simeq\bigoplus_{j=1}^q\A(M)\),
+and \(\A(\psi)\otimes\operatorname{id}_{Z_q}\) is the direct sum of \(q\)
+copies of \(\A(\psi)\).  If \(\psi\) is Cauchy, \(\A(\psi)\) is an isomorphism,
+so its finite direct sum is an isomorphism.  Thus the time-slice axiom is
+preserved.  The relative Cauchy evolution in \(\A_q\) is obtained by applying
+the same time-slice zig-zag with every arrow tensored by
+\(\operatorname{id}_{Z_q}\), giving the stated formula.
+
+Finally, if \(R_q=R\circ Q_{j,M}\), then for \(a\in\A(M)\) and
+\(z,z'\in Z_q\) with \(\pi_j(z)=\pi_j(z')\),
+\[
+  R_q(a\otimes z)=R(a\,\pi_j(z))=R(a\,\pi_j(z'))=R_q(a\otimes z').
+\]
+Thus the record is constant on the hidden finite-center fiber.
+\end{proof}
+
+\section{Dynamical Locality}
+
+Fewster-Verch dynamical locality compares the kinematic local subobject
+\[
+  \A_{\mathrm{kin}}(M;O)=\A(\iota_O)(\A(M|_O))
+\]
+with the dynamical subobject
+\[
+  \A_{\mathrm{dyn}}(M;O)
+  =
+  \{a\in \A(M): \rce_M[h](a)=a
+  \text{ for all } h \text{ supported in } O^\perp\}.
+\]
+The theory is dynamically local when these two subobjects agree for all
+admissible \(O\).
+
+\begin{proposition}[inheritance of RCE dynamical locality]
+\label{prop:dynloc}
+Assume \(\A\) is dynamically local in the Fewster-Verch RCE sense, and assume
+the tensor product in the target algebra category identifies
+\(\A(M)\otimes\C^q\) with \(\bigoplus_{j=1}^q\A(M)\).  Then the constant
+finite-center extension \(\A_q\) is dynamically local in the same sense.
+\end{proposition}
+
+\begin{proof}
+For every admissible \(O\subset M\),
+\[
+  (\A_q)_{\mathrm{kin}}(M;O)
+  =
+  \A_{\mathrm{kin}}(M;O)\otimes \C^q
+\]
+by functoriality of the inclusion \(\iota_O:M|_O\to M\).  By
+Theorem~\ref{thm:constant-center},
+\[
+  \rce_q[h]=\rce[h]\otimes \operatorname{id}_{\C^q}.
+\]
+Under the finite direct-sum identification, an element of \(\A_q(M)\) is a
+tuple \((a_1,\ldots,a_q)\).  It is fixed by all \(\rce_q[h]\) with
+\(\operatorname{supp}h\subset O^\perp\) exactly when every \(a_j\) is fixed by
+the corresponding \(\rce[h]\).  Hence
+\[
+  (\A_q)_{\mathrm{dyn}}(M;O)
+  =
+  \A_{\mathrm{dyn}}(M;O)\otimes \C^q.
+\]
+If \(\A_{\mathrm{kin}}(M;O)=\A_{\mathrm{dyn}}(M;O)\), then
+\((\A_q)_{\mathrm{kin}}(M;O)=(\A_q)_{\mathrm{dyn}}(M;O)\).
+\end{proof}
+
+\section{Positive Exits}
+
+The proposition is narrow.  It says that the RCE-defined equality of
+kinematic and dynamical local subobjects does not by itself remove a constant
+finite center.  Stronger physical assumptions can remove it:
+
+\begin{center}
+\begin{tabular}{p{0.28\linewidth}p{0.58\linewidth}}
+\toprule
+Exit premise & Effect on \(\A_q\) for \(q>1\) \\
+\midrule
+Extended locality & If algebras of causally disjoint nonempty regions may
+intersect only in scalars, \(\A_q\) fails because every local algebra contains
+the common central copy of \(Z_q\). \\
+\addlinespace
+Local definiteness & If the intersection of local algebras shrinking to a
+point must be \(\C\), \(\A_q\) fails because \(Z_q\) remains in every local
+algebra. \\
+\addlinespace
+Center reduction & If the framework quotients or reduces away central
+degrees of freedom, as in reduced Maxwell-type constructions, the missing
+physical-exclusion premise has been supplied. \\
+\addlinespace
+Center-separating measurement & If the probe/readout is tomographically
+complete on \(Z_q\), the data do not factor through a single character
+\(\pi_j\); the quotient-visible hypothesis is false. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Referee Question}
+
+The classification question is precise:
+
+\begin{quote}
+Is the constant finite-center extension above already excluded by the standard
+LCQFT hypotheses intended in the target setting?  If so, name the axiom or
+theorem.  If not, BFV functoriality, time-slice, RCE, and RCE dynamical
+locality alone do not supply finite-center accountability.
+\end{quote}
+
+The desired external response is not encouragement.  It is one of:
+known theorem, false statement, missing positive hypothesis, physically too
+broad, or useful expository no-go.
+
+\begin{thebibliography}{99}
+
+\bibitem{BFV}
+R. Brunetti, K. Fredenhagen, and R. Verch,
+The generally covariant locality principle: a new paradigm for local quantum
+field theory,
+\emph{Communications in Mathematical Physics} \textbf{237} (2003), 31--68.
+
+\bibitem{FewsterVerch}
+C. J. Fewster and R. Verch,
+Dynamical locality and covariance: what makes a physical theory the same in
+all spacetimes?,
+\emph{Annales Henri Poincare} \textbf{13} (2012), 1613--1674.
+
+\bibitem{FewsterOverview}
+C. J. Fewster,
+The paradigm of local covariance,
+in \emph{Quantum Field Theory and Gravity}, Birkhauser, 2012.
+
+\bibitem{FewsterVerchMeasurement}
+C. J. Fewster and R. Verch,
+Quantum fields and local measurements,
+\emph{Communications in Mathematical Physics} \textbf{378} (2020), 851--889.
+
+\bibitem{FewsterVerchReview}
+C. J. Fewster and R. Verch,
+Measurement in quantum field theory,
+\emph{Lecture Notes in Physics} \textbf{1017} (2024), 1--45.
+
+\bibitem{FewsterLang}
+C. J. Fewster and B. Lang,
+Dynamical locality of the free Maxwell field,
+\emph{Annales Henri Poincare} \textbf{17} (2016), 401--436.
+
+\end{thebibliography}
+
+\end{document}

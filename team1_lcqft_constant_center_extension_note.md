@@ -3,6 +3,9 @@
 Status: live referee-facing theorem note. This is not a frozen manuscript or
 Lean artifact.
 
+Short TeX/PDF version: `team1_lcqft_constant_center_short_note.tex` /
+`team1_lcqft_constant_center_short_note.pdf`.
+
 Purpose: turn the LCQFT/dynamical-locality adjudication row into a concrete
 standard-language test. The target is not a new LCQFT construction. The target
 is a precise finite-center countermodel family showing which positive
