@@ -143,10 +143,14 @@ This note should be easy to demote if the literature already contains the exact
 translation. In standard statistical language, `R` is the declared experiment or
 coarse graining, `ker R` is the information discarded by that experiment, and
 the theorem says that hidden finite-center cardinality is recoverable only when
-the experiment is sufficient for that target. In Petz-style operator-algebraic
-language, the same boundary is phrased relative to a declared subalgebra or
-channel: recovery is relative to the supplied object and does not by itself
-certify maximality against hidden finite central extensions.
+the experiment is sufficient for that target. Blackwell comparison and Le
+Cam deficiency already provide the standard comparison-of-experiments language
+for exact and approximate reconstruction loss. In Petz-style
+operator-algebraic language, the same boundary is phrased relative to a declared
+subalgebra or channel; Buscemi/Shmaya-style quantum comparison theorems give
+the finite quantum-statistical analogue. These frameworks all make recovery
+relative to the supplied object and do not by themselves certify maximality
+against hidden finite central extensions.
 
 The Team 1 contribution, if any, is therefore not the quotient calculation. It
 is the black-hole/AQFT claim boundary: entropy, recovery, modular, sector, and
@@ -160,7 +164,7 @@ accountability premise has been supplied in standard-language form.
 | `R` determines `V_F / ker R`. | Elementary finite-dimensional theorem. |
 | `R` determines full `q` when `ker R=0` and the represented center is physically exhaustive. | Positive accountability criterion. |
 | One accounted contrast implies `q=2`. | False without maximality/admissibility/direct finite-alphabet input. |
-| Blackwell/Petz sufficiency may already contain the criterion. | Must be checked and demoted if exact. |
+| Blackwell/Le Cam/Petz/quantum comparison theory may already contain the criterion. | Must be checked and demoted if exact. |
 | AQFT/OAQEC hypotheses may already supply maximality or faithful support. | External reviewer should identify the named hypothesis if so. |
 
 ## Finite Proof Checklist
@@ -199,8 +203,9 @@ This is the positive exit from the finite-center no-go package:
 
 Is the criterion above merely:
 
-- finite-dimensional Blackwell/sufficiency theory;
+- finite-dimensional Blackwell/sufficiency or Le Cam deficiency theory;
 - Petz sufficiency in finite commutative form;
+- Buscemi/Shmaya quantum statistical comparison theory;
 - an elementary central-projection quotient corollary;
 - a standard AQFT/OAQEC support-maximality condition under another name;
 - or a useful black-hole/AQFT reconstruction boundary worth writing as an
@@ -218,10 +223,20 @@ not another verifier.
   "Equivalent Comparisons of Experiments", Annals of Mathematical Statistics
   24 (1953), 265-272: sufficiency/comparison is relative to a declared
   experiment or decision task.
+- Le Cam, "Sufficiency and Approximate Sufficiency", Annals of Mathematical
+  Statistics 35 (1964), 1419-1455; and Asymptotic Methods in Statistical
+  Decision Theory, Springer, 1986: deficiency makes approximate experiment
+  comparison and reconstruction loss explicit.
 - Petz, "Sufficient Subalgebras and the Relative Entropy of States of a von
   Neumann Algebra", Communications in Mathematical Physics 105 (1986),
   123-131: recovery/equality of relative entropy is relative to a declared
   subalgebra or channel.
+- Shmaya, "Comparison of Information Structures and Completely Positive Maps",
+  Journal of Physics A 38 (2005), 9717-9727; and Buscemi, "Comparison of
+  Quantum Statistical Models: Equivalent Conditions for Sufficiency",
+  Communications in Mathematical Physics 310 (2012), 625-647: quantum
+  comparison theorems extend the Blackwell-type boundary to finite quantum
+  models and completely positive maps.
 - Von Neumann algebra ideal theory: ultraweakly closed two-sided ideals are
   central-projection summands; see for example Lurie, Math 261y Lecture 9,
   Proposition 1.
