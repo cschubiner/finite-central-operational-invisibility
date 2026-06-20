@@ -21,6 +21,10 @@ anchors:
 - Fewster-Verch, "Dynamical locality and covariance", `arXiv:1106.4785`:
   dynamical locality identifies kinematical and dynamical local subobjects and
   gives a strong same-physics criterion.
+- Fewster's overview "The paradigm of local covariance" summarizes the
+  relevant definitions as
+  `A_kin(M;K)=A(iota_K)(A(M|K))` and
+  `A_dyn(M;K)={a in A(M): rce_M[h]a=a for all h supported in K^perp}`.
 - Fewster-Verch, "Quantum fields and local measurements", `arXiv:1810.06512`,
   and "Measurement in Quantum Field Theory", `arXiv:2304.13356`: measurement
   in LCQFT is implemented through a probe, coupling, and scattering map; a
@@ -63,13 +67,77 @@ Then:
    center-accountability, physical exclusion, local definiteness, extended
    locality, center reduction, or a center-separating measurement channel.
 
-If the chosen definition of dynamical locality is formulated so that the
-kinematic and dynamic local subobjects of `A_q` are exactly the corresponding
-subobjects of `A` tensored with `Z_q`, then dynamical locality is inherited
-from `A`. If the adopted physical framework also requires extended locality,
-local definiteness, trivial local centers, or a reduced Maxwell-type quotient,
-then those assumptions are precisely the positive exits that kill the constant
-finite-center extension.
+## Proposition: Dynamical-Locality Inheritance
+
+Assume `A` is dynamically local in the Fewster-Verch RCE sense: for each
+admissible region `O` in `M`, the kinematic subalgebra
+
+```text
+A_kin(M;O) = A(iota_O)(A(M|O))
+```
+
+equals the dynamical subalgebra
+
+```text
+A_dyn(M;O) = {a in A(M) : rce_M[h](a)=a for all h supported in O^perp}.
+```
+
+Then the constant finite-center extension `A_q` is dynamically local in the
+same RCE sense, provided the tensor product used in the target algebra category
+identifies
+
+```text
+A_q(M) = A(M) tensor C^q ~= direct_sum_{j=1}^q A(M).
+```
+
+Indeed,
+
+```text
+(A_q)_kin(M;O) = A_kin(M;O) tensor C^q
+```
+
+by functoriality of the inclusion `iota_O`, while
+
+```text
+(A_q)_dyn(M;O) = A_dyn(M;O) tensor C^q
+```
+
+because `rce_q[h]=rce[h] tensor id_{C^q}` and a finite tuple
+`(a_1,...,a_q)` is fixed by all such lifted RCE maps exactly when every
+component `a_j` is fixed by the corresponding RCE map in `A`. Therefore
+`A_kin=A_dyn` implies `(A_q)_kin=(A_q)_dyn`.
+
+This proposition is deliberately narrow. It says that the standard
+RCE-defined dynamical-locality equality does not by itself remove a constant
+finite center. It does not say that every stronger physical admissibility
+principle permits the extension.
+
+## Positive Exits That Kill The Extension
+
+The constant finite-center extension is killed by any axiom requiring the
+center to be locally absent or experimentally separated. For example:
+
+- **Extended locality:** if two causally disjoint nonempty regions must have
+  kinematic algebras intersecting only in scalars, then `A_q` with `q>1`
+  fails, because every local algebra contains the common central copy of
+  `C^q`.
+- **Local definiteness / trivial pointlike center:** if the intersection of
+  local algebras shrinking to a point must be only `C`, then `A_q` fails for
+  `q>1` for the same reason.
+- **Center reduction:** if the theory is required to quotient away the
+  nontrivial center, as in reduced Maxwell-type constructions, then the
+  comparison class has already supplied the missing physical-exclusion
+  premise.
+- **Center-separating measurement:** if the probe/scattering/readout scheme is
+  tomographically complete on `C^q`, then the data no longer factor through a
+  single character `pi_j`; Team 1's quotient-visible non-identifiability
+  hypothesis is false.
+
+Thus the exact LCQFT classification question is not whether dynamical locality
+is important. It is whether the intended physical setup assumes one of these
+positive exits. If yes, Team 1 should demote the LCQFT row to that axiom. If
+not, BFV functoriality, time-slice, and quotient-visible RCE still leave the
+finite center unidentified.
 
 ## Proof
 
