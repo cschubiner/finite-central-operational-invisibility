@@ -67,6 +67,29 @@ the induced effects span `V_q^*`. The predicate `q = 2` is forced only if the
 measurement data also determine that the represented contrast space is the
 whole physical finite center, not merely a quotient of a larger hidden one.
 
+## Proposition: Atomic Induced Effects Are Centrally Complete
+
+There is a direct positive exit. If the supplied probe-measurement family
+contains induced system effects whose restrictions to
+
+```text
+Z = l^\infty({1,...,q})
+```
+
+are the minimal central projections `e_1,...,e_q`, or any invertible linear
+recombination of them modulo the scalar unit, then the protocol reconstructs
+the retained finite central state.
+
+For a central state `p = (p_1,...,p_q)`, the probability of the induced effect
+`e_i` is exactly `p_i`. Hence the atomic effects recover the whole central
+probability vector. Equivalently, the classes of the `e_i` modulo the scalar
+unit span the contrast dual `V_q^*`.
+
+This also separates `q=2` from retained nonbinary comparison models, but only
+after one more premise: the measured retained center is the whole finite
+central target. Without that premise, the measurement has reconstructed a
+quotient or retained center, not ruled out a larger hidden one.
+
 ## Adaptive Protocol Boundary
 
 Finite adaptive composition does not repair a missing separator by itself. If
@@ -108,5 +131,10 @@ claim is:
 > effects factor through a quotient or retraction, finite adaptive protocols
 > preserve the same blindness and cannot reconstruct hidden central rank or
 > `q=2`.
+
+The positive counterpart is equally concrete: induced effects that are atomic
+on the retained finite center recover the retained central state, and full
+binary-rank accountability additionally requires knowing that this retained
+center is the whole finite central target.
 
 That is the local measurement/probe row for external adjudication.

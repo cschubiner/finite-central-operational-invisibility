@@ -41,7 +41,10 @@ coarse-graining, then finite adaptive composition preserves that blindness.
 Thus a measurement formalism alone does not force hidden finite central rank or
 the predicate \(q=2\); the supplied probe effects must be informationally
 complete for that target, or a physical quotient/exclusion axiom must remove
-the hidden center.
+the hidden center.  Conversely, induced effects proportional to the minimal
+central projections give a direct positive exit: they reconstruct the retained
+finite central state and separate every binary-vs-nonbinary contrast in that
+retained center.
 \end{abstract}
 
 \paragraph{Status.}
@@ -109,6 +112,28 @@ contrast reconstruction means that \(R\) is injective on \(V_q\), equivalently
 that the restrictions of the induced effects span \(V_q^*\), which is (2).
 \end{proof}
 
+\begin{proposition}[atomic induced effects are centrally complete]
+\label{prop:atomic-effects}
+Assume the supplied probe-measurement family contains induced system effects
+whose restrictions to \(Z=\ell^\infty(\{1,\ldots,q\})\) are the minimal central
+projections \(e_1,\ldots,e_q\), or any invertible linear recombination of them
+modulo the scalar unit.  Then the protocol reconstructs the retained finite
+central state on \(Z\).  In particular, it separates the binary predicate
+\(q=2\) from every retained nonbinary comparison model once the retained center
+itself is known to be the whole finite central target.
+\end{proposition}
+
+\begin{proof}
+For a central state \(p=(p_1,\ldots,p_q)\), the probability of the induced
+effect \(e_i\) is \(p_i\).  Thus the atomic effects recover the full probability
+vector \(p\).  Equivalently, on the contrast space \(V_q\), the classes of
+\(e_i\) modulo the scalar unit span \(V_q^*\), so
+Theorem~\ref{thm:effect-span} applies.  An invertible linear recombination
+gives the same span.  The final binary-rank statement uses the additional
+premise that the measured center is the full finite central target; otherwise
+one has reconstructed only the retained quotient center.
+\end{proof}
+
 \section{Adaptive protocols}
 
 \begin{proposition}[adaptivity does not create a missing central separator]
@@ -146,7 +171,8 @@ contrast dual \(V_q^*\), so finite central states are tomographically visible.
 \\
 \addlinespace
 Direct atomic central readout & Effects proportional to the minimal central
-projections \(e_i\) separate every central atom. \\
+projections \(e_i\) reconstruct the retained central state by
+Proposition~\ref{prop:atomic-effects}. \\
 \addlinespace
 Factor, quotient, or inadmissibility axiom & The hidden finite center is
 removed from the comparison class rather than reconstructed by measurement. \\
