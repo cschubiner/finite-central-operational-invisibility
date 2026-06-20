@@ -1,0 +1,194 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1.12in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\setlength{\emergencystretch}{3em}
+\hypersetup{
+  pdftitle={Discrete Black-Hole Spectroscopy Does Not Force Binary Rank Without an Alphabet Law},
+  pdfsubject={Bekenstein-Mukhanov spectroscopy, finite alphabets, black-hole entropy},
+  pdfkeywords={black-hole spectroscopy, Bekenstein-Mukhanov, finite alphabet, binary rank, area quantization}
+}
+
+\title{Discrete Black-Hole Spectroscopy Does Not Force\\
+Binary Rank Without an Alphabet Law}
+\author{}
+\date{Live review note of June 20, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Bekenstein--Mukhanov spectroscopy is a genuine possible positive route to a
+finite alphabet: under an integer degeneracy law \(g_n=k^n\), a resolved
+fundamental area spacing \(\Delta A=4\log(k)\,\ell_P^2\) in fixed units would
+determine \(k\), and \(\Delta A=4\log(2)\,\ell_P^2\) would determine \(k=2\).
+The point of this note is the converse boundary.  Entropy, qualitative
+discreteness, recovery data, or an area spacing without the physical law
+identifying that spacing with an integer degeneracy base do not force the
+binary predicate \(q=2\).  Binary rank descends from spectroscopy exactly when
+the supplied spectral law and measured data are injective on the
+binary-versus-nonbinary comparison fiber.
+\end{abstract}
+
+\paragraph{Status.}
+This is non-frozen external-review metadata for Team 1.  It is intended as a
+small claim that a black-hole spectroscopy or quantum-gravity reviewer can
+classify as known, false, missing-hypothesis, or useful.  It does not modify
+any frozen Team 1 manuscript, Lean archive, public mirror manifest, or SHA-256
+package.
+
+\section{Primary sources}
+
+The boundary below was checked against Bekenstein's entropy-area proposal
+\cite{BekensteinEntropy}, Bekenstein--Mukhanov quantum black-hole spectroscopy
+\cite{BekensteinMukhanov}, Bekenstein's black-hole-as-atom review
+\cite{BekensteinAtoms}, and Maggiore's quasinormal-mode interpretation of
+area quantization \cite{MaggioreQNM}.  These works are used as positive
+spectroscopy or area-quantization inputs, not as claims that binary rank is
+absent from nature.
+
+\section{Alphabet identifiability}
+
+Let \(q\ge2\) be the proposed finite alphabet size of a horizon cell or finite
+central primitive.  Let \(D(q)\) denote the actual spectroscopy data reported
+under a specified physical law: resolved fundamental frequency or area
+spacing, transition intensities, level degeneracies, Planck/area units, and
+the rule connecting those data to \(q\).
+
+\begin{theorem}[spectroscopy alphabet criterion]
+\label{thm:spectral-alphabet}
+The binary predicate \(q=2\) is reconstructible from the supplied spectroscopy
+data \(D\) if and only if, inside the declared comparison class,
+\[
+  D(q)=D(2)\quad\Longrightarrow\quad q=2 .
+  \tag{1}
+\]
+Equivalently, the spectroscopy map must be injective on the
+binary-versus-nonbinary fiber.
+\end{theorem}
+
+\begin{proof}
+If \(q=2\) is reconstructible from \(D\), then the predicate is a function of
+the data, so any model with the same data as \(q=2\) must also satisfy
+\(q=2\).  Conversely, if (1) holds, define the binary predicate on the image of
+\(D\) by declaring the fiber \(D(2)\) binary and every other image nonbinary.
+Condition (1) is exactly the well-definedness condition for this assignment on
+the relevant comparison class.
+\end{proof}
+
+\section{Bekenstein--Mukhanov as a positive exit}
+
+In the Bekenstein--Mukhanov idealization, the area levels are equally spaced
+and the degeneracy of the \(n\)-th level has the form
+\[
+  g_n=k^n,\qquad k\in\{2,3,\ldots\}.
+\]
+Matching the entropy \(S_n=\log g_n=n\log k\) to the
+Bekenstein--Hawking normalization \(S=A/(4\ell_P^2)\) gives
+\[
+  A_n=4n\log(k)\,\ell_P^2,
+  \qquad
+  \Delta A=4\log(k)\,\ell_P^2 .
+  \tag{2}
+\]
+
+\begin{proposition}[what the line measurement supplies]
+\label{prop:bm-positive}
+Assume the Bekenstein--Mukhanov integer-degeneracy law \(g_n=k^n\), fixed
+Planck/area units, and a resolved fundamental spacing \(\Delta A\).  Then the
+spacing determines \(k\) exactly when
+\[
+  k=\exp\!\left(\frac{\Delta A}{4\ell_P^2}\right)
+\]
+is a positive integer satisfying the declared law.  In particular,
+\(\Delta A=4\log(2)\,\ell_P^2\) gives \(k=2\).
+\end{proposition}
+
+\begin{proof}
+Equation (2) gives \(\Delta A=4\log(k)\ell_P^2\).  Solving for \(k\) gives the
+displayed expression.  The conclusion that \(k\) is an alphabet size uses the
+integer-degeneracy law; the measured spacing alone supplies only the numerical
+spacing parameter.
+\end{proof}
+
+\section{What does not force binary rank}
+
+\begin{proposition}[spacing without an alphabet law is nonidentifying]
+\label{prop:nonidentifying}
+The following data do not by themselves imply \(q=2\):
+\begin{enumerate}
+\item entropy proportional to area;
+\item qualitative discreteness of the area or mass spectrum;
+\item a uniformly spaced area spectrum \(A_n=\gamma n\ell_P^2\) with
+      unspecified \(\gamma\);
+\item a spacing parameter \(\gamma\) without a law identifying
+      \(\gamma=4\log(q)\) for an integer finite alphabet \(q\);
+\item recovery, sector, modular, crossed-product, or quotient-visible records
+      that do not contain a \(q\)-separating spectral measurement.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Entropy gives a number of states, \(\exp(S)\), not a distinguished base for
+writing that number as powers of \(2\), \(3\), or another alphabet.  A
+uniformly spaced spectrum with free parameter \(\gamma\) is compatible with
+\(\gamma=4\log(2)\), \(\gamma=4\log(3)\), \(\gamma=8\pi\), or other proposed
+area quanta, depending on the physical quantization rule.  Therefore the data
+listed above fail condition (1): the binary and nonbinary comparison classes
+are not separated until the finite-alphabet law or direct measurement channel
+is part of the supplied data.
+\end{proof}
+
+\section{Referee question}
+
+The exact external question is:
+
+\begin{quote}
+Does the black-hole spectroscopy or area-quantization hypothesis in the target
+setting supply a resolved finite-alphabet law whose data are injective on
+\(q=2\), or does it supply only entropy, qualitative discreteness, or area
+spacing without binary-alphabet accountability?
+\end{quote}
+
+If the first holds, spectroscopy is a positive exit from the Team 1 finite
+central obstruction.  If the second holds, Team 1 should not claim a
+spectroscopic derivation of binary rank; the correct conclusion is only that a
+direct finite-alphabet measurement would be enough.
+
+\begin{thebibliography}{9}
+
+\bibitem{BekensteinEntropy}
+J. D. Bekenstein,
+\emph{Black Holes and Entropy},
+Phys. Rev. D 7 (1973), 2333,
+\href{https://link.aps.org/doi/10.1103/PhysRevD.7.2333}{doi:10.1103/PhysRevD.7.2333}.
+
+\bibitem{BekensteinMukhanov}
+J. D. Bekenstein and V. F. Mukhanov,
+\emph{Spectroscopy of the quantum black hole},
+Phys. Lett. B 360 (1995), 7--12,
+\href{https://arxiv.org/abs/gr-qc/9505012}{arXiv:gr-qc/9505012}.
+
+\bibitem{BekensteinAtoms}
+J. D. Bekenstein,
+\emph{Quantum Black Holes as Atoms},
+in Proceedings of the Eighth Marcel Grossmann Meeting,
+\href{https://arxiv.org/abs/gr-qc/9710076}{arXiv:gr-qc/9710076}.
+
+\bibitem{MaggioreQNM}
+M. Maggiore,
+\emph{The physical interpretation of the spectrum of black hole quasinormal modes},
+Phys. Rev. Lett. 100 (2008), 141301,
+\href{https://arxiv.org/abs/0711.3145}{arXiv:0711.3145}.
+
+\end{thebibliography}
+
+\end{document}

@@ -47,6 +47,7 @@ Public GitHub comments may be linked directly.
 | `team1_dhr_dr_sector_character_nonmaximality_note.md` or `team1_dhr_dr_sector_character_nonmaximality_short_note.{tex,pdf}` | Response classifies the DHR/DR sector-character nonfaithfulness construction as known, false, or killed by a named sector-faithfulness/full-field/factor/quotient hypothesis. | Patch the note first; if false or already known, record the exact theorem and demote the DHR/DR row before touching frozen artifacts. |
 | `team1_oaqec_jlms_algebra_relative_nonmaximality_note.md` or `team1_oaqec_jlms_algebra_relative_nonmaximality_short_note.{tex,pdf}` | Response classifies the OAQEC/JLMS direct-sum nonmaximality construction as known, false, or killed by a named full-code/maximality/complementary-recovery hypothesis. | Patch the note first; if false or already known, record the exact theorem and demote the OAQEC/JLMS row before touching frozen artifacts. |
 | `team1_crossed_product_entropy_calibration_note.md` or `team1_crossed_product_entropy_calibration_short_note.{tex,pdf}` | Response classifies the crossed-product/Type II entropy calibration boundary as known, false, or killed by a named trace, area, or finite-center normalization hypothesis. | Patch the note first; if false or already known, record the exact theorem and demote the crossed-product entropy row before touching frozen artifacts. |
+| `team1_discrete_spectroscopy_alphabet_boundary_note.md` or `team1_discrete_spectroscopy_alphabet_boundary_short_note.{tex,pdf}` | Response classifies the discrete spectroscopy alphabet boundary as known, false, or killed by a named finite-alphabet, area-quantization, line-measurement, or quasinormal-mode hypothesis. | Patch the note first; if false or already known, record the exact theorem and demote the binary-rank/spectroscopy row before touching frozen artifacts. |
 | Public mirrors | Any source-facing patch changes reviewer-facing files. | Publish as non-frozen review metadata; never mutate frozen hashes unless maintainer explicitly unfreezes. |
 | Frozen manuscripts / Lean archives | Only written external feedback or maintainer unfreeze decision justifies mutation. | Log response first, patch narrowly, rebuild, and refresh manifests/hashes. |
 
@@ -78,7 +79,10 @@ The current decisive questions are:
 5. Crossed-product entropy: does the gravitational Type II construction supply
    finite central trace/area calibration, or only entropy for a specified
    algebra and trace normalization?
-6. Positive accountability: the finite accountability quotient is internally
+6. Discrete black-hole spectroscopy: does a standard area-quantization or
+   quasinormal-mode hypothesis force `q=2`, or is a finite-alphabet law/direct
+   resolved line measurement still an extra positive input?
+7. Positive accountability: the finite accountability quotient is internally
    demoted to Blackwell/Le Cam/Petz/Buscemi sufficiency; is the black-hole/AQFT
    translation still useful, or already standard in the target literature?
 
