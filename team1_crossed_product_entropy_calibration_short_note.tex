@@ -1,0 +1,252 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1.12in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\newcommand{\B}{\mathcal B}
+\newcommand{\K}{\mathcal K}
+\newcommand{\M}{\mathcal M}
+\newcommand{\R}{\mathbb R}
+\newcommand{\id}{\operatorname{id}}
+
+\setlength{\emergencystretch}{3em}
+\hypersetup{
+  pdftitle={Crossed-Product Entropy Does Not Supply an Omitted Finite-Center Calibration},
+  pdfsubject={Type II entropy, modular crossed products, finite centers, black-hole entropy},
+  pdfkeywords={crossed product, Type II algebra, entropy calibration, finite centers, black holes}
+}
+
+\title{Crossed-Product Entropy Does Not Supply\\
+an Omitted Finite-Center Calibration}
+\author{}
+\date{Live review note of June 20, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Gravitational crossed-product constructions define entropy for a specified
+Type II or semifinite von Neumann algebra together with its trace or
+normalization convention.  This note isolates a finite-central boundary.  If
+\(\M\) is replaced by
+\[
+  \B_n=\M\,\bar\otimes\,\ell^\infty(\{1,\ldots,n\}),
+\]
+then the modular crossed product carries the finite center to the Type II core:
+\[
+  \B_n\rtimes_{\sigma^{\Omega_r}}\R
+  \cong
+  (\M\rtimes_{\sigma^\omega}\R)\,\bar\otimes\,
+  \ell^\infty(\{1,\ldots,n\}).
+\]
+Trace-normalized Type II entropy fixes the finite-center entropy contribution
+only when the supplied trace or absolute calibration separates the central
+weights relevant to the claimed state family.  Therefore Witten-style
+crossed-product entropy is a positive entropy construction for the supplied
+algebra and trace; it is not, by itself, a principle that reconstructs an
+omitted finite central summand, finite central trace weights, or an absolute
+entropy-density coefficient.
+\end{abstract}
+
+\paragraph{Status.}
+This is non-frozen external-review metadata for Team 1.  It is intended as a
+small claim that a crossed-product, Type II, or black-hole entropy reviewer can
+classify as known, false, missing-hypothesis, or useful.  It does not modify
+any frozen Team 1 manuscript, Lean archive, public mirror manifest, or SHA-256
+package.
+
+\section{Primary sources}
+
+The boundary below was checked against Witten's crossed-product black-hole
+entropy construction \cite{WittenCrossed}, Longo--Witten continuous entropy
+\cite{LongoWittenEntropy}, the large-\(N\) generalized-entropy algebra of
+Chandrasekaran--Penington--Witten \cite{CPWLargeN}, and the JT-gravity Type II
+algebra analysis of Penington--Witten \cite{PeningtonWittenJT}.  These works
+are used here as positive constructions for specified algebras and traces, not
+as claims that finite-center calibration is absent from physics.
+
+\section{Finite centers in the crossed product}
+
+Let \(\M\) be a von Neumann algebra with faithful normal state \(\omega\), and
+let
+\[
+  \K=\M\rtimes_{\sigma^\omega}\R
+\]
+be its modular crossed product.  For \(n\ge2\), let
+\[
+  \B_n=\M\,\bar\otimes\,\ell^\infty(\{1,\ldots,n\}),
+  \qquad
+  \Omega_r=\omega\otimes r,
+\]
+where \(r=(r_1,\ldots,r_n)\) is a faithful probability vector.
+
+\begin{theorem}[finite central cores]
+\label{thm:finite-central-cores}
+There is a canonical crossed-product identification
+\[
+  \B_n\rtimes_{\sigma^{\Omega_r}}\R
+  \cong
+  \K\,\bar\otimes\,\ell^\infty(\{1,\ldots,n\}).
+\]
+Consequently the modular crossed product carries the finite center into the
+Type II core.  It does not by itself select the finite central cardinality,
+the predicate \(n=2\), or the finite-center trace normalization.
+\end{theorem}
+
+\begin{proof}
+The modular automorphism group of \(\Omega_r=\omega\otimes r\) is
+\[
+  \sigma_t^{\Omega_r}=\sigma_t^\omega\otimes\id
+\]
+because the finite abelian factor is central and \(r\) is diagonal on it.
+Crossed products commute with tensoring by a finite algebra on which the
+action is trivial, giving the displayed isomorphism.  The right-hand side
+still has central projections \(1\otimes e_i\), so the finite center has not
+been selected or removed by the passage to the core.
+\end{proof}
+
+\section{Trace calibration fiber}
+
+Assume \(\K\) is equipped with a faithful normal semifinite trace \(\tau\).
+On the full finite central core, consider traces
+\[
+  \tau_a(x_1,\ldots,x_n)=\sum_{i=1}^n a_i\tau(x_i),
+  \qquad a_i>0.
+\]
+For a central probability vector \(p=(p_i)\), the part of the finite-center
+entropy that changes with the central trace weights is
+\[
+  L_a(p)=\sum_i p_i\log a_i.
+\]
+If the supplied trace calibration consists of central test values
+\[
+  T_a(c)=\sum_i a_i c_i,\qquad c\in C\subset\R^n,
+\]
+then \(L_a(p)\) is determined for all allowed \(p\in P\) if and only if
+\[
+  T_a|_C=T_b|_C
+  \quad\Longrightarrow\quad
+  L_a(p)=L_b(p)\quad\hbox{for every }p\in P .
+  \tag{1}
+\]
+
+\begin{proposition}[diagonal trace tests are insufficient]
+\label{prop:diagonal-insufficient}
+Scalar diagonal trace tests do not determine the finite-center entropy
+normalization.  For \(n=2\), the trace weights \(a=(1,3)\) and \(b=(2,2)\)
+agree on every scalar diagonal test, but for \(p=(1/2,1/2)\),
+\[
+  L_a(p)-L_b(p)=\frac12\log\frac34\ne0 .
+\]
+\end{proposition}
+
+\begin{proof}
+A scalar diagonal test has the form \(c=(\lambda,\lambda)\), so
+\[
+  T_a(c)=\lambda(a_1+a_2)=4\lambda=T_b(c).
+\]
+However
+\[
+  L_a(1/2,1/2)-L_b(1/2,1/2)
+  =
+  \frac12(\log1+\log3-\log2-\log2)
+  =
+  \frac12\log\frac34 .
+\]
+Thus the same diagonal Type II trace data can leave different absolute
+finite-center entropy terms.
+\end{proof}
+
+\section{Entropy-density boundary}
+
+Let \(D\) be the crossed-product, relative-entropy, or operational data
+supplied in a comparison class, and let
+\[
+  c(X)=\lim_\Sigma\frac{S_X(\Sigma)}{\operatorname{Area}(\Sigma)}
+\]
+be an asserted absolute entropy-density coefficient.  Then \(c\) is determined
+by \(D\) exactly when it is constant on \(D\)-fibers:
+\[
+  D(X)=D(Y)
+  \quad\Longrightarrow\quad
+  \lim_\Sigma
+  \frac{S_X(\Sigma)-S_Y(\Sigma)}
+       {\operatorname{Area}(\Sigma)}
+  =0 .
+  \tag{2}
+\]
+Finite-center cardinality terms, trace-weight terms such as \(L_a-L_b\), and
+affine entropy or area counterterms are obstructions precisely when their
+normalized limits in (2) are nonzero.
+
+\section{Positive exits and referee question}
+
+\begin{center}
+\begin{tabular}{p{0.35\linewidth}p{0.50\linewidth}}
+\toprule
+Exit premise & Effect \\
+\midrule
+Full Type II algebra retained & The finite central summands are part of the
+specified entropy algebra, rather than omitted before the entropy calculation.
+\\
+\addlinespace
+Atomic trace calibration & Tests \(h\otimes e_i\) recover the central trace
+weights \(a_i\) up to the intended convention. \\
+\addlinespace
+Absolute area/entropy calibration & An affinely spanning calibrated state
+family fixes the additive or affine entropy residual. \\
+\addlinespace
+Quotient, factor, or inadmissibility axiom & The finite-center comparison
+class is explicitly removed from the target theory. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The precise external question is:
+
+\begin{quote}
+Does the crossed-product or gravitational Type II construction being invoked
+in the target setting supply the finite central trace/area calibration above,
+or does it define entropy only for the algebra and trace normalization already
+specified?
+\end{quote}
+
+If the answer is the second, Team 1 has no new crossed-product theorem.  Its
+surviving claim is only the claim-boundary warning: crossed-product entropy
+should not be overread as finite-center maximality or as an absolute
+finite-center calibration principle.
+
+\begin{thebibliography}{9}
+
+\bibitem{WittenCrossed}
+E. Witten,
+\emph{Gravity and the Crossed Product},
+JHEP 10 (2022), 008,
+\href{https://arxiv.org/abs/2112.12828}{arXiv:2112.12828}.
+
+\bibitem{LongoWittenEntropy}
+R. Longo and E. Witten,
+\emph{A note on continuous entropy},
+\href{https://arxiv.org/abs/2202.03357}{arXiv:2202.03357}.
+
+\bibitem{CPWLargeN}
+V. Chandrasekaran, G. Penington, and E. Witten,
+\emph{Large N algebras and generalized entropy},
+JHEP 04 (2023), 009,
+\href{https://arxiv.org/abs/2209.10454}{arXiv:2209.10454}.
+
+\bibitem{PeningtonWittenJT}
+G. Penington and E. Witten,
+\emph{Algebras and States in JT Gravity},
+\href{https://arxiv.org/abs/2301.07257}{arXiv:2301.07257}.
+
+\end{thebibliography}
+
+\end{document}

@@ -35,12 +35,15 @@ For the stricter standard-theorem demotion pass, see
 For the concrete LCQFT constant-center extension test, see
 `team1_lcqft_constant_center_extension_note.md`.
 For the concrete OAQEC/JLMS algebra-relative nonmaximality test, see
-`team1_oaqec_jlms_algebra_relative_nonmaximality_note.md` and the standalone
-review PDF
+`team1_oaqec_jlms_algebra_relative_nonmaximality_note.md` and the
+standalone review PDF
 `team1_oaqec_jlms_algebra_relative_nonmaximality_short_note.pdf`.
 For the concrete DHR/DR sector-character nonmaximality test, see
-`team1_dhr_dr_sector_character_nonmaximality_note.md` and the standalone review
-PDF `team1_dhr_dr_sector_character_nonmaximality_short_note.pdf`.
+`team1_dhr_dr_sector_character_nonmaximality_note.md` and the standalone
+review PDF `team1_dhr_dr_sector_character_nonmaximality_short_note.pdf`.
+For the concrete crossed-product entropy calibration boundary test, see
+`team1_crossed_product_entropy_calibration_note.md` and the standalone
+review PDF `team1_crossed_product_entropy_calibration_short_note.pdf`.
 
 ## Primary-Source Boundary Pass
 
@@ -66,7 +69,7 @@ reviewer attack, not priority claims.
 | Sector/recovery/JLMS data reconstruct only inside supplied algebra | DHR/DR or OAQEC/JLMS has a theorem that recovers omitted central-character fibers or proves maximality from the stated data; for DHR/DR, the concrete target is `team1_dhr_dr_sector_character_nonmaximality_note.md`; for OAQEC/JLMS, the concrete target is `team1_oaqec_jlms_algebra_relative_nonmaximality_note.md`. | If no such maximality theorem applies, the finite-center obstruction is a useful boundary statement for supplied-category or algebra-relative reconstruction. |
 | Support/readout accountability is the missing route to finite rank | The finite rank-accountability criterion is Blackwell/Le Cam/Petz/Buscemi-style target-specific sufficiency/factorization. | The theorem core is now internally demoted. What may survive is only the black-hole/AQFT translation: binary rank needs sufficiency for that exact finite-center target, not generic recovery or entropy equality. |
 | Binary `q=2` is not forced by quotient-visible entropy/recovery data | A weaker accepted physical axiom derives `q=2` after accountability without a separate alphabet law or direct measurement. | If no such axiom is known, Paper 2's negative result is the strongest publishable Team 1 target: binary requires additional physics, not just quotient-visible data. |
-| Entropy-density/Newton normalization needs calibration | Crossed-product or horizon-entropy literature fixes the additive/finite-center calibration under exactly the stated assumptions. | If calibration is not fixed, Paper 1's entropy row should be presented as an obstruction to overclaiming, not as a new entropy theorem. |
+| Entropy-density/Newton normalization needs calibration | Crossed-product or horizon-entropy literature fixes the additive/finite-center calibration under exactly the stated assumptions; the concrete target is `team1_crossed_product_entropy_calibration_note.md`. | If calibration is not fixed, Paper 1's entropy row should be presented as an obstruction to overclaiming, not as a new entropy theorem. |
 
 ## Minimal External Classification Needed
 
@@ -88,14 +91,18 @@ Before sending, use `team1_standard_theorem_crosswalk.md` to avoid
 overclaiming anything already standard in operator algebra, LCQFT,
 superselection reconstruction, OAQEC, sufficiency theory, crossed-product
 entropy, or black-hole spectroscopy. For the LCQFT/dynamical-locality lane,
-send `team1_lcqft_constant_center_extension_note.md` as the concrete claim to
-classify.
+send `team1_lcqft_constant_center_extension_note.md` as the concrete
+claim to classify.
 For the OAQEC/JLMS lane, send
 `team1_oaqec_jlms_algebra_relative_nonmaximality_note.md` plus the compact
-short note `team1_oaqec_jlms_algebra_relative_nonmaximality_short_note.pdf`.
+short note
+`team1_oaqec_jlms_algebra_relative_nonmaximality_short_note.pdf`.
 For the DHR/DR lane, send
-`team1_dhr_dr_sector_character_nonmaximality_note.md` plus the compact short
-note `team1_dhr_dr_sector_character_nonmaximality_short_note.pdf`.
+`team1_dhr_dr_sector_character_nonmaximality_note.md` plus the compact
+short note `team1_dhr_dr_sector_character_nonmaximality_short_note.pdf`.
+For the crossed-product entropy lane, send
+`team1_crossed_product_entropy_calibration_note.md` plus the compact short
+note `team1_crossed_product_entropy_calibration_short_note.pdf`.
 
 ## One-Week Frontier Work
 
