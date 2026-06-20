@@ -47,6 +47,10 @@ review PDF `team1_dhr_dr_sector_character_nonmaximality_short_note.pdf`.
 For the concrete crossed-product entropy calibration boundary test, see
 `team1_crossed_product_entropy_calibration_note.md` and the standalone
 review PDF `team1_crossed_product_entropy_calibration_short_note.pdf`.
+For the concrete relative-entropy central-face calibration test, see
+`team1_relative_entropy_central_face_calibration_note.md` and the
+standalone review PDF
+`team1_relative_entropy_central_face_calibration_short_note.pdf`.
 For the concrete discrete-spectroscopy alphabet boundary test, see
 `team1_discrete_spectroscopy_alphabet_boundary_note.md` and the standalone
 review PDF `team1_discrete_spectroscopy_alphabet_boundary_short_note.pdf`.
@@ -83,6 +87,7 @@ reviewer attack, not priority claims.
 | Support/readout accountability is the missing route to finite rank | The finite rank-accountability criterion is Blackwell/Le Cam/Petz/Buscemi-style target-specific sufficiency/factorization. | The theorem core is now internally demoted. What may survive is only the black-hole/AQFT translation: binary rank needs sufficiency for that exact finite-center target, not generic recovery or entropy equality. |
 | Binary `q=2` is not forced by quotient-visible entropy/recovery data | A weaker accepted physical axiom derives `q=2` after accountability without a separate alphabet law or direct measurement; for spectroscopy, the concrete target is `team1_discrete_spectroscopy_alphabet_boundary_note.md`. | If no such axiom is known, Paper 2's negative result is the strongest publishable Team 1 target: binary requires additional physics, not just quotient-visible data. |
 | Entropy-density/Newton normalization needs calibration | Crossed-product or horizon-entropy literature fixes the additive/finite-center calibration under exactly the stated assumptions; the concrete target is `team1_crossed_product_entropy_calibration_note.md`. | If calibration is not fixed, Paper 1's entropy row should be presented as an obstruction to overclaiming, not as a new entropy theorem. |
+| Relative entropy fixes central probabilities but not affine calibration | JLMS/OAQEC/crossed-product hypotheses include the full central face plus absolute affine trace/area calibration; the concrete target is `team1_relative_entropy_central_face_calibration_note.md`. | Pairwise relative entropies cancel common central trace weights and therefore do not determine the absolute finite-center entropy representative. |
 
 ## Minimal External Classification Needed
 
@@ -116,6 +121,10 @@ short note `team1_dhr_dr_sector_character_nonmaximality_short_note.pdf`.
 For the crossed-product entropy lane, send
 `team1_crossed_product_entropy_calibration_note.md` plus the compact short
 note `team1_crossed_product_entropy_calibration_short_note.pdf`.
+For the relative-entropy central-face lane, send
+`team1_relative_entropy_central_face_calibration_note.md` plus the compact
+short note
+`team1_relative_entropy_central_face_calibration_short_note.pdf`.
 For the discrete black-hole spectroscopy lane, send
 `team1_discrete_spectroscopy_alphabet_boundary_note.md` plus the compact
 short note `team1_discrete_spectroscopy_alphabet_boundary_short_note.pdf`.

@@ -76,6 +76,7 @@ review files live at repository root. In the Paper 2 mirror they live under
 | DHR/DR sectors | `team1_dhr_dr_sector_character_nonmaximality_note.md` / `team1_dhr_dr_sector_character_nonmaximality_short_note.pdf` | Does the supplied sector category retain central-character fibers, or only the diagonal restricted category? |
 | OAQEC/JLMS | `team1_oaqec_jlms_algebra_relative_nonmaximality_note.md` / `team1_oaqec_jlms_algebra_relative_nonmaximality_short_note.pdf` | Does recovery/relative entropy imply maximality of the supplied logical algebra, or only reconstruction inside it? |
 | Crossed-product entropy | `team1_crossed_product_entropy_calibration_note.md` / `team1_crossed_product_entropy_calibration_short_note.pdf` | Does the Type II/crossed-product construction fix finite central trace/area calibration, or only entropy for a specified algebra and trace? |
+| Relative-entropy central face | `team1_relative_entropy_central_face_calibration_note.md` / `team1_relative_entropy_central_face_calibration_short_note.pdf` | Do pairwise relative-entropy/JLMS comparisons fix the affine finite-center trace/area calibration, or only probability ratios inside the supplied face? |
 | Discrete spectroscopy | `team1_discrete_spectroscopy_alphabet_boundary_note.md` / `team1_discrete_spectroscopy_alphabet_boundary_short_note.pdf` | Does a standard area-quantization or QNM hypothesis force `q=2`, or is a finite-alphabet law/direct line measurement extra? |
 
 ## Minimum Useful Reply

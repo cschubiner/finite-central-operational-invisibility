@@ -58,6 +58,11 @@ For the concrete crossed-product entropy calibration boundary test, see
 review version is
 `team1_crossed_product_entropy_calibration_short_note.tex` /
 `team1_crossed_product_entropy_calibration_short_note.pdf`.
+For the concrete relative-entropy central-face calibration boundary test, see
+`team1_relative_entropy_central_face_calibration_note.md`; the compact
+TeX/PDF review version is
+`team1_relative_entropy_central_face_calibration_short_note.tex` /
+`team1_relative_entropy_central_face_calibration_short_note.pdf`.
 For the concrete discrete-spectroscopy alphabet boundary test, see
 `team1_discrete_spectroscopy_alphabet_boundary_note.md`; the compact
 TeX/PDF review version is
@@ -130,6 +135,17 @@ A reviewer can kill it by naming the crossed-product or gravitational Type II
 hypothesis that fixes the same finite central trace/area calibration; otherwise
 the row becomes an explicit warning that Type II entropy is defined for the
 supplied algebra and trace, not for omitted finite-center normalization data.
+
+The relative-entropy central-face row has now been sharpened to a concrete
+affine-calibration test in
+`team1_relative_entropy_central_face_calibration_note.md`, with the
+standalone short note
+`team1_relative_entropy_central_face_calibration_short_note.pdf`. A
+reviewer can kill it by naming the JLMS/OAQEC/crossed-product hypothesis that
+supplies full central-face affine trace/area calibration; otherwise the row
+becomes an explicit warning that pairwise relative entropy cancels common
+central trace weights and does not fix absolute finite-center entropy
+representatives.
 
 The discrete spectroscopy row has now been sharpened to a concrete
 finite-alphabet boundary test in

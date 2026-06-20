@@ -1,0 +1,238 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1.12in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\newcommand{\C}{\mathbb C}
+\newcommand{\Z}{\mathcal Z}
+\newcommand{\taua}{\tau_a}
+\newcommand{\taub}{\tau_b}
+\newcommand{\supp}{\operatorname{supp}}
+
+\setlength{\emergencystretch}{3em}
+\hypersetup{
+  pdftitle={Relative Entropy Does Not Supply an Omitted Finite-Central Calibration},
+  pdfsubject={Relative entropy, finite centers, JLMS, OAQEC, entropy calibration},
+  pdfkeywords={relative entropy, finite centers, JLMS, operator algebra quantum error correction, entropy calibration}
+}
+
+\title{Relative Entropy Does Not Supply\\
+an Omitted Finite-Central Calibration}
+\author{}
+\date{Live review note of June 20, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Relative entropy and JLMS/OAQEC recovery comparisons are statements about the
+algebra and state family supplied to them.  This note records the finite-center
+boundary.  In a finite central decomposition with trace weights
+\(\tau_a(c)=\sum_i a_i c_i\), the density of a central probability vector
+\(p\) is \(p_i/a_i\).  Hence
+\[
+  S_{\tau_a}(p\Vert r)
+  =
+  \sum_i p_i\log{p_i\over r_i},
+\]
+so the common trace weights cancel from every pairwise relative entropy on a
+fixed retained face.  The absolute entropy still contains the affine central
+term \(\sum_i p_i\log a_i\).  Therefore relative-entropy equality does not, by
+itself, determine an omitted finite central trace/area calibration or an
+absolute entropy-density representative.  The positive exit is an affine or
+atomic calibration that fixes this central term on the state family, or a
+physical axiom excluding the hidden center.
+\end{abstract}
+
+\paragraph{Status.}
+This is non-frozen external-review metadata for Team 1.  It is intended as a
+small claim that a relative-entropy, OAQEC/JLMS, crossed-product, or
+black-hole-entropy reviewer can classify as known, false, missing-hypothesis,
+or useful.  It does not modify any frozen Team 1 manuscript, Lean archive,
+public mirror manifest, or SHA-256 package.
+
+\section{Primary sources}
+
+The boundary below was checked against Araki's relative entropy for von
+Neumann algebras \cite{ArakiRelativeEntropy}, the JLMS relative-entropy
+equality \cite{JLMS}, entanglement-wedge reconstruction
+\cite{DongHarlowWall}, Harlow's operator-algebra quantum error-correction
+formulation of the RT formula \cite{HarlowRTQEC}, and gravitational
+crossed-product entropy \cite{WittenCrossed,CPWLargeN}.  These works are used
+as positive statements for supplied algebras, traces, and state families.  No
+new relative-entropy theorem is claimed here.
+
+\section{Finite central face}
+
+Let
+\[
+  \Z_m=\ell^\infty(\{1,\ldots,m\})\cong\C^m
+\]
+and let \(\tau_a(c)=\sum_i a_i c_i\), where \(a_i>0\).  If \(p\) is a central
+probability vector, its density with respect to \(\tau_a\) is \(p_i/a_i\).
+For two probability vectors \(p,r\) with \(\supp p\subseteq\supp r\),
+\[
+  S_{\tau_a}(p\Vert r)
+  =
+  \sum_{i:p_i>0}p_i
+  \log{(p_i/a_i)\over(r_i/a_i)}
+  =
+  \sum_{i:p_i>0}p_i\log{p_i\over r_i}.
+  \tag{1}
+\]
+Thus the trace weights cancel from pairwise relative entropy on the retained
+central face.
+
+The absolute entropy relative to the same trace is
+\[
+  H_{\tau_a}(p)
+  =
+  -\sum_i p_i\log{p_i\over a_i}
+  =
+  H(p)+\sum_i p_i\log a_i .
+  \tag{2}
+\]
+The second term is an affine central calibration.
+
+\begin{proposition}[relative entropy leaves a calibration fiber]
+\label{prop:calibration-fiber}
+Fix a retained central face \(F\subseteq\{1,\ldots,m\}\) and a state family
+\(P\) supported on \(F\).  If \(a\) and \(b\) are faithful trace calibrations
+on \(F\), then every pairwise relative entropy among states in \(P\) is the
+same for \(\tau_a\) and \(\tau_b\).  Consequently pairwise relative entropy on
+\(P\) does not determine the trace weights, the affine term
+\(\sum_i p_i\log a_i\), or any absolute entropy-density coefficient depending
+on that term.
+\end{proposition}
+
+\begin{proof}
+Equation (1) contains only the probability ratios \(p_i/r_i\).  The weights
+\(a_i\) cancel.  Replacing \(a\) by \(b\) therefore leaves all pairwise
+relative entropies unchanged.  Equation (2) shows that absolute entropy still
+depends on the affine functional \(p\mapsto\sum_i p_i\log a_i\), which has not
+been fixed by those relative entropies.
+\end{proof}
+
+\begin{proposition}[two-atom witness]
+\label{prop:two-atom-witness}
+On the two-atom center, let \(a=(1,3)\), \(b=(2,2)\), and
+\(p=(1/2,1/2)\).  The pairwise relative entropies on the two-atom probability
+simplex are unchanged when \(\tau_a\) is replaced by \(\tau_b\), but
+\[
+  H_{\tau_a}(p)-H_{\tau_b}(p)=\frac12\log{3\over4}\ne0 .
+\]
+\end{proposition}
+
+\begin{proof}
+The first statement is Proposition~\ref{prop:calibration-fiber}.  For the
+second,
+\[
+  H_{\tau_a}(p)-H_{\tau_b}(p)
+  =
+  {1\over2}(\log1+\log3-\log2-\log2)
+  =
+  {1\over2}\log{3\over4}.
+\]
+\end{proof}
+
+\begin{theorem}[affine central calibration criterion]
+\label{thm:affine-calibration}
+Let \(P\) be the retained central state family and write
+\[
+  L_a(p)=\sum_i p_i\log a_i .
+\]
+An absolute central entropy or area calibration determines the finite-center
+entropy term on \(P\) exactly when it determines the affine functional \(L_a\)
+on the affine hull of \(P\).  In particular, vertex calibrations on every
+central atom recover all \(\log a_i\) up to the common trace-normalization
+convention; calibrations on a proper face leave the omitted vertices
+unconstrained.
+\end{theorem}
+
+\begin{proof}
+By (2), all dependence on trace calibration is through the affine functional
+\(L_a\).  Knowing absolute entropy or area values on an affinely spanning
+subset of \(P\) fixes \(L_a\) on the affine hull of \(P\), and no smaller
+calibration can fix it outside its affine span.  Vertex tests read off the
+values \(L_a(e_i)=\log a_i\).  If a vertex is omitted, changing only that
+coordinate gives another faithful calibration with the same supplied tests and
+different absolute entropy for states using the omitted vertex.  A common
+rescaling \(a\mapsto\lambda a\) adds the constant \(\log\lambda\) to all
+\(L_a(p)\), which is invisible only when the intended convention is
+projective.
+\end{proof}
+
+\section{JLMS/OAQEC boundary}
+
+JLMS and operator-algebra quantum error correction give powerful positive
+statements for the declared algebra and state family.  They become a positive
+exit from this Team 1 obstruction exactly when the comparison includes the
+central face and its absolute affine calibration.
+
+If the comparison factors through a quotient, selected central character,
+declared code algebra, or state family that omits some central vertices, then
+relative entropy remains algebra-relative.  It does not certify maximality of
+the finite center or determine the omitted trace/area calibration.
+
+\section{Referee question}
+
+\begin{quote}
+In the target black-hole/AQFT reconstruction setting, does the invoked
+JLMS/OAQEC/crossed-product result supply full central-face affine calibration,
+or only relative entropy for the algebra and state family already specified?
+\end{quote}
+
+If the answer is the second, Team 1 has no new relative-entropy theorem.  The
+surviving claim is only the claim-boundary warning: relative entropy and
+recovery data should not be overread as finite-center maximality or as an
+absolute finite-center calibration principle.
+
+\begin{thebibliography}{9}
+
+\bibitem{ArakiRelativeEntropy}
+H. Araki,
+\emph{Relative entropy of states of von Neumann algebras},
+Publ. RIMS 11 (1976), 809--833,
+\href{https://ems.press/content/serial-article-files/41836}{EMS PDF}.
+
+\bibitem{JLMS}
+D. L. Jafferis, A. Lewkowycz, J. Maldacena, and S. J. Suh,
+\emph{Relative entropy equals bulk relative entropy},
+JHEP 06 (2016), 004,
+\href{https://arxiv.org/abs/1512.06431}{arXiv:1512.06431}.
+
+\bibitem{DongHarlowWall}
+X. Dong, D. Harlow, and A. C. Wall,
+\emph{Reconstruction of Bulk Operators within the Entanglement Wedge in
+Gauge-Gravity Duality},
+Phys. Rev. Lett. 117 (2016), 021601,
+\href{https://arxiv.org/abs/1601.05416}{arXiv:1601.05416}.
+
+\bibitem{HarlowRTQEC}
+D. Harlow,
+\emph{The Ryu-Takayanagi Formula from Quantum Error Correction},
+Commun. Math. Phys. 354 (2017), 865--912,
+\href{https://arxiv.org/abs/1607.03901}{arXiv:1607.03901}.
+
+\bibitem{WittenCrossed}
+E. Witten,
+\emph{Gravity and the Crossed Product},
+JHEP 10 (2022), 008,
+\href{https://arxiv.org/abs/2112.12828}{arXiv:2112.12828}.
+
+\bibitem{CPWLargeN}
+V. Chandrasekaran, G. Penington, and E. Witten,
+\emph{Large N algebras and generalized entropy},
+JHEP 04 (2023), 009,
+\href{https://arxiv.org/abs/2209.10454}{arXiv:2209.10454}.
+
+\end{thebibliography}
+
+\end{document}
