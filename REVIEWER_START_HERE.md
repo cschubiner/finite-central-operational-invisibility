@@ -21,6 +21,9 @@ Public verification workflow:
 Public review and verification status:
 `PUBLIC_REVIEW_STATUS.md`
 
+Structured public review issue template:
+`.github/ISSUE_TEMPLATE/external-review-classification.md`
+
 ## What To Inspect First
 
 1. Read `PUBLIC_REVIEW_STATUS.md`.
@@ -90,3 +93,5 @@ short, source-specific, and decisive enough to drive one of these actions:
 - preserve the frozen package as a new-but-checkable classification.
 
 Silence, informal interest, or encouragement is not adjudication.
+
+New public review issues can use the external review classification template.
