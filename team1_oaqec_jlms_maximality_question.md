@@ -17,6 +17,28 @@ finite-center accountability, or is maximality/full central-sector
 accountability an additional hypothesis?
 ```
 
+## Primary-Source Checkpoint
+
+The reason this question is narrow is that the standard sources appear to be
+statements about a specified algebra or wedge, not automatic maximality
+statements.
+
+- Harlow's OAQEC theorem is stated for a finite-dimensional code subspace and a
+  von Neumann algebra `M` acting on it; the equivalences characterize
+  reconstruction, relative entropy, and RT structure for that supplied `M`.
+- Harlow explicitly allows nontrivial centers in `M`, and the algebraic entropy
+  contains the classical distribution over the center.
+- Kamal-Penington extend the algebraic RT/OAQEC picture to boundary algebras
+  with centers and formulate reconstructability from a specified boundary
+  algebra.
+- JLMS and Dong-Harlow-Wall supply the relative-entropy/reconstruction inputs
+  for the entanglement-wedge algebra under discussion.
+
+Thus the proposed Team 1 boundary is not "JLMS/OAQEC is wrong." It is:
+if the supplied algebra or state family has already quotiented away a finite
+central refinement, recovery of that supplied algebra does not by itself prove
+that no larger finite central refinement existed.
+
 ## Minimal Test Model
 
 Let `M` be a finite-dimensional logical von Neumann algebra that is
@@ -78,11 +100,16 @@ Please classify this as one of:
 5. `plausibly useful`: elementary, but worth stating as a black-hole/AQFT
    reconstruction-boundary warning.
 
+The most useful answer is the exact theorem, definition, or hypothesis that
+turns "reconstructable supplied algebra" into "maximal full logical algebra,"
+or else the statement that no such implication is part of the cited theorem.
+
 ## Sources Team 1 Is Not Claiming To Extend
 
 - Jafferis-Lewkowycz-Maldacena-Suh, `arXiv:1512.06431`.
 - Dong-Harlow-Wall, `arXiv:1601.05416`.
 - Harlow, `arXiv:1607.03901`.
+- Kamal-Penington, `arXiv:1912.02240`.
 
 Team 1 is not claiming a new JLMS or OAQEC theorem. The only question is
 whether recovery/relative entropy for a supplied algebra is sometimes overread

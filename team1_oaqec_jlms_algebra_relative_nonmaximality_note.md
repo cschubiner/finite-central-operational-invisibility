@@ -27,13 +27,19 @@ This note was written after checking the standard holographic/OAQEC anchors:
   in the boundary region when the code/algebraic hypotheses are met.
 - Harlow, "The Ryu-Takayanagi formula from quantum error correction",
   `arXiv:1607.03901`: the final theorem is stated in operator-algebra quantum
-  error-correction language, and finite-dimensional von Neumann algebras may
-  have nontrivial centers.
+  error-correction language for a specified finite-dimensional von Neumann
+  algebra `M` acting on the code. The algebraic entropy includes the classical
+  distribution over the center of that supplied algebra.
 - Kamal-Penington, "The Ryu-Takayanagi formula from quantum error correction:
   an algebraic treatment of the boundary CFT", `arXiv:1912.02240`: later
-  algebraic treatments emphasize that boundary and bulk algebras may have
-  centers, reinforcing that the algebra being reconstructed is a specified
-  object.
+  algebraic treatments emphasize that both boundary and bulk algebras may have
+  centers, and formulate reconstruction from a specified boundary algebra.
+
+The question for this note is therefore not whether OAQEC/JLMS reconstructs a
+declared algebra. It does. The question is whether reconstructability of that
+declared algebra also certifies that the declared algebra is maximal against a
+larger finite central direct-sum refinement. If a standard theorem supplies that
+maximality implication, Team 1 should cite it and demote this row.
 
 ## Lemma: Direct-Sum Algebra-Relative Extension
 
@@ -64,7 +70,7 @@ new finite classical algebra `C^q`.
 Thus algebraic QEC recovery is stable under finite direct sums. Recovery of
 `M` does not by itself imply that `M` was maximal as a logical algebra.
 
-## Quotient-Visible Nonidentifiability
+## Lemma: Quotient-Visible Nonidentifiability
 
 Let `pi_k : C^q -> C` be a central character and let
 
@@ -91,6 +97,18 @@ additional premise:
 - all central sectors are included in the state family and entropy comparison;
 - a center-separating boundary operation/readout is supplied;
 - or a physical exclusion rule removes the finite central extension.
+
+Equivalently, for this finite test model, the implication under review is:
+
+```text
+reconstructable supplied algebra M
+    does not imply
+maximal logical algebra, full hidden finite center, or q=2.
+```
+
+The implication becomes valid only after one of the positive exits above is
+added to the hypotheses. That is the exact missing-hypothesis question for an
+OAQEC/JLMS reviewer.
 
 ## Proof Sketch
 
@@ -149,6 +167,13 @@ that have already discarded the central distribution. If the intended
 holographic setup includes all central sectors and their probabilities in the
 bulk/boundary relative-entropy comparison, finite-center accountability has
 been supplied.
+
+This also gives the clean demotion criterion. If the cited OAQEC/JLMS theorem
+is being invoked with the full central-sector state family and a maximal
+logical algebra as part of its hypotheses, Team 1's hidden-center comparison is
+outside that theorem's intended setup. Team 1 should then record the exact
+maximality/full-center hypothesis and demote the row to that named positive
+exit.
 
 ## Referee Classification
 
