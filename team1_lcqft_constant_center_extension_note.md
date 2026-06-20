@@ -34,7 +34,7 @@ anchors:
   measurement route distinguishes a finite center only if the probe/readout is
   separating for that center.
 - Fewster-Lang, "Dynamical locality of the free Maxwell field",
-  `arXiv:1401.1871`: nontrivial centers can be the obstruction in concrete
+  `arXiv:1403.7083`: nontrivial centers can be the obstruction in concrete
   LCQFT examples. This is a warning not to say "dynamical locality never sees
   centers"; the correct claim is conditional on which local-definiteness,
   extended-locality, or center-reduction axiom is included.
