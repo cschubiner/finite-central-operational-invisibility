@@ -105,6 +105,51 @@ after applying the quotient `Q_k`, depend only on the selected component. They
 cannot distinguish changes in nonselected central components. Hence hidden
 finite central rank is not a function of the quotient-visible OAQEC/JLMS data.
 
+## Proposition: Central-Sector Entropy Is A Positive Exit
+
+The quotient-visible obstruction disappears if the JLMS/OAQEC comparison
+includes the full central-sector probability distribution.
+
+Let `rho,sigma` be block-diagonal states on
+
+```text
+M_q ~= direct_sum_{j=1}^q M
+```
+
+written as
+
+```text
+rho   = direct_sum_j p_j rho_j,
+sigma = direct_sum_j r_j sigma_j,
+```
+
+where `p,r` are probability vectors and `rho_j,sigma_j` are normalized states
+on the `j`th copy of `M`. If `supp rho subset supp sigma`, then
+
+```text
+S(rho || sigma)
+  = D(p || r) + sum_{j:p_j>0} p_j S(rho_j || sigma_j),
+```
+
+where
+
+```text
+D(p || r) = sum_{j:p_j>0} p_j log(p_j/r_j).
+```
+
+This is just the standard direct-sum formula for relative entropy: the
+logarithm and trace split blockwise. The first term is the classical relative
+entropy of the central-sector distributions. Therefore a state family or JLMS
+comparison that varies the full central distribution no longer factors through
+a single character `Q_k`; it detects the finite center through `D(p||r)`.
+
+This is a positive exit, not a contradiction of the nonmaximality lemma. The
+Team 1 obstruction applies to quotient-selected or algebra-relative records
+that have already discarded the central distribution. If the intended
+holographic setup includes all central sectors and their probabilities in the
+bulk/boundary relative-entropy comparison, finite-center accountability has
+been supplied.
+
 ## Referee Classification
 
 This note should be classified as one of:

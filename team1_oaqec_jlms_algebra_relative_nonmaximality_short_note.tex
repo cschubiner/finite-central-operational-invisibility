@@ -2,6 +2,7 @@
 
 \usepackage[margin=1.12in]{geometry}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{array}
 \usepackage{booktabs}
 \usepackage{hyperref}
 
@@ -17,6 +18,7 @@
 \newcommand{\M}{\mathcal M}
 \newcommand{\Tr}{\operatorname{Tr}}
 \newcommand{\id}{\operatorname{id}}
+\newcommand{\supp}{\operatorname{supp}}
 
 \setlength{\emergencystretch}{3em}
 \hypersetup{
@@ -158,6 +160,54 @@ relative-entropy term between central distributions.  That is not a
 counterexample to the obstruction; it is a center-separating positive exit.
 \end{remark}
 
+\begin{proposition}[central-sector entropy is a positive exit]
+\label{prop:center-entropy}
+Let \(\rho,\sigma\) be block-diagonal states on
+\(\M_q\simeq\bigoplus_{j=1}^{q}\M\), written as
+\[
+  \rho=\bigoplus_{j=1}^{q} p_j\rho_j,\qquad
+  \sigma=\bigoplus_{j=1}^{q} r_j\sigma_j,
+\]
+where \(p,r\) are probability vectors and \(\rho_j,\sigma_j\) are normalized
+states on the \(j\)th copy of \(\M\).  If
+\(\supp\rho\subseteq\supp\sigma\), then
+\[
+  S(\rho\|\sigma)
+  =
+  D(p\|r)+\sum_{j:p_j>0}p_j\,S(\rho_j\|\sigma_j),
+\]
+where
+\[
+  D(p\|r)=\sum_{j:p_j>0}p_j\log\frac{p_j}{r_j}
+\]
+is the classical relative entropy of the central-sector distributions.
+Consequently, a JLMS/OAQEC comparison that includes arbitrary central
+probability vectors does not factor through \(Q_k\): it can detect changes in
+the finite center through the classical term \(D(p\|r)\).
+\end{proposition}
+
+\begin{proof}
+The logarithm of a block-diagonal positive operator is block diagonal on its
+support:
+\[
+  \log\rho=\bigoplus_{j:p_j>0}(\log p_j+\log\rho_j),
+  \qquad
+  \log\sigma=\bigoplus_{j:r_j>0}(\log r_j+\log\sigma_j).
+\]
+Using \(S(\rho\|\sigma)=\Tr \rho(\log\rho-\log\sigma)\), the trace over the
+direct sum separates into block traces:
+\[
+  S(\rho\|\sigma)
+  =
+  \sum_j p_j(\log p_j-\log r_j)
+  +
+  \sum_j p_j\,\Tr \rho_j(\log\rho_j-\log\sigma_j).
+\]
+This is the stated formula.  If the comparison class varies the central
+probability vector, the first term varies, so the record is no longer
+quotient-visible through a single selected summand.
+\end{proof}
+
 \section{Positive Exits}
 
 The obstruction is intentionally conditional.  It is killed, or demoted to a
@@ -165,7 +215,7 @@ routine application, by any hypothesis that supplies finite-center
 accountability:
 
 \begin{center}
-\begin{tabular}{p{0.33\linewidth}p{0.53\linewidth}}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.35\linewidth}>{\raggedright\arraybackslash}p{0.51\linewidth}}
 \toprule
 Exit premise & Effect \\
 \midrule
@@ -179,7 +229,8 @@ central summands are excluded by hypothesis or theorem. \\
 \addlinespace
 Center-separating states or operations & If the comparison includes states,
 operations, or boundary readouts that distinguish the central projections
-\(p_j\), then the data no longer factor through \(Q_k\). \\
+\(p_j\), then the data no longer factor through \(Q_k\).  Proposition
+\ref{prop:center-entropy} is the relative-entropy version of this exit. \\
 \addlinespace
 Physical exclusion & If the holographic model forbids such finite classical
 superselection labels, the extra premise should be named. \\
